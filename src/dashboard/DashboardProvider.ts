@@ -61,7 +61,11 @@ export class DashboardProvider {
       DashboardProvider.viewType,
       'DMCTN Taste Skill',
       column,
-      { enableScripts: true, retainContextWhenHidden: true }
+      {
+        enableScripts: true,
+        retainContextWhenHidden: true,
+        localResourceRoots: [vscode.Uri.joinPath(context.extensionUri, 'media')]
+      }
     );
     DashboardProvider.current = new DashboardProvider(panel, context);
   }
@@ -252,6 +256,11 @@ export class DashboardProvider {
   }
 
   private html(): string {
-    return buildDashboardHtml(nonce());
+    const webview = this.panel.webview;
+    const media = vscode.Uri.joinPath(this.context.extensionUri, 'media');
+    const logoDashboardUri = webview
+      .asWebviewUri(vscode.Uri.joinPath(media, 'dmctn-taste-logo-dashboard.png'))
+      .toString();
+    return buildDashboardHtml(nonce(), webview.cspSource, logoDashboardUri);
   }
 }

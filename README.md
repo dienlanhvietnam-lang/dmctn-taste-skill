@@ -1,6 +1,6 @@
 # DMCTN Taste Skill
 
-[![Version](https://img.shields.io/badge/version-0.2.6-blue)](https://github.com/dienlanhvietnam-lang/dmctn-taste-skill)
+[![Version](https://img.shields.io/badge/version-0.2.7-blue)](https://github.com/dienlanhvietnam-lang/dmctn-taste-skill)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
 **Bộ skill UI chống “AI rập khuôn” cho Cursor, VS Code Agent, Claude Code và Codex.**  
@@ -77,8 +77,8 @@ The extension installs into your workspace:
 ## Cài đặt nhanh
 ## Quick start
 
-1. **Cài extension** — file VSIX (`dmctn-taste-skill-0.2.6.vsix`) hoặc Marketplace khi phát hành.  
-   **Install the extension** — VSIX (`dmctn-taste-skill-0.2.6.vsix`) or Marketplace when published.
+1. **Cài extension** — file VSIX (`dmctn-taste-skill-0.2.7.vsix`) hoặc Marketplace khi phát hành.  
+   **Install the extension** — VSIX (`dmctn-taste-skill-0.2.7.vsix`) or Marketplace when published.
 
 2. **Mở dự án** trong VS Code hoặc Cursor.  
    **Open your project** in VS Code or Cursor.
@@ -289,7 +289,7 @@ No, except when installing the extension from a store.
 npm install
 npm run compile
 npm test
-npm run package   # → dmctn-taste-skill-0.2.6.vsix
+npm run package   # → dmctn-taste-skill-0.2.7.vsix
 ```
 
 Tài liệu / Docs: [`docs/PUBLISH_CHECKLIST.md`](docs/PUBLISH_CHECKLIST.md) · [`docs/RUNTIME_QA_REPORT.md`](docs/RUNTIME_QA_REPORT.md)

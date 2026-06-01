@@ -1,10 +1,15 @@
 /**
  * dashboardTemplate.ts — HTML/CSS/JS cho webview dashboard.
  * Icon slots prepared for next icon mapping phase.
+ * Logo: media/dmctn-taste-logo-dashboard.png via webview URI.
  */
 
-export function buildDashboardHtml(nonce: string): string {
-  const csp = `default-src 'none'; style-src 'unsafe-inline'; script-src 'nonce-${nonce}';`;
+export function buildDashboardHtml(
+  nonce: string,
+  cspSource: string,
+  logoUri: string
+): string {
+  const csp = `default-src 'none'; img-src ${cspSource}; style-src 'unsafe-inline'; script-src 'nonce-${nonce}';`;
   return `<!DOCTYPE html>
 <html lang="vi">
 <head>
@@ -15,21 +20,22 @@ export function buildDashboardHtml(nonce: string): string {
 <style>
   /* Icon slots prepared for next icon mapping phase. */
   :root{
-    --dm-bg:#0f1210;
-    --dm-panel:#171c15;
-    --dm-panel-soft:#1e2519;
-    --dm-border:#2e3a28;
-    --dm-text:#e8ece3;
-    --dm-muted:#9aa890;
+    --dm-bg:#0c0e0b;
+    --dm-panel:#141812;
+    --dm-panel-soft:#1a2016;
+    --dm-border:#2a3524;
+    --dm-text:#ebe8df;
+    --dm-muted:#96a08c;
     --dm-green:#4f7a37;
-    --dm-green-soft:rgba(79,122,55,.18);
+    --dm-green-soft:rgba(79,122,55,.2);
     --dm-red:#8c2f2a;
-    --dm-red-soft:rgba(140,47,42,.2);
+    --dm-red-soft:rgba(140,47,42,.22);
     --dm-gold:#c9a227;
-    --dm-gold-soft:rgba(201,162,39,.16);
+    --dm-gold-soft:rgba(201,162,39,.14);
     --dm-focus:#c9a227;
-    --dm-charcoal:#11150f;
+    --dm-charcoal:#0a0c09;
     --dm-offwhite:#f4f1e8;
+    --dm-accent:linear-gradient(90deg,var(--dm-green) 0%,var(--dm-gold) 55%,var(--dm-red) 100%);
     --sp-1:4px;--sp-2:8px;--sp-3:12px;--sp-4:16px;--sp-5:20px;--sp-6:24px;--sp-7:32px;
     --r-sm:6px;--r-md:10px;--r-lg:14px;
     --font:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
@@ -38,8 +44,8 @@ export function buildDashboardHtml(nonce: string): string {
   *{box-sizing:border-box;}
   body{margin:0;font-family:var(--font);background:var(--dm-bg);color:var(--dm-text);
     font-size:14px;line-height:1.55;-webkit-font-smoothing:antialiased;}
-  .app{display:flex;min-height:100vh;}
-  .side{width:200px;flex:0 0 200px;background:var(--dm-panel);border-right:1px solid var(--dm-border);
+  .app{display:flex;min-height:100vh;background:var(--dm-bg);}
+  .side{width:196px;flex:0 0 196px;background:var(--dm-panel);border-right:1px solid var(--dm-border);
     padding:var(--sp-4) var(--sp-3);display:flex;flex-direction:column;gap:var(--sp-1);}
   .brand{padding:var(--sp-2) var(--sp-3) var(--sp-4);border-bottom:1px solid var(--dm-border);margin-bottom:var(--sp-2);}
   .brand-title{font-weight:700;font-size:14px;letter-spacing:.01em;color:var(--dm-offwhite);}
@@ -49,8 +55,9 @@ export function buildDashboardHtml(nonce: string): string {
     padding:var(--sp-2) var(--sp-3);border-radius:var(--r-sm);cursor:pointer;font-size:13px;}
   .navbtn:hover{background:var(--dm-panel-soft);color:var(--dm-text);border-color:var(--dm-border);}
   .navbtn:focus-visible{outline:2px solid var(--dm-focus);outline-offset:2px;}
-  .navbtn.active{background:var(--dm-green-soft);color:var(--dm-offwhite);border-color:rgba(79,122,55,.45);}
-  .navbtn.active .dm-icon{opacity:1;}
+  .navbtn.active{background:var(--dm-green-soft);color:var(--dm-offwhite);
+    border-color:rgba(79,122,55,.4);border-left:3px solid var(--dm-gold);padding-left:calc(var(--sp-3) - 2px);}
+  .navbtn.active .dm-icon{opacity:1;border-color:rgba(201,162,39,.35);}
   .nav-label{flex:1;}
   .dm-icon{width:18px;height:18px;flex-shrink:0;border-radius:var(--r-sm);opacity:.75;
     background:var(--dm-panel-soft);border:1px solid var(--dm-border);position:relative;}
@@ -71,7 +78,9 @@ export function buildDashboardHtml(nonce: string): string {
   .badge.ok{background:var(--dm-green-soft);color:#9ccb78;border:1px solid rgba(79,122,55,.35);}
   .badge.no{background:var(--dm-red-soft);color:#e09a96;border:1px solid rgba(140,47,42,.35);}
   .badge.part{background:var(--dm-gold-soft);color:#e2c766;border:1px solid rgba(201,162,39,.35);}
-  .main{flex:1;padding:var(--sp-6) var(--sp-7);overflow:auto;}
+  .main{flex:1;padding:var(--sp-6) var(--sp-7);overflow:auto;position:relative;
+    background:linear-gradient(180deg,rgba(79,122,55,.04) 0%,transparent 120px);}
+  .main::before{content:"";position:absolute;top:0;left:0;right:0;height:2px;background:var(--dm-accent);opacity:.85;}
   .page{display:none;max-width:860px;}
   .page.active{display:block;animation:fadeIn .2s ease;}
   @keyframes fadeIn{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}
@@ -82,9 +91,20 @@ export function buildDashboardHtml(nonce: string): string {
   .card{background:var(--dm-panel);border:1px solid var(--dm-border);border-radius:var(--r-md);
     padding:var(--sp-5);margin:var(--sp-4) 0;}
   .card-soft{background:var(--dm-panel-soft);}
-  .hero{border-left:3px solid var(--dm-green);padding-left:var(--sp-4);}
-  .hero h1{font-size:20px;margin:0 0 var(--sp-2);}
-  .hero p{margin:0;color:var(--dm-muted);font-size:13px;}
+  .hero{border-left:3px solid var(--dm-gold);padding:var(--sp-4);background:var(--dm-panel-soft);}
+  .hero-inner{display:flex;gap:var(--sp-4);align-items:flex-start;}
+  .brand-logo{width:72px;height:72px;object-fit:contain;flex-shrink:0;border-radius:var(--r-sm);
+    background:transparent;}
+  .brand-logo--sm{width:48px;height:48px;}
+  .hero-text{flex:1;min-width:0;}
+  .hero h1{font-size:20px;margin:0 0 var(--sp-2);color:var(--dm-offwhite);}
+  .hero p{margin:0;color:var(--dm-muted);font-size:13px;line-height:1.5;}
+  .pack-badge{display:inline-block;font-size:10px;font-weight:700;text-transform:uppercase;
+    letter-spacing:.05em;padding:2px 8px;border-radius:999px;background:var(--dm-gold-soft);
+    color:var(--dm-gold);border:1px solid rgba(201,162,39,.35);margin-bottom:var(--sp-2);}
+  .pack-card.featured .pack-badge{margin-bottom:var(--sp-1);}
+  .about-head{display:flex;gap:var(--sp-4);align-items:center;margin-bottom:var(--sp-4);}
+  .guide-card .card-icon{margin-bottom:var(--sp-2);}
   .status-banner{display:flex;flex-wrap:wrap;align-items:center;gap:var(--sp-4);
     padding:var(--sp-4);background:var(--dm-panel-soft);border-radius:var(--r-md);
     border:1px solid var(--dm-border);margin-bottom:var(--sp-4);}
@@ -103,6 +123,7 @@ export function buildDashboardHtml(nonce: string): string {
   .btn:focus-visible{outline:2px solid var(--dm-focus);outline-offset:2px;}
   .btn-primary{background:var(--dm-green);color:#fff;border-color:var(--dm-green);}
   .btn-primary:hover{filter:brightness(1.08);}
+  #btnCopy.btn-primary{background:var(--dm-gold);border-color:var(--dm-gold);color:var(--dm-charcoal);}
   .btn-secondary{background:transparent;color:var(--dm-text);border-color:var(--dm-border);}
   .btn-secondary:hover{background:var(--dm-panel-soft);}
   .btn-danger{background:var(--dm-red);color:#fff;border-color:var(--dm-red);}
@@ -219,8 +240,13 @@ export function buildDashboardHtml(nonce: string): string {
   <main class="main">
     <section class="page active" id="overview">
       <div class="card hero">
-        <h1 data-i="overview.heroTitle"></h1>
-        <p data-i="overview.intro"></p>
+        <div class="hero-inner">
+          <img class="brand-logo" src="${logoUri}" alt="" width="72" height="72" />
+          <div class="hero-text">
+            <h1 data-i="overview.heroTitle"></h1>
+            <p data-i="overview.intro"></p>
+          </div>
+        </div>
       </div>
       <div class="status-banner">
         <div id="ovStatus" class="st missing" role="status"></div>
@@ -248,6 +274,7 @@ export function buildDashboardHtml(nonce: string): string {
           <button class="btn btn-secondary" id="instMin" type="button" data-i="install.btnMinimal"></button>
         </div>
         <div class="pack-card featured">
+          <span class="pack-badge" data-i="install.recommended"></span>
           <b data-i="install.modeFull"></b>
           <span class="micro" data-i="install.modeFull.desc"></span>
           <button class="btn btn-primary" id="instFull" type="button" data-i="install.btnFull"></button>
@@ -302,7 +329,7 @@ export function buildDashboardHtml(nonce: string): string {
           </div>
           <div class="row">
             <button class="btn btn-primary" id="btnGen" type="button" data-i="prompts.generate"></button>
-            <button class="btn btn-secondary" id="btnCopy" type="button" data-i="prompts.copy"></button>
+            <button class="btn btn-primary" id="btnCopy" type="button" data-i="prompts.copy"></button>
           </div>
         </div>
         <div class="prompt-out-wrap">
@@ -317,16 +344,19 @@ export function buildDashboardHtml(nonce: string): string {
       <h2 class="page-h1" data-i="guide.heading"></h2>
       <div class="guide-grid">
         <div class="guide-card">
+          <span class="dm-icon dm-icon--prompt card-icon" aria-hidden="true"></span>
           <h3 data-i="guide.cursor.title"></h3>
           <p data-i="guide.cursor.body"></p>
           <pre class="snip" data-i="guide.cursor.code"></pre>
         </div>
         <div class="guide-card">
+          <span class="dm-icon dm-icon--skills card-icon" aria-hidden="true"></span>
           <h3 data-i="guide.vscode.title"></h3>
           <p data-i="guide.vscode.body"></p>
           <pre class="snip" data-i="guide.vscode.code"></pre>
         </div>
         <div class="guide-card">
+          <span class="dm-icon dm-icon--install card-icon" aria-hidden="true"></span>
           <h3 data-i="guide.claude.title"></h3>
           <p data-i="guide.claude.body"></p>
           <pre class="snip" data-i="guide.claude.code"></pre>
@@ -367,8 +397,13 @@ export function buildDashboardHtml(nonce: string): string {
     </section>
 
     <section class="page" id="about">
-      <h2 class="page-h1" data-i="about.heading"></h2>
-      <p class="page-lead" data-i="about.body"></p>
+      <div class="about-head">
+        <img class="brand-logo brand-logo--sm" src="${logoUri}" alt="" width="48" height="48" />
+        <div>
+          <h2 class="page-h1" style="margin:0" data-i="about.heading"></h2>
+          <p class="page-lead" style="margin:var(--sp-2) 0 0" data-i="about.body"></p>
+        </div>
+      </div>
       <div class="page-h2" data-i="about.privacy.title"></div>
       <div class="privacy-grid">
         <div class="privacy-item"><b data-i="about.privacy.localLabel"></b><span data-i="about.privacy.local"></span></div>

@@ -4,6 +4,9 @@ out/
 .vscode-test/
 .DS_Store
 
+# Source art drops (copied into media/ for release)
+incoming-assets/
+
 # Local / QA — not for git
 .env
 .env.*

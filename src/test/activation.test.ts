@@ -65,6 +65,17 @@ const vscodeMock: any = {
         _html: '',
         _posted: [] as any[],
         webview: {
+          cspSource: 'https://file+.vscode-resource.vscode-cdn.net',
+          asWebviewUri(uri: { fsPath: string }) {
+            return {
+              toString() {
+                return (
+                  'https://file+.vscode-resource.vscode-cdn.net' +
+                  uri.fsPath.replace(/\\/g, '/').replace(/ /g, '%20')
+                );
+              }
+            };
+          },
           set html(v: string) {
             lastPanel._html = v;
           },
@@ -168,6 +179,9 @@ test('openDashboard: creates a webview with HTML', async () => {
   );
   assert.ok(lastPanel._html.includes('dm-icon--overview'), 'overview icon slot missing');
   assert.ok(lastPanel._html.includes('--dm-green'), 'design tokens missing');
+  assert.ok(lastPanel._html.includes('dmctn-taste-logo-dashboard.png'), 'dashboard logo path missing');
+  assert.ok(lastPanel._html.includes('img-src'), 'CSP img-src missing');
+  assert.ok(lastPanel._html.includes('brand-logo'), 'hero logo element missing');
 });
 
 test('install via dashboard message creates files in temp workspace', async () => {

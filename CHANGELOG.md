@@ -9,6 +9,29 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 
 ---
 
+## [0.2.7] — Logo + dashboard Việt Nam hiện đại
+## [0.2.7] — Logo mapping + modern Vietnamese dashboard
+
+### Thêm / Added
+- Asset logo chính thức: `media/icon.png` (128×128), `media/dmctn-taste-logo.png`, `media/dmctn-taste-logo-dashboard.png`.  
+  Final logo assets mapped into `media/` for VSIX and dashboard.
+
+### Thay đổi / Changed
+- Dashboard dùng logo qua `webview.asWebviewUri`; phong cách developer tool Việt Nam hiện đại (xanh tre, vàng kim, đỏ trầm).  
+  Dashboard loads logo via webview URI; modern Vietnamese visual language.
+
+- Tab Install: badge **Khuyên dùng** / **Recommended** cho gói Full.  
+  Install tab: **Recommended** badge on Full pack.
+
+### Ghi chú / Notes
+- **Không** đổi logic install/update/remove/prompt.  
+  **No** install/update/remove/prompt behavior changes.
+
+- `incoming-assets/` excluded from VSIX (source copies only).  
+  `incoming-assets/` excluded from VSIX.
+
+---
+
 ## [0.2.6] — Dashboard UX redesign
 ## [0.2.6] — Dashboard UX redesign
 

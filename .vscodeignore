@@ -20,5 +20,8 @@ TEST-TASTE-CODING/**
 **/*secret*
 **/.dmctn/**
 package-lock.json
+incoming-assets/**
 !assets/**
 !media/icon.png
+!media/dmctn-taste-logo.png
+!media/dmctn-taste-logo-dashboard.png
