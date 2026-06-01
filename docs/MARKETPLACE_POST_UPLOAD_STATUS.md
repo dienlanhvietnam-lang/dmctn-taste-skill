@@ -53,8 +53,5 @@ Run **post-publish QA** — install from Marketplace, dashboard, Full 13/13, pro
 ## Ghi chú
 ## Notes
 
-- Open VSX: **NOT_STARTED** (tùy chọn).  
-  Open VSX: **NOT_STARTED** (optional).
-
 - Runtime QA trước publish (VSIX/Cursor): **FULL_PASS** — xem [`RUNTIME_QA_REPORT.md`](RUNTIME_QA_REPORT.md).  
   Pre-publish runtime QA (VSIX/Cursor): **FULL_PASS** — see [`RUNTIME_QA_REPORT.md`](RUNTIME_QA_REPORT.md).

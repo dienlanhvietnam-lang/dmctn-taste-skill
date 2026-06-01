@@ -1,8 +1,8 @@
-# Tài nguyên cửa hàng — Marketplace / Open VSX
-# Store assets — Marketplace / Open VSX
+# Tài nguyên cửa hàng — Visual Studio Marketplace
+# Store assets — Visual Studio Marketplace
 
-Ảnh minh họa **đã có** — dùng cho GitHub README, Visual Studio Marketplace và Open VSX.  
-**Present** — used for GitHub README, Visual Studio Marketplace, and Open VSX listings.
+Ảnh minh họa **đã có** — dùng cho GitHub README và Visual Studio Marketplace.  
+**Present** — used for GitHub README and Visual Studio Marketplace listings.
 
 Thư mục này **không** đóng gói trong `.vsix` (xem `.vscodeignore`).  
 This folder is **excluded from the `.vsix`** (see `.vscodeignore`).
@@ -32,9 +32,6 @@ Dimensions: **1600×900** PNG, branded logo stamp and bilingual captions.
 
 - **Visual Studio Marketplace** — ✅ **Published** v0.2.9 (xem [`docs/MARKETPLACE_POST_UPLOAD_STATUS.md`](../docs/MARKETPLACE_POST_UPLOAD_STATUS.md))  
   **Visual Studio Marketplace** — ✅ **Published** v0.2.9 (see [`docs/MARKETPLACE_POST_UPLOAD_STATUS.md`](../docs/MARKETPLACE_POST_UPLOAD_STATUS.md))
-
-- **Open VSX** — ⏳ chưa bắt đầu; upload cùng bộ ảnh khi publish  
-  **Open VSX** — ⏳ not started; upload the same set when publishing
 
 ---
 

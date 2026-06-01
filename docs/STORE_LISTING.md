@@ -1,8 +1,8 @@
 # Nội dung listing cửa hàng — DMCTN Taste Skill
 # Store listing copy — DMCTN Taste Skill
 
-Dùng văn bản này khi điền form **Marketplace** / **Open VSX**.  
-Use this text when filling **Marketplace** / **Open VSX** forms.
+Dùng văn bản này khi điền form **Visual Studio Marketplace**.  
+Use this text when filling the **Visual Studio Marketplace** form.
 
 **Kho mã:** https://github.com/dienlanhvietnam-lang/dmctn-taste-skill — repo public trên GitHub.  
 **Repository:** https://github.com/dienlanhvietnam-lang/dmctn-taste-skill — public GitHub source.

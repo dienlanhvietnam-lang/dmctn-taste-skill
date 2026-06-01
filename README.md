@@ -225,11 +225,9 @@ Agent applying Taste Skill — Design Read and anti-slop UI result.
 | Ảnh Marketplace / Store screenshots | ✅ READY — `store-assets/*.png` (1600×900) |
 | Visual Studio Marketplace | ✅ **PUBLISHED / PUBLIC** — v0.2.9, tìm kiếm công khai trên Marketplace |
 | | ✅ **PUBLISHED / PUBLIC** — v0.2.9, publicly searchable on Marketplace |
-| Open VSX | ⏳ **NOT_STARTED** — tùy chọn |
-| | ⏳ **NOT_STARTED** — optional |
 
-**Publisher Marketplace:** `buivantinh` · **Phiên bản / Version:** `0.2.9`  
-**Marketplace publisher:** `buivantinh` · **Version:** `0.2.9`
+**Publisher:** `buivantinh` / DMCTN Studio · **Phiên bản / Version:** `0.2.9`  
+**Publisher:** `buivantinh` / DMCTN Studio · **Version:** `0.2.9`
 
 Chi tiết sau upload: [`docs/MARKETPLACE_POST_UPLOAD_STATUS.md`](docs/MARKETPLACE_POST_UPLOAD_STATUS.md)  
 Post-upload details: [`docs/MARKETPLACE_POST_UPLOAD_STATUS.md`](docs/MARKETPLACE_POST_UPLOAD_STATUS.md)
@@ -241,9 +239,6 @@ Post-upload details: [`docs/MARKETPLACE_POST_UPLOAD_STATUS.md`](docs/MARKETPLACE
 
 1. Chạy QA cài từ Marketplace public (theo [`docs/PUBLISH_CHECKLIST.md`](docs/PUBLISH_CHECKLIST.md#post-publish-qa)) — **PENDING**.  
    Run public install QA from Marketplace (see [`docs/PUBLISH_CHECKLIST.md`](docs/PUBLISH_CHECKLIST.md#post-publish-qa)) — **PENDING**.
-
-2. (Tùy chọn) Open VSX.  
-   (Optional) Open VSX.
 
 ---
 

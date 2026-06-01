@@ -1,8 +1,8 @@
 # Checklist phát hành — DMCTN Taste Skill
 # Publish checklist — DMCTN Taste Skill
 
-Dùng checklist này trước khi đăng lên **Visual Studio Marketplace** hoặc **Open VSX**.  
-Use this checklist before publishing to **Visual Studio Marketplace** or **Open VSX**.
+Dùng checklist này trước khi đăng lên **Visual Studio Marketplace**.  
+Use this checklist before publishing to **Visual Studio Marketplace**.
 
 **Không** commit token, PAT, hoặc file `.env` chứa secret.  
 **Do not** commit tokens, PATs, or `.env` files with secrets.
@@ -21,7 +21,6 @@ Use this checklist before publishing to **Visual Studio Marketplace** or **Open 
 | Marketplace verification | ✅ **DONE** |
 | Marketplace published (public search) | ✅ **DONE** — v0.2.9 |
 | Public listing QA (install from store) | ⏳ **PENDING** |
-| Open VSX | ⏳ **PENDING** / optional |
 
 Chi tiết sau upload: [`MARKETPLACE_POST_UPLOAD_STATUS.md`](MARKETPLACE_POST_UPLOAD_STATUS.md)  
 Post-upload details: [`MARKETPLACE_POST_UPLOAD_STATUS.md`](MARKETPLACE_POST_UPLOAD_STATUS.md)
@@ -93,8 +92,8 @@ Before Marketplace publish, confirm:
 
 ---
 
-## Điều kiện chung (cả hai store)
-## Prerequisites (both stores)
+## Điều kiện chung
+## Prerequisites
 
 - [ ] `repository` trong `package.json` → repo **public** trên GitHub  
 - [ ] `repository` in `package.json` → repo **public** on GitHub
@@ -170,33 +169,6 @@ Before Marketplace publish, confirm:
 
 7. Kiểm tra trang extension sau publish (cài từ Marketplace profile sạch).  
    Verify the extension page after publish (install from Marketplace in a clean profile).
-
----
-
-## Open VSX
-## Open VSX
-
-1. Tạo tài khoản / namespace tại https://open-vsx.org/  
-   Create account / namespace at https://open-vsx.org/
-
-2. Tạo token **Eclipse Open VSX** (lưu an toàn, không commit)  
-   Create an **Eclipse Open VSX** access token (store securely, never commit)
-
-3. Cài: `npm install -g ovsx`  
-   Install: `npm install -g ovsx`
-
-4. Đóng gói: `npm run package`  
-   Package: `npm run package`
-
-5. Publish (chỉ thay token lúc chạy):  
-   Publish (substitute token at runtime only):
-
-   ```bash
-   ovsx publish dmctn-taste-skill-<version>.vsix -p <OPEN_VSX_TOKEN>
-   ```
-
-6. Dùng cùng nội dung listing và ảnh như Marketplace khi áp dụng được.  
-   Use the same listing copy and screenshots as Marketplace where applicable.
 
 ---
 

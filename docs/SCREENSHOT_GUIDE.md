@@ -77,5 +77,5 @@ Chỉ dùng **UI thật** — không dùng mockup AI gắn nhãn sản phẩm.
 - Tham chiếu ảnh trong README gốc (đường dẫn hoạt động trên GitHub khi push).  
   Reference images in root `README.md` (paths work on GitHub when pushed).
 
-- Upload lên UI listing Marketplace / Open VSX.  
-  Upload to Marketplace / Open VSX listing UI.
+- Upload lên UI listing Visual Studio Marketplace.  
+  Upload to the Visual Studio Marketplace listing UI.
