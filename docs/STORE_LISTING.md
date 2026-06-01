@@ -1,15 +1,20 @@
-# Store Listing Copy — DMCTN Taste Skill
+# Nội dung listing cửa hàng — DMCTN Taste Skill
+# Store listing copy — DMCTN Taste Skill
 
-Use this text when filling Marketplace / Open VSX forms.
+Dùng văn bản này khi điền form **Marketplace** / **Open VSX**.  
+Use this text when filling **Marketplace** / **Open VSX** forms.
 
-**Repository:** https://github.com/dienlanhvietnam-lang/dmctn-taste-skill — public GitHub repo (extension source).
+**Kho mã:** https://github.com/dienlanhvietnam-lang/dmctn-taste-skill — repo public trên GitHub.  
+**Repository:** https://github.com/dienlanhvietnam-lang/dmctn-taste-skill — public GitHub source.
 
 ---
 
+## Tên extension (package)
 ## Extension name (package)
 
 `dmctn-taste-skill`
 
+## Tên hiển thị
 ## Display name
 
 **DMCTN Taste Skill**
@@ -18,86 +23,103 @@ Use this text when filling Marketplace / Open VSX forms.
 
 `buivantinh` — DMCTN Studio / Bùi Văn Tĩnh
 
-## Short description (EN) — max ~200 chars
+*(Publisher Marketplace có thể khác owner GitHub `dienlanhvietnam-lang`.)*  
+*(Marketplace publisher may differ from GitHub org `dienlanhvietnam-lang`.)*
 
-Install anti-slop UI taste skills into your project for Cursor, VS Code agents, Claude Code, and Codex. Bilingual dashboard. Local-only, no telemetry.
+---
 
-## Short description (VI)
+## Mô tả ngắn
+## Short description
 
 Cài bộ skill chống UI AI rập khuôn vào dự án cho Cursor / VS Code / Claude Code / Codex. Dashboard song ngữ. Chạy cục bộ, không telemetry.
 
-## Long description (EN)
+Install anti-slop UI taste skills into your project for Cursor, VS Code agents, Claude Code, and Codex. Bilingual dashboard. Local-only, no telemetry.
 
-**DMCTN Taste Skill** helps you install a curated pack of UI “taste” skills into any workspace so AI agents stop shipping generic, look-alike interfaces.
+*(Tối đa ~200 ký tự cho trường EN trên Marketplace.)*  
+*(~200 chars max for the EN field on Marketplace.)*
 
-### What you get
+---
 
-- **13 skills** (Minimal, Full, or Custom install): taste-skill, redesign-skill, brandkit, and style/tooling skills for GPT/Codex, image-to-code, mobile/web reference prompts, and more.
-- **Bilingual dashboard (Vietnamese / English)** with Overview, Install, Skills, Prompts, Guide, Settings, and About.
-- **Taste Gate** via `.cursor/rules/dmctn-taste-gate.mdc` — agents must produce a Design Read before coding UI.
-- **6 prompt templates** with anti-AI-slop checklist, mobile-first, accessibility, performance, security, and PASS/FAIL reporting.
-- **Safe updates** with backups in `.dmctn/taste-skill-backups/`; never overwrites your edited files without asking.
-
-### Privacy
-
-- Runs **fully on your machine**
-- **No telemetry**, no analytics, no network calls
-- **Never** reads secrets, tokens, or API keys from your project
-- **Never** writes files without your explicit confirmation
-
-### Upstream credit
-
-Practical Vietnamese localization inspired by **Leonxlnx/taste-skill** (MIT License). See `assets/credits/LICENSE_UPSTREAM.md` in the extension package.
-
-## Long description (VI)
+## Mô tả dài
+## Long description
 
 **DMCTN Taste Skill** giúp cài bộ skill “taste” về UI vào dự án để agent AI không tạo giao diện chung chung, giống template hàng loạt.
 
-### Tính năng
+**DMCTN Taste Skill** helps you install a curated pack of UI “taste” skills into any workspace so AI agents stop shipping generic, look-alike interfaces.
 
-- **13 skill** — cài Minimal / Full / Custom
-- **Dashboard song ngữ** Việt/Anh
-- **Taste Gate** — bắt agent trả Design Read trước khi code UI
-- **6 prompt mẫu** kèm checklist anti-slop, mobile-first, a11y, hiệu năng, bảo mật
-- **Update an toàn** — backup, không ghi đè file bạn đã sửa nếu chưa hỏi
+### Tính năng / What you get
 
-### Quyền riêng tư
+- **13 skill** — cài Minimal / Full / Custom: taste-skill, redesign-skill, brandkit, GPT/Codex, image-to-code, preset phong cách, output enforcement, …  
+- **13 skills** — Minimal / Full / Custom install: taste-skill, redesign-skill, brandkit, GPT/Codex variants, image-to-code, style presets, output enforcement, and more.
 
-- Chạy **hoàn toàn cục bộ**
-- **Không telemetry**
-- **Không** đọc secret/token
-- **Không** ghi file khi chưa xác nhận
+- **Dashboard song ngữ** — Tổng quan, Cài đặt, Bộ skill, Prompt mẫu, Hướng dẫn, Cài đặt extension, Thông tin  
+- **Bilingual dashboard (VI / EN)** — Overview, Install, Skills, Prompts, Guide, Settings, About.
 
-### Nguồn upstream
+- **Taste Gate** — `.cursor/rules/dmctn-taste-gate.mdc`; agent phải Design Read trước khi code UI  
+- **Taste Gate** — `.cursor/rules/dmctn-taste-gate.mdc`; agents must produce a Design Read before UI code.
 
-Dựa trên ý tưởng **Leonxlnx/taste-skill** (MIT).
+- **6 prompt mẫu** — anti-slop, mobile-first, accessibility, performance, security, PASS/FAIL  
+- **6 prompt templates** — anti-slop checklist, mobile-first, a11y, performance, security, PASS/FAIL reporting.
 
+- **Cập nhật an toàn** — backup `.dmctn/taste-skill-backups/`; không ghi đè file đã sửa nếu chưa hỏi  
+- **Safe updates** — backups in `.dmctn/taste-skill-backups/`; never overwrites your edits without asking.
+
+### Quyền riêng tư / Privacy
+
+- Chạy **hoàn toàn cục bộ**  
+- Runs **fully on your machine**
+
+- **Không telemetry**, không analytics, không gọi mạng  
+- **No telemetry**, no analytics, no network calls
+
+- **Không** đọc secret, token, API key  
+- **Never** reads secrets, tokens, or API keys
+
+- **Không** ghi file khi chưa xác nhận  
+- **Never** writes files without your explicit confirmation
+
+### Nguồn upstream / Upstream credit
+
+Dựa trên ý tưởng **Leonxlnx/taste-skill** (MIT). Xem `assets/credits/LICENSE_UPSTREAM.md` trong gói extension.
+
+Practical Vietnamese localization inspired by **Leonxlnx/taste-skill** (MIT). See `assets/credits/LICENSE_UPSTREAM.md` in the extension package.
+
+---
+
+## Từ khóa
 ## Keywords
 
 `ai`, `cursor`, `ui`, `design`, `frontend`, `agent`, `prompt`, `taste`, `anti-slop`
 
+## Danh mục
 ## Categories
 
 - Other  
-- Snippets (optional secondary)
+- Snippets (phụ / optional secondary)
 
-## Privacy / legal statement (EN)
+---
+
+## Tuyên bố quyền riêng tư
+## Privacy / legal statement
+
+Extension không thu thập, không gửi và không lưu dữ liệu người dùng. Hoạt động hoàn toàn cục bộ trong VS Code / Cursor. Không telemetry. Không đọc secret hay token xác thực.
 
 This extension does not collect, transmit, or store user data. It operates entirely locally within VS Code / Cursor. No telemetry. No access to secrets or authentication tokens.
 
-## Privacy statement (VI)
+---
 
-Extension không thu thập, không gửi và không lưu dữ liệu người dùng. Hoạt động hoàn toàn cục bộ. Không telemetry. Không đọc secret hay token xác thực.
+## Danh sách ảnh (upload từ `store-assets/`)
+## Screenshot list (upload from `store-assets/`)
 
-## Screenshots (upload from `store-assets/`)
+Upload 4 PNG theo `docs/SCREENSHOT_GUIDE.md`:  
+Upload these four PNGs per `docs/SCREENSHOT_GUIDE.md`:
 
-Upload these four PNGs in the publisher portal (crop per `docs/SCREENSHOT_GUIDE.md`):
+| File | Chú thích / Caption |
+|------|---------------------|
+| `dashboard-overview.png` | Dashboard song ngữ — Tổng quan, trạng thái Full / Bilingual dashboard — Overview, Full install status |
+| `install-skills.png` | Tab Cài đặt hoặc Bộ skill (13 skill) / Install packs or Skills list (13 skills) |
+| `prompt-output.png` | Prompt mẫu — Output tự sinh / Prompt templates with auto-generated output |
+| `coding-result.png` | Agent áp dụng Taste Skill — Design Read & UI anti-slop / Agent applying Taste Skill — Design Read & anti-slop result |
 
-| File | Caption (EN) |
-|------|----------------|
-| `store-assets/dashboard-overview.png` | Bilingual dashboard — Overview, Full install status |
-| `store-assets/install-skills.png` | Install packs or Skills list (13 skills) |
-| `store-assets/prompt-output.png` | Prompt templates with auto-generated output |
-| `store-assets/coding-result.png` | Agent applying Taste Skill — Design Read & anti-slop UI result |
-
-Until files exist on GitHub, Marketplace upload uses local copies from `store-assets/` only — do not fake images.
+Cho đến khi file có trên GitHub, upload từ bản cục bộ `store-assets/` — **không** dùng ảnh mockup giả.  
+Until files exist on GitHub, upload local copies from `store-assets/` only — **do not** use fake mockup images.

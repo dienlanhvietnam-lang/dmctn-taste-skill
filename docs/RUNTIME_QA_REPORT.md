@@ -1,92 +1,119 @@
-# Runtime QA Report — DMCTN Taste Skill
+# Báo cáo QA runtime — DMCTN Taste Skill
+# Runtime QA report — DMCTN Taste Skill
 
-| Field | Value |
-|-------|--------|
-| **Version** | 0.2.3 (Store + Repo Ready) |
-| **Overall** | **FULL_PASS** |
-| **Automated smoke** | PASS — `npm test` 49/49, `activation.test.ts` |
+| Trường / Field | Giá trị / Value |
+|----------------|-----------------|
+| **Phiên bản / Version** | 0.2.5 (tài liệu song ngữ / bilingual docs) |
+| **Tổng thể / Overall** | **FULL_PASS** |
+| **Smoke tự động / Automated smoke** | PASS — `npm test` 49/49, `activation.test.ts` |
 
 ---
 
+## Runtime trên Cursor
 ## Runtime in Cursor
 
-**Status: FULL_PASS**
+**Trạng thái / Status: FULL_PASS**
 
-### Evidence
+### Bằng chứng / Evidence
 
-| Check | Result |
-|-------|--------|
+| Kiểm tra / Check | Kết quả / Result |
+|------------------|------------------|
+| Dashboard Webview mở trong Cursor | PASS |
 | Dashboard Webview opens in Cursor | PASS |
+| Cài Full — 13/13 skill | PASS |
 | Full install — 13/13 skills | PASS |
-| Status shows **Đã cài đủ (Full)** / Full installed | PASS |
-| Tab **Prompt mẫu** — output auto-generates on open / preset change | PASS |
+| Trạng thái **Đã cài đủ (Full)** | PASS |
+| Status **Đã cài đủ (Full)** / Full installed | PASS |
+| Tab **Prompt mẫu** — output tự sinh khi mở / đổi preset | PASS |
+| Tab **Prompt mẫu** — auto-generates on open / preset change | PASS |
+| Nhãn sidebar **Prompt mẫu** (không “Promt”) | PASS |
 | Sidebar label **Prompt mẫu** (not “Promt mẫu”) | PASS |
+| Cài đặt VI / EN hiển thị | PASS |
 | Settings VI / EN visible | PASS |
+| Tab Bộ skill — 13 skill + badge trạng thái | PASS |
 | Skills tab — 13 skills with state badges | PASS |
 
-### Remaining manual checks (optional — not blocking runtime PASS)
+### Kiểm tra thủ công còn lại (tùy chọn — không chặn FULL_PASS)
+### Remaining manual checks (optional — not blocking FULL_PASS)
 
-These were **not re-run** in the latest session; code paths are covered by automated tests:
+Chưa chạy lại trong phiên gần nhất; logic được test tự động bao phủ:  
+**Not re-run** in the latest session; code paths covered by automated tests:
 
-| Check | Status | Notes |
-|-------|--------|-------|
-| Copy toast (“Đã copy” / “Copied”) after **Sao chép prompt** | **Unconfirmed** | Host uses `vscode.env.clipboard`; smoke test verifies toast message |
-| Update skills + backup on modified file | **Unconfirmed** | Covered by `updater.test.ts` |
-| Remove from project — only managed files | **Unconfirmed** | Covered by `removeFromProject` tests |
-| Never Ask — no startup popup | **Unconfirmed** | Setting `dmctnTaste.neverAskInstall` |
+| Kiểm tra / Check | Trạng thái / Status | Ghi chú / Notes |
+|------------------|---------------------|-----------------|
+| Toast copy (“Đã copy” / “Copied”) sau **Sao chép prompt** | **Chưa xác nhận / Unconfirmed** | `vscode.env.clipboard`; smoke test toast |
+| Cập nhật skill + backup file đã sửa | **Chưa xác nhận / Unconfirmed** | `updater.test.ts` |
+| Gỡ khỏi dự án — chỉ file được quản lý | **Chưa xác nhận / Unconfirmed** | `removeFromProject` tests |
+| Never Ask — không popup khi mở dự án | **Chưa xác nhận / Unconfirmed** | `dmctnTaste.neverAskInstall` |
 
 ---
 
-## Coding Application QA
+## QA ứng dụng coding
+## Coding application QA
 
-**Status: FULL_PASS**
+**Trạng thái / Status: FULL_PASS**
 
-### Evidence
+### Bằng chứng / Evidence
 
-| Check | Result |
-|-------|--------|
-| Agent reads Taste Skill / Taste Gate before coding UI | PASS |
+| Kiểm tra / Check | Kết quả / Result |
+|------------------|------------------|
+| Agent đọc Taste Skill / Taste Gate trước khi code UI | PASS |
+| Agent reads Taste Skill / Taste Gate before UI code | PASS |
+| Agent xuất **Design Read** | PASS |
 | Agent produced **Design Read** | PASS |
+| Agent xuất **Anti-AI-slop checklist** | PASS |
 | Agent produced **Anti-AI-slop checklist** | PASS |
-| Agent produced implementation **plan** with PASS/FAIL criteria | PASS |
-| Demo `index.html` redesigned — away from generic AI-slop patterns (purple gradient hero, 3-card SaaS template, etc.) | PASS |
+| Kế hoạch triển khai + tiêu chí PASS/FAIL | PASS |
+| Implementation **plan** with PASS/FAIL criteria | PASS |
+| Demo `index.html` redesign — bỏ pattern AI-slop (gradient tím, 3-card SaaS, …) | PASS |
+| Demo `index.html` redesigned — away from generic AI-slop patterns | PASS |
 
-### Context
+### Ngữ cảnh / Context
 
-Validated on a real project workspace with Full pack installed (`.cursor/rules/dmctn-taste-gate.mdc`, `skills/*`, `AGENTS.md`).
+Xác minh trên workspace thật với bộ Full (`.cursor/rules/dmctn-taste-gate.mdc`, `skills/*`, `AGENTS.md`).  
+Validated on a real project workspace with Full pack installed.
 
 ---
 
+## Phạm vi tự động (headless)
 ## Automated coverage (headless)
 
-| Area | Result |
-|------|--------|
+| Khu vực / Area | Kết quả / Result |
+|----------------|------------------|
+| Activate extension + 7 lệnh | PASS |
 | Extension activate + 7 commands | PASS |
 | Dashboard HTML + CSP | PASS |
+| Cài Minimal / Full + detector | PASS |
 | Minimal / Full install + detector status | PASS |
 | `generatePrompt` → webview output | PASS |
-| Copy → host clipboard + toast | PASS |
+| Copy → clipboard host + toast | PASS |
 | i18n + icon 128×128 | PASS |
 
 ---
 
+## An toàn
 ## Safety
 
-| Check | Result |
-|-------|--------|
+| Kiểm tra / Check | Kết quả / Result |
+|------------------|------------------|
+| Không ghi file im lặng | PASS (thiết kế; user xác nhận cài) |
 | No silent file writes | PASS (by design; user confirms install) |
+| Không mạng / telemetry | PASS |
 | No network / telemetry | PASS |
+| Không đọc secret/token | PASS |
 | No secret/token reads | PASS |
+| Không ghi đè khi chưa hỏi | PASS (thiết kế) |
 | No overwrite without confirmation | PASS (by design) |
 
 ---
 
+## Ký duyệt
 ## Sign-off
 
 | | |
 |---|---|
-| **Tester** | Bùi Văn Tĩnh (Cursor runtime + coding QA) |
-| **Date** | 2026-06-01 |
+| **Người test / Tester** | Bùi Văn Tĩnh (Cursor runtime + coding QA) |
+| **Ngày / Date** | 2026-06-01 |
 | **Editor** | Cursor |
-| **Extension version tested** | 0.2.2 → packaged as 0.2.3 Store Ready |
-| **Verdict** | **FULL_PASS** (runtime + coding application) |
+| **Phiên bản extension test / Extension version tested** | 0.2.2 → đóng gói Store Ready 0.2.3+; docs 0.2.5 |
+| **Kết luận / Verdict** | **FULL_PASS** (runtime + coding application) |
