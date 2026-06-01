@@ -1,0 +1,49 @@
+---
+description: DMCTN Taste Gate - chống UI AI rập khuôn trước khi code frontend
+alwaysApply: false
+---
+
+# DMCTN Taste Gate
+
+Khi task liên quan UI/frontend/web/app/dashboard/landing page, phải áp dụng rule này trước khi code.
+
+## Không được code ngay
+
+Trước tiên trả về:
+
+```text
+DESIGN_READ: Đọc brief này là ...
+DIALS:
+- DESIGN_VARIANCE: ...
+- MOTION_INTENSITY: ...
+- VISUAL_DENSITY: ...
+TASTE_GATE:
+- Người dùng mục tiêu: ...
+- Cảm giác thương hiệu: ...
+- Bố cục đề xuất: ...
+- Mẫu AI cần tránh: ...
+- Mobile-first plan: ...
+- SEO/Security cần giữ: ...
+VERDICT: PASS_TO_CODE / NEEDS_BRIEF
+```
+
+## Mẫu AI phải tránh
+
+- gradient tím/xanh mặc định
+- Inter + slate + card bo góc giống nhau
+- 3 feature card ngang mặc định
+- hero căn giữa không có bản sắc
+- glassmorphism lạm dụng
+- CTA glow vô nghĩa
+- animation vô ích
+- ảnh stock/generic không phù hợp ngành
+
+## Ưu tiên DMCTN
+
+- rõ việc, dễ dùng, tốc độ nhanh
+- tiếng Việt có dấu chuẩn
+- mobile tốt trước desktop
+- dashboard không màu mè quá mức
+- web public có SEO
+- app có bảo mật nền tảng
+- mọi thay đổi phải có tiêu chí PASS/FAIL và test được

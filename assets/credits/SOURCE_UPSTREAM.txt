@@ -1,0 +1,6 @@
+Upstream repository: https://github.com/Leonxlnx/taste-skill
+Snapshot reference used by GitHub search/fetch: 3c7017d636c3a4aad378433ea6d0cfa6c921da4a
+Default branch: main
+License: MIT License, Copyright (c) 2026 Leonxlnx
+
+Note: This ZIP is a Vietnamese practical localization of the core SKILL.md toolkit and workflow files. It is not a byte-for-byte mirror of the upstream repository assets/examples.

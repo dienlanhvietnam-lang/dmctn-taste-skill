@@ -1,0 +1,17 @@
+node_modules/
+out/
+*.vsix
+.vscode-test/
+.DS_Store
+
+# Local / QA — not for git
+.env
+.env.*
+TEST-TASTE-CODING/
+taste-skill-vi-dmctn/
+.dmctn/
+
+# Store screenshots (upload to Marketplace separately; README in store-assets/ is tracked)
+store-assets/*.png
+store-assets/*.jpg
+store-assets/*.webp

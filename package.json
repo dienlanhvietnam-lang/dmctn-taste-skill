@@ -1,0 +1,122 @@
+{
+  "name": "dmctn-taste-skill",
+  "displayName": "DMCTN Taste Skill",
+  "description": "Install anti-slop UI taste skills into your project for Cursor / VS Code agents / Claude Code / Codex. Bilingual VI/EN dashboard.",
+  "version": "0.2.4",
+  "publisher": "buivantinh",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dienlanhvietnam-lang/dmctn-taste-skill.git"
+  },
+  "homepage": "https://github.com/dienlanhvietnam-lang/dmctn-taste-skill#readme",
+  "bugs": {
+    "url": "https://github.com/dienlanhvietnam-lang/dmctn-taste-skill/issues"
+  },
+  "author": {
+    "name": "DMCTN Studio / Bùi Văn Tĩnh"
+  },
+  "license": "MIT",
+  "icon": "media/icon.png",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Other",
+    "Snippets"
+  ],
+  "keywords": [
+    "ai",
+    "cursor",
+    "ui",
+    "design",
+    "frontend",
+    "agent",
+    "prompt",
+    "taste",
+    "anti-slop"
+  ],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "dmctnTaste.openDashboard",
+        "title": "DMCTN Taste: Open Dashboard"
+      },
+      {
+        "command": "dmctnTaste.installToProject",
+        "title": "DMCTN Taste: Install to Current Project"
+      },
+      {
+        "command": "dmctnTaste.updateSkills",
+        "title": "DMCTN Taste: Update Skills"
+      },
+      {
+        "command": "dmctnTaste.generatePrompt",
+        "title": "DMCTN Taste: Generate Cursor Prompt"
+      },
+      {
+        "command": "dmctnTaste.checkSetup",
+        "title": "DMCTN Taste: Check Project Setup"
+      },
+      {
+        "command": "dmctnTaste.removeFromProject",
+        "title": "DMCTN Taste: Remove from Project"
+      },
+      {
+        "command": "dmctnTaste.switchLanguage",
+        "title": "DMCTN Taste: Switch Language"
+      }
+    ],
+    "configuration": {
+      "title": "DMCTN Taste Skill",
+      "properties": {
+        "dmctnTaste.language": {
+          "type": "string",
+          "enum": [
+            "auto",
+            "vi",
+            "en"
+          ],
+          "default": "auto",
+          "description": "Ngôn ngữ giao diện / UI language (auto = theo VS Code)."
+        },
+        "dmctnTaste.neverAskInstall": {
+          "type": "boolean",
+          "default": false,
+          "description": "Không hỏi cài đặt khi mở project thiếu skill / Do not prompt to install on startup."
+        },
+        "dmctnTaste.defaultPack": {
+          "type": "string",
+          "enum": [
+            "minimal",
+            "full"
+          ],
+          "default": "minimal",
+          "description": "Gói cài mặc định / Default install pack."
+        },
+        "dmctnTaste.backupBeforeUpdate": {
+          "type": "boolean",
+          "default": true,
+          "description": "Backup file cũ trước khi update / Backup existing files before update."
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile",
+    "test": "node --test \"out/test/**/*.test.js\"",
+    "package": "vsce package --no-dependencies"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "@types/vscode": "^1.85.0",
+    "typescript": "^5.4.0",
+    "@vscode/vsce": "^2.24.0"
+  }
+}
