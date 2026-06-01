@@ -9,6 +9,22 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 
 ---
 
+## [0.2.8] — Dashboard visual polish
+## [0.2.8] — Dashboard visual polish
+
+### Thay đổi / Changed
+- Tinh chỉnh layout, spacing, hierarchy và mật độ nội dung dashboard (Overview, Install, Skills, Prompt, Guide, Settings, About).  
+  Refined dashboard layout, spacing, hierarchy, and visual density for Marketplace screenshots.
+
+- Design tokens sâu hơn (`--dm-bg-elevated`, shadow nhẹ, button hierarchy rõ).  
+  Deeper design tokens and clearer button hierarchy.
+
+### Ghi chú / Notes
+- **Không** đổi logic install/update/remove/prompt.  
+  **No** install/update/remove/prompt behavior changes.
+
+---
+
 ## [0.2.7] — Logo + dashboard Việt Nam hiện đại
 ## [0.2.7] — Logo mapping + modern Vietnamese dashboard
 

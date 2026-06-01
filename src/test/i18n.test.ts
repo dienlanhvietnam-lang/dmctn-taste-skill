@@ -65,7 +65,10 @@ test('i18n: dashboard UX keys exist in vi and en', () => {
     'skills.group.core',
     'about.privacy.title',
     'empty.noWorkspace',
-    'install.recommended'
+    'install.recommended',
+    'overview.pillLocal',
+    'overview.actionsTitle',
+    'prompts.outputTitle'
   ];
   for (const key of keys) {
     assert.ok(t('vi', key) && t('vi', key) !== key, 'missing vi: ' + key);

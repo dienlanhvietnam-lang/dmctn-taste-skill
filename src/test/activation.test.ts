@@ -182,6 +182,10 @@ test('openDashboard: creates a webview with HTML', async () => {
   assert.ok(lastPanel._html.includes('dmctn-taste-logo-dashboard.png'), 'dashboard logo path missing');
   assert.ok(lastPanel._html.includes('img-src'), 'CSP img-src missing');
   assert.ok(lastPanel._html.includes('brand-logo'), 'hero logo element missing');
+  assert.ok(lastPanel._html.includes('hero-premium'), 'premium hero missing');
+  assert.ok(lastPanel._html.includes('overview-layout'), 'overview layout missing');
+  assert.ok(lastPanel._html.includes('prompt-output-card'), 'prompt output card missing');
+  assert.ok(lastPanel._html.includes('--dm-bg-elevated'), 'elevated tokens missing');
 });
 
 test('install via dashboard message creates files in temp workspace', async () => {

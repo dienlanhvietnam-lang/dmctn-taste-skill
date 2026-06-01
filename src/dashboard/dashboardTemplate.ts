@@ -1,7 +1,6 @@
 /**
- * dashboardTemplate.ts — HTML/CSS/JS cho webview dashboard.
+ * dashboardTemplate.ts — Premium Vietnamese developer console (webview).
  * Icon slots prepared for next icon mapping phase.
- * Logo: media/dmctn-taste-logo-dashboard.png via webview URI.
  */
 
 export function buildDashboardHtml(
@@ -20,180 +19,234 @@ export function buildDashboardHtml(
 <style>
   /* Icon slots prepared for next icon mapping phase. */
   :root{
-    --dm-bg:#0c0e0b;
-    --dm-panel:#141812;
-    --dm-panel-soft:#1a2016;
-    --dm-border:#2a3524;
-    --dm-text:#ebe8df;
-    --dm-muted:#96a08c;
-    --dm-green:#4f7a37;
-    --dm-green-soft:rgba(79,122,55,.2);
-    --dm-red:#8c2f2a;
-    --dm-red-soft:rgba(140,47,42,.22);
-    --dm-gold:#c9a227;
-    --dm-gold-soft:rgba(201,162,39,.14);
+    --dm-bg:#080a08;
+    --dm-bg-elevated:#0e110d;
+    --dm-panel:#131712;
+    --dm-panel-2:#181f15;
+    --dm-border-soft:rgba(154,160,140,.12);
+    --dm-border-strong:rgba(154,160,140,.22);
+    --dm-text:#ece9e0;
+    --dm-text-soft:#a8b09a;
+    --dm-green:#527a3d;
+    --dm-green-soft:rgba(82,122,61,.22);
+    --dm-green-glow:rgba(82,122,61,.08);
+    --dm-red:#7a322e;
+    --dm-red-soft:rgba(122,50,46,.24);
+    --dm-gold:#b8941f;
+    --dm-gold-soft:rgba(184,148,31,.16);
     --dm-focus:#c9a227;
-    --dm-charcoal:#0a0c09;
-    --dm-offwhite:#f4f1e8;
-    --dm-accent:linear-gradient(90deg,var(--dm-green) 0%,var(--dm-gold) 55%,var(--dm-red) 100%);
+    --dm-charcoal:#060806;
+    --dm-offwhite:#f3f0e6;
+    --dm-shadow-soft:0 1px 0 rgba(255,255,255,.04) inset, 0 8px 24px rgba(0,0,0,.28);
+    --dm-shadow-card:0 12px 32px rgba(0,0,0,.22);
     --sp-1:4px;--sp-2:8px;--sp-3:12px;--sp-4:16px;--sp-5:20px;--sp-6:24px;--sp-7:32px;
-    --r-sm:6px;--r-md:10px;--r-lg:14px;
+    --r-sm:10px;--r-md:14px;--r-lg:18px;
     --font:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
     --mono:ui-monospace,Consolas,"Courier New",monospace;
   }
   *{box-sizing:border-box;}
   body{margin:0;font-family:var(--font);background:var(--dm-bg);color:var(--dm-text);
-    font-size:14px;line-height:1.55;-webkit-font-smoothing:antialiased;}
+    font-size:14px;line-height:1.5;-webkit-font-smoothing:antialiased;}
   .app{display:flex;min-height:100vh;background:var(--dm-bg);}
-  .side{width:196px;flex:0 0 196px;background:var(--dm-panel);border-right:1px solid var(--dm-border);
-    padding:var(--sp-4) var(--sp-3);display:flex;flex-direction:column;gap:var(--sp-1);}
-  .brand{padding:var(--sp-2) var(--sp-3) var(--sp-4);border-bottom:1px solid var(--dm-border);margin-bottom:var(--sp-2);}
-  .brand-title{font-weight:700;font-size:14px;letter-spacing:.01em;color:var(--dm-offwhite);}
-  .brand-sub{font-size:11px;color:var(--dm-muted);margin-top:var(--sp-2);line-height:1.4;}
+  .side{width:176px;flex:0 0 176px;background:var(--dm-bg-elevated);
+    border-right:1px solid var(--dm-border-soft);padding:var(--sp-4) var(--sp-2);
+    display:flex;flex-direction:column;gap:2px;}
+  .brand{padding:var(--sp-2) var(--sp-3) var(--sp-4);margin-bottom:var(--sp-1);}
+  .brand-title{font-weight:650;font-size:13px;letter-spacing:.02em;color:var(--dm-offwhite);}
+  .brand-sub{font-size:10px;color:var(--dm-text-soft);margin-top:var(--sp-2);line-height:1.45;}
   .navbtn{display:flex;align-items:center;gap:var(--sp-3);width:100%;text-align:left;
-    background:transparent;border:1px solid transparent;color:var(--dm-muted);
-    padding:var(--sp-2) var(--sp-3);border-radius:var(--r-sm);cursor:pointer;font-size:13px;}
-  .navbtn:hover{background:var(--dm-panel-soft);color:var(--dm-text);border-color:var(--dm-border);}
-  .navbtn:focus-visible{outline:2px solid var(--dm-focus);outline-offset:2px;}
-  .navbtn.active{background:var(--dm-green-soft);color:var(--dm-offwhite);
-    border-color:rgba(79,122,55,.4);border-left:3px solid var(--dm-gold);padding-left:calc(var(--sp-3) - 2px);}
-  .navbtn.active .dm-icon{opacity:1;border-color:rgba(201,162,39,.35);}
-  .nav-label{flex:1;}
-  .dm-icon{width:18px;height:18px;flex-shrink:0;border-radius:var(--r-sm);opacity:.75;
-    background:var(--dm-panel-soft);border:1px solid var(--dm-border);position:relative;}
-  .dm-icon--overview::after{content:"";position:absolute;inset:4px;border:2px solid var(--dm-green);border-radius:2px;}
+    background:transparent;border:none;color:var(--dm-text-soft);
+    padding:7px var(--sp-3);border-radius:var(--r-sm);cursor:pointer;font-size:12.5px;
+    border-left:3px solid transparent;transition:background .12s,color .12s;}
+  .navbtn:hover{background:rgba(255,255,255,.03);color:var(--dm-text);}
+  .navbtn:focus-visible{outline:2px solid var(--dm-focus);outline-offset:1px;}
+  .navbtn.active{background:var(--dm-green-glow);color:var(--dm-offwhite);
+    border-left-color:var(--dm-gold);}
+  .navbtn.active .dm-icon{opacity:1;border-color:rgba(184,148,31,.3);}
+  .nav-label{flex:1;line-height:1.3;}
+  .dm-icon{width:16px;height:16px;flex-shrink:0;border-radius:6px;opacity:.7;
+    background:var(--dm-panel-2);border:1px solid var(--dm-border-soft);position:relative;}
+  .dm-icon--overview::after{content:"";position:absolute;inset:3px;border:2px solid var(--dm-green);border-radius:2px;}
   .dm-icon--install::after{content:"+";position:absolute;inset:0;display:flex;align-items:center;
-    justify-content:center;font-size:12px;font-weight:700;color:var(--dm-gold);}
-  .dm-icon--skills::after{content:"";position:absolute;left:4px;right:4px;top:5px;height:2px;
-    background:var(--dm-green);box-shadow:0 4px 0 var(--dm-green),0 8px 0 var(--dm-muted);}
-  .dm-icon--prompt::after{content:"";position:absolute;inset:5px 4px;border-left:2px solid var(--dm-gold);}
+    justify-content:center;font-size:11px;font-weight:700;color:var(--dm-gold);}
+  .dm-icon--skills::after{content:"";position:absolute;left:3px;right:3px;top:4px;height:2px;
+    background:var(--dm-green);box-shadow:0 3px 0 var(--dm-green),0 6px 0 var(--dm-text-soft);}
+  .dm-icon--prompt::after{content:"";position:absolute;inset:4px 3px;border-left:2px solid var(--dm-gold);}
   .dm-icon--guide::after{content:"?";position:absolute;inset:0;display:flex;align-items:center;
-    justify-content:center;font-size:11px;font-weight:700;color:var(--dm-muted);}
-  .dm-icon--settings::after{content:"";position:absolute;inset:5px;border:2px solid var(--dm-muted);border-radius:50%;}
+    justify-content:center;font-size:10px;font-weight:700;color:var(--dm-text-soft);}
+  .dm-icon--settings::after{content:"";position:absolute;inset:4px;border:2px solid var(--dm-text-soft);border-radius:50%;}
   .dm-icon--about::after{content:"i";position:absolute;inset:0;display:flex;align-items:center;
-    justify-content:center;font-size:11px;font-weight:700;color:var(--dm-green);}
-  .side-foot{margin-top:auto;padding-top:var(--sp-3);}
-  .badge{font-size:11px;padding:var(--sp-2) var(--sp-3);border-radius:var(--r-sm);
-    text-align:center;font-weight:600;line-height:1.35;}
-  .badge.ok{background:var(--dm-green-soft);color:#9ccb78;border:1px solid rgba(79,122,55,.35);}
-  .badge.no{background:var(--dm-red-soft);color:#e09a96;border:1px solid rgba(140,47,42,.35);}
-  .badge.part{background:var(--dm-gold-soft);color:#e2c766;border:1px solid rgba(201,162,39,.35);}
-  .main{flex:1;padding:var(--sp-6) var(--sp-7);overflow:auto;position:relative;
-    background:linear-gradient(180deg,rgba(79,122,55,.04) 0%,transparent 120px);}
-  .main::before{content:"";position:absolute;top:0;left:0;right:0;height:2px;background:var(--dm-accent);opacity:.85;}
-  .page{display:none;max-width:860px;}
-  .page.active{display:block;animation:fadeIn .2s ease;}
-  @keyframes fadeIn{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}
-  .page-h1{font-size:22px;font-weight:700;margin:0 0 var(--sp-2);color:var(--dm-offwhite);}
-  .page-lead{color:var(--dm-muted);margin:0 0 var(--sp-5);font-size:14px;max-width:52em;}
-  .page-h2{font-size:11px;font-weight:600;margin:var(--sp-5) 0 var(--sp-3);
-    text-transform:uppercase;letter-spacing:.06em;color:var(--dm-muted);}
-  .card{background:var(--dm-panel);border:1px solid var(--dm-border);border-radius:var(--r-md);
-    padding:var(--sp-5);margin:var(--sp-4) 0;}
-  .card-soft{background:var(--dm-panel-soft);}
-  .hero{border-left:3px solid var(--dm-gold);padding:var(--sp-4);background:var(--dm-panel-soft);}
-  .hero-inner{display:flex;gap:var(--sp-4);align-items:flex-start;}
-  .brand-logo{width:72px;height:72px;object-fit:contain;flex-shrink:0;border-radius:var(--r-sm);
-    background:transparent;}
-  .brand-logo--sm{width:48px;height:48px;}
+    justify-content:center;font-size:10px;font-weight:700;color:var(--dm-green);}
+  .side-foot{margin-top:auto;padding:var(--sp-3) var(--sp-2) 0;}
+  .status-chip{font-size:10px;padding:6px 10px;border-radius:var(--r-sm);font-weight:600;
+    line-height:1.35;border:1px solid var(--dm-border-soft);background:var(--dm-panel);}
+  .status-chip.ok{color:#9ccb78;background:var(--dm-green-soft);border-color:rgba(82,122,61,.35);}
+  .status-chip.no{color:#d9a09c;background:var(--dm-red-soft);}
+  .status-chip.part{color:#e2c766;background:var(--dm-gold-soft);}
+  .main{flex:1;padding:var(--sp-6) var(--sp-7) var(--sp-7);overflow:auto;
+    background:radial-gradient(ellipse 80% 50% at 20% -10%,var(--dm-green-glow),transparent 55%),
+      var(--dm-bg);}
+  .main-inner{max-width:920px;margin:0 auto;}
+  .page{display:none;}
+  .page.active{display:block;animation:fadeIn .18s ease;}
+  @keyframes fadeIn{from{opacity:0;transform:translateY(3px)}to{opacity:1;transform:none}}
+  .page-head{margin-bottom:var(--sp-5);}
+  .page-h1{font-size:21px;font-weight:650;margin:0 0 var(--sp-2);color:var(--dm-offwhite);letter-spacing:-.02em;}
+  .page-lead{color:var(--dm-text-soft);margin:0;font-size:13.5px;max-width:42em;line-height:1.55;}
+  .section-label{font-size:10px;font-weight:650;text-transform:uppercase;letter-spacing:.08em;
+    color:var(--dm-text-soft);margin:0 0 var(--sp-3);}
+  .card{background:var(--dm-panel);border:1px solid var(--dm-border-soft);border-radius:var(--r-md);
+    box-shadow:var(--dm-shadow-soft);}
+  .card-pad{padding:var(--sp-5);}
+  .card-inset{background:var(--dm-panel-2);border-color:var(--dm-border-soft);}
+  .overview-layout{display:grid;gap:var(--sp-4);}
+  @media(min-width:780px){
+    .overview-layout{grid-template-columns:1.15fr .85fr;}
+    .hero-premium{grid-column:1/-1;}
+    .info-strip{grid-column:1/-1;}
+  }
+  .hero-premium{position:relative;overflow:hidden;padding:var(--sp-5) var(--sp-6);
+    border:1px solid var(--dm-border-strong);background:linear-gradient(135deg,var(--dm-panel) 0%,var(--dm-panel-2) 100%);}
+  .hero-premium::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;
+    background:linear-gradient(90deg,var(--dm-green),var(--dm-gold) 70%,var(--dm-red));}
+  .hero-inner{display:flex;gap:var(--sp-5);align-items:center;}
+  .brand-logo{width:64px;height:64px;object-fit:contain;flex-shrink:0;
+    filter:drop-shadow(0 4px 12px rgba(0,0,0,.35));}
+  .brand-logo--sm{width:44px;height:44px;}
   .hero-text{flex:1;min-width:0;}
-  .hero h1{font-size:20px;margin:0 0 var(--sp-2);color:var(--dm-offwhite);}
-  .hero p{margin:0;color:var(--dm-muted);font-size:13px;line-height:1.5;}
-  .pack-badge{display:inline-block;font-size:10px;font-weight:700;text-transform:uppercase;
-    letter-spacing:.05em;padding:2px 8px;border-radius:999px;background:var(--dm-gold-soft);
-    color:var(--dm-gold);border:1px solid rgba(201,162,39,.35);margin-bottom:var(--sp-2);}
-  .pack-card.featured .pack-badge{margin-bottom:var(--sp-1);}
-  .about-head{display:flex;gap:var(--sp-4);align-items:center;margin-bottom:var(--sp-4);}
-  .guide-card .card-icon{margin-bottom:var(--sp-2);}
-  .status-banner{display:flex;flex-wrap:wrap;align-items:center;gap:var(--sp-4);
-    padding:var(--sp-4);background:var(--dm-panel-soft);border-radius:var(--r-md);
-    border:1px solid var(--dm-border);margin-bottom:var(--sp-4);}
-  .status-banner .st{font-size:13px;font-weight:600;padding:var(--sp-2) var(--sp-3);
-    border-radius:999px;}
-  .st.included{background:var(--dm-green-soft);color:#9ccb78;}
-  .st.missing{background:var(--dm-red-soft);color:#e09a96;}
-  .st.modified{background:var(--dm-gold-soft);color:#e2c766;}
-  .progress-wrap{flex:1;min-width:140px;}
-  .progress-label{font-size:11px;color:var(--dm-muted);margin-bottom:var(--sp-1);}
-  .progress-track{height:6px;background:var(--dm-charcoal);border-radius:999px;overflow:hidden;border:1px solid var(--dm-border);}
-  .progress-fill{height:100%;background:var(--dm-green);border-radius:999px;transition:width .25s;width:0;}
-  .row{display:flex;gap:var(--sp-3);flex-wrap:wrap;align-items:center;margin-top:var(--sp-3);}
+  .hero-premium h1{font-size:22px;margin:0 0 var(--sp-2);color:var(--dm-offwhite);font-weight:650;}
+  .hero-premium p{margin:0;color:var(--dm-text-soft);font-size:13.5px;max-width:36em;}
+  .status-panel .status-big{font-size:14px;font-weight:600;padding:var(--sp-3) var(--sp-4);
+    border-radius:var(--r-sm);display:inline-block;margin-bottom:var(--sp-4);}
+  .st.included{background:var(--dm-green-soft);color:#a8d68a;}
+  .st.missing{background:var(--dm-red-soft);color:#e0aaa6;}
+  .st.modified{background:var(--dm-gold-soft);color:#e8d078;}
+  .progress-block{margin-bottom:var(--sp-4);}
+  .progress-label{font-size:11px;color:var(--dm-text-soft);margin-bottom:var(--sp-2);font-weight:500;}
+  .progress-track{height:8px;background:var(--dm-charcoal);border-radius:999px;overflow:hidden;
+    border:1px solid var(--dm-border-soft);}
+  .progress-fill{height:100%;background:linear-gradient(90deg,var(--dm-green),#6a9a52);
+    border-radius:999px;transition:width .3s ease;width:0;}
+  .info-strip{display:flex;flex-wrap:wrap;gap:var(--sp-2);}
+  .pill{font-size:11px;padding:6px 12px;border-radius:999px;background:var(--dm-panel-2);
+    border:1px solid var(--dm-border-soft);color:var(--dm-text-soft);white-space:nowrap;}
+  .pill strong{color:var(--dm-gold);font-weight:600;margin-right:4px;}
+  .action-toolbar{display:flex;flex-wrap:wrap;gap:var(--sp-3);align-items:center;}
   .btn{font-family:var(--font);font-size:13px;font-weight:600;border-radius:var(--r-sm);
-    padding:var(--sp-2) var(--sp-4);cursor:pointer;border:1px solid transparent;transition:background .15s,border-color .15s;}
+    padding:9px 16px;cursor:pointer;border:1px solid transparent;
+    transition:filter .12s,background .12s,border-color .12s;}
   .btn:focus-visible{outline:2px solid var(--dm-focus);outline-offset:2px;}
-  .btn-primary{background:var(--dm-green);color:#fff;border-color:var(--dm-green);}
-  .btn-primary:hover{filter:brightness(1.08);}
-  #btnCopy.btn-primary{background:var(--dm-gold);border-color:var(--dm-gold);color:var(--dm-charcoal);}
-  .btn-secondary{background:transparent;color:var(--dm-text);border-color:var(--dm-border);}
-  .btn-secondary:hover{background:var(--dm-panel-soft);}
+  .btn-lg{padding:11px 20px;font-size:14px;}
+  .btn-primary{background:var(--dm-green);color:#fff;border-color:#5f8f47;
+    box-shadow:0 1px 0 rgba(255,255,255,.12) inset;}
+  .btn-primary:hover{filter:brightness(1.1);}
+  .btn-secondary{background:var(--dm-panel-2);color:var(--dm-text);border-color:var(--dm-border-strong);}
+  .btn-secondary:hover{background:var(--dm-panel);border-color:var(--dm-gold-soft);}
+  .btn-tertiary{background:transparent;color:var(--dm-text-soft);border-color:var(--dm-border-soft);}
+  .btn-tertiary:hover{color:var(--dm-text);border-color:var(--dm-border-strong);}
+  .btn-ghost{background:transparent;color:var(--dm-text-soft);border-color:transparent;padding-left:12px;padding-right:12px;}
+  .btn-ghost:hover{color:var(--dm-text);background:rgba(255,255,255,.04);}
+  .btn-copy{background:var(--dm-gold);color:var(--dm-charcoal);border-color:#a08018;font-weight:700;}
+  .btn-copy:hover{filter:brightness(1.08);}
   .btn-danger{background:var(--dm-red);color:#fff;border-color:var(--dm-red);}
-  .btn-danger:hover{filter:brightness(1.1);}
-  .pack-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:var(--sp-3);}
-  .pack-card{background:var(--dm-panel-soft);border:1px solid var(--dm-border);border-radius:var(--r-md);
-    padding:var(--sp-4);display:flex;flex-direction:column;gap:var(--sp-2);}
-  .pack-card b{font-size:14px;color:var(--dm-offwhite);}
-  .pack-card .micro{font-size:12px;color:var(--dm-muted);flex:1;line-height:1.45;}
-  .pack-card .btn{width:100%;margin-top:var(--sp-2);}
-  .pack-card.featured{border-color:rgba(79,122,55,.5);box-shadow:inset 0 0 0 1px rgba(79,122,55,.15);}
-  .callout-gold{font-size:12px;color:var(--dm-gold);padding:var(--sp-3) var(--sp-4);
-    background:var(--dm-gold-soft);border-radius:var(--r-sm);border:1px solid rgba(201,162,39,.25);margin:var(--sp-4) 0;}
-  ul.files{list-style:none;padding:0;margin:var(--sp-2) 0;}
-  ul.files li{font-family:var(--mono);font-size:12px;color:var(--dm-text);
-    padding:var(--sp-2) var(--sp-3);background:var(--dm-charcoal);border:1px solid var(--dm-border);
-    border-radius:var(--r-sm);margin:var(--sp-1) 0;}
+  .pack-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--sp-4);}
+  @media(max-width:820px){.pack-grid{grid-template-columns:1fr;}}
+  .pack-card{background:var(--dm-panel-2);border:1px solid var(--dm-border-soft);border-radius:var(--r-md);
+    padding:var(--sp-5);display:flex;flex-direction:column;gap:var(--sp-2);min-height:168px;}
+  .pack-card b{font-size:15px;color:var(--dm-offwhite);}
+  .pack-card .micro{font-size:12px;color:var(--dm-text-soft);flex:1;line-height:1.5;}
+  .pack-card .btn{width:100%;margin-top:auto;}
+  .pack-card.featured{border-color:rgba(82,122,61,.45);background:linear-gradient(180deg,rgba(82,122,61,.1),var(--dm-panel-2));
+    box-shadow:var(--dm-shadow-card);}
+  .pack-badge{display:inline-block;font-size:9px;font-weight:700;text-transform:uppercase;
+    letter-spacing:.06em;padding:3px 8px;border-radius:999px;background:var(--dm-gold-soft);
+    color:var(--dm-gold);border:1px solid rgba(184,148,31,.3);width:fit-content;}
+  .callout-safe{font-size:12px;color:var(--dm-gold);padding:var(--sp-3) var(--sp-4);
+    background:var(--dm-gold-soft);border-radius:var(--r-sm);border:1px solid rgba(184,148,31,.2);
+    margin:var(--sp-4) 0;line-height:1.45;}
+  .files-panel{margin-top:var(--sp-4);}
+  ul.files{list-style:none;padding:0;margin:0;display:grid;gap:var(--sp-2);
+    grid-template-columns:repeat(auto-fill,minmax(240px,1fr));}
+  ul.files li{font-family:var(--mono);font-size:11.5px;color:var(--dm-text);
+    padding:var(--sp-2) var(--sp-3);background:var(--dm-charcoal);border:1px solid var(--dm-border-soft);
+    border-radius:var(--r-sm);}
   .field{margin-bottom:var(--sp-4);}
-  .field label{display:block;font-size:12px;font-weight:500;color:var(--dm-muted);margin-bottom:var(--sp-2);}
-  select,input[type=text],input[type=search]{width:100%;background:var(--dm-panel-soft);
-    border:1px solid var(--dm-border);color:var(--dm-text);padding:var(--sp-2) var(--sp-3);
+  .field:last-child{margin-bottom:0;}
+  .field label{display:block;font-size:11px;font-weight:600;color:var(--dm-text-soft);
+    margin-bottom:var(--sp-2);text-transform:uppercase;letter-spacing:.04em;}
+  select,input[type=text],input[type=search]{width:100%;background:var(--dm-charcoal);
+    border:1px solid var(--dm-border-soft);color:var(--dm-text);padding:10px var(--sp-3);
     border-radius:var(--r-sm);font-size:13px;font-family:var(--font);}
-  select:focus,input:focus{outline:2px solid var(--dm-focus);outline-offset:0;border-color:var(--dm-gold);}
-  .check-row{display:flex;align-items:center;gap:var(--sp-3);margin:var(--sp-3) 0;}
+  select:focus,input:focus{outline:none;border-color:var(--dm-gold);box-shadow:0 0 0 2px var(--dm-gold-soft);}
+  .search-wrap{position:relative;}
+  .check-row{display:flex;align-items:center;gap:var(--sp-3);margin:var(--sp-4) 0 var(--sp-3);
+    padding:var(--sp-3);background:var(--dm-panel-2);border-radius:var(--r-sm);border:1px solid var(--dm-border-soft);}
   .check-row input{width:auto;accent-color:var(--dm-green);}
   .check-row label{margin:0;font-size:13px;color:var(--dm-text);}
-  .skill-group{margin:var(--sp-4) 0 var(--sp-2);}
-  .skill-group-title{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.05em;
-    color:var(--dm-muted);margin:var(--sp-4) 0 var(--sp-2);padding-bottom:var(--sp-2);
-    border-bottom:1px solid var(--dm-border);}
+  .skill-group{margin:var(--sp-4) 0 0;}
+  .skill-group-title{font-size:10px;font-weight:650;text-transform:uppercase;letter-spacing:.07em;
+    color:var(--dm-gold);margin:0 0 var(--sp-2);padding-bottom:var(--sp-2);
+    border-bottom:1px solid var(--dm-border-soft);}
   .skill-row{display:grid;grid-template-columns:auto 1fr auto;gap:var(--sp-3);align-items:start;
-    padding:var(--sp-3) 0;border-bottom:1px solid var(--dm-border);}
-  .skill-row:last-child{border-bottom:none;}
-  .skill-row input{margin-top:4px;accent-color:var(--dm-green);}
-  .skill-row .name{font-size:13px;font-weight:600;}
-  .skill-row .desc{font-size:12px;color:var(--dm-muted);margin:var(--sp-1) 0 0;}
-  .tag{font-size:10px;padding:2px 6px;border-radius:999px;margin-left:var(--sp-2);vertical-align:middle;
-    background:var(--dm-gold-soft);color:var(--dm-gold);}
-  .prompt-layout{display:grid;grid-template-columns:1fr;gap:var(--sp-4);}
-  @media(min-width:720px){.prompt-layout{grid-template-columns:280px 1fr;align-items:start;}}
-  .prompt-out-wrap{margin-top:var(--sp-2);}
-  textarea.prompt-out{width:100%;min-height:340px;background:var(--dm-charcoal);
-    border:1px solid var(--dm-border);color:var(--dm-text);padding:var(--sp-4);
-    border-radius:var(--r-md);font-family:var(--mono);font-size:12.5px;line-height:1.55;resize:vertical;}
-  .paste-hint{font-size:12px;color:var(--dm-gold);margin-top:var(--sp-2);}
-  .guide-grid{display:grid;gap:var(--sp-3);}
-  @media(min-width:640px){.guide-grid{grid-template-columns:repeat(auto-fit,minmax(240px,1fr));}}
-  .guide-card{background:var(--dm-panel-soft);border:1px solid var(--dm-border);border-radius:var(--r-md);padding:var(--sp-4);}
-  .guide-card h3{font-size:14px;margin:0 0 var(--sp-2);color:var(--dm-offwhite);}
-  .guide-card p{font-size:12px;color:var(--dm-muted);margin:0 0 var(--sp-3);}
-  pre.snip{margin:0;padding:var(--sp-3);background:var(--dm-charcoal);border:1px solid var(--dm-border);
-    border-radius:var(--r-sm);font-family:var(--mono);font-size:11px;color:var(--dm-text);overflow:auto;white-space:pre-wrap;}
-  .privacy-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:var(--sp-3);margin:var(--sp-4) 0;}
-  .privacy-item{background:var(--dm-panel-soft);border:1px solid var(--dm-border);border-radius:var(--r-sm);
-    padding:var(--sp-3);font-size:12px;}
-  .privacy-item b{display:block;font-size:11px;text-transform:uppercase;letter-spacing:.04em;
-    color:var(--dm-gold);margin-bottom:var(--sp-1);}
-  .meta-line{font-size:13px;color:var(--dm-muted);margin:var(--sp-2) 0;}
+    padding:var(--sp-3);margin-bottom:var(--sp-2);border-radius:var(--r-sm);
+    border:1px solid transparent;background:transparent;transition:background .1s,border-color .1s;}
+  .skill-row:hover{background:rgba(255,255,255,.02);border-color:var(--dm-border-soft);}
+  .skill-row input{margin-top:5px;accent-color:var(--dm-green);}
+  .skill-row .name{font-size:13px;font-weight:600;color:var(--dm-offwhite);}
+  .skill-row .desc{font-size:12px;color:var(--dm-text-soft);margin:var(--sp-1) 0 0;line-height:1.4;}
+  .tag{font-size:9px;padding:2px 6px;border-radius:999px;margin-left:var(--sp-2);vertical-align:middle;
+    background:var(--dm-gold-soft);color:var(--dm-gold);font-weight:600;}
+  .skill-row .st{font-size:10px;font-weight:650;padding:4px 10px;border-radius:999px;white-space:nowrap;}
+  .prompt-stage{display:grid;gap:var(--sp-4);}
+  @media(min-width:800px){.prompt-stage{grid-template-columns:260px 1fr;align-items:stretch;}}
+  .prompt-controls{display:flex;flex-direction:column;gap:0;}
+  .prompt-output-card{flex:1;display:flex;flex-direction:column;min-height:400px;
+    border:1px solid var(--dm-border-strong);border-radius:var(--r-md);background:var(--dm-panel);
+    box-shadow:var(--dm-shadow-card);overflow:hidden;}
+  .prompt-output-head{padding:var(--sp-3) var(--sp-4);border-bottom:1px solid var(--dm-border-soft);
+    display:flex;align-items:center;justify-content:space-between;gap:var(--sp-3);
+    background:var(--dm-panel-2);}
+  .prompt-output-head .section-label{margin:0;}
+  textarea.prompt-out{flex:1;width:100%;min-height:360px;background:var(--dm-charcoal);
+    border:none;color:var(--dm-text);padding:var(--sp-4) var(--sp-5);
+    font-family:var(--mono);font-size:12.5px;line-height:1.6;resize:vertical;}
+  textarea.prompt-out:focus{outline:none;}
+  .paste-hint{font-size:11.5px;color:var(--dm-gold);padding:var(--sp-3) var(--sp-4);
+    border-top:1px solid var(--dm-border-soft);background:var(--dm-panel-2);margin:0;}
+  .guide-grid{display:grid;gap:var(--sp-4);}
+  @media(min-width:700px){.guide-grid{grid-template-columns:repeat(3,1fr);}}
+  .guide-card{background:var(--dm-panel-2);border:1px solid var(--dm-border-soft);
+    border-radius:var(--r-md);padding:var(--sp-4);display:flex;flex-direction:column;}
+  .guide-card h3{font-size:13px;margin:0 0 var(--sp-2);color:var(--dm-offwhite);font-weight:650;}
+  .guide-card p{font-size:12px;color:var(--dm-text-soft);margin:0 0 var(--sp-3);flex:1;line-height:1.5;}
+  .guide-card .card-icon{margin-bottom:var(--sp-2);}
+  pre.snip{margin:0;padding:var(--sp-3);background:var(--dm-charcoal);border:1px solid var(--dm-border-soft);
+    border-radius:var(--r-sm);font-family:var(--mono);font-size:10.5px;color:var(--dm-text);line-height:1.45;}
+  .settings-card{max-width:480px;}
+  .privacy-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:var(--sp-3);margin:var(--sp-4) 0;}
+  @media(min-width:600px){.privacy-grid{grid-template-columns:repeat(4,1fr);}}
+  .privacy-item{background:var(--dm-panel-2);border:1px solid var(--dm-border-soft);border-radius:var(--r-sm);
+    padding:var(--sp-3);font-size:11.5px;line-height:1.45;color:var(--dm-text-soft);}
+  .privacy-item b{display:block;font-size:9px;text-transform:uppercase;letter-spacing:.06em;
+    color:var(--dm-gold);margin-bottom:var(--sp-2);font-weight:650;}
+  .about-head{display:flex;gap:var(--sp-4);align-items:flex-start;margin-bottom:var(--sp-5);}
+  .about-meta{max-width:520px;}
+  .meta-line{font-size:12.5px;color:var(--dm-text-soft);margin:var(--sp-2) 0;}
   .meta-line strong{color:var(--dm-text);}
-  .empty{padding:var(--sp-5);text-align:center;color:var(--dm-muted);font-size:13px;
-    border:1px dashed var(--dm-border);border-radius:var(--r-md);}
+  .empty{padding:var(--sp-6);text-align:center;color:var(--dm-text-soft);font-size:13px;
+    border:1px dashed var(--dm-border-soft);border-radius:var(--r-md);background:var(--dm-panel-2);}
   .toast{position:fixed;bottom:var(--sp-5);right:var(--sp-5);background:var(--dm-green);color:#fff;
-    padding:var(--sp-3) var(--sp-4);border-radius:var(--r-sm);opacity:0;transform:translateY(8px);
-    transition:.22s;pointer-events:none;font-size:13px;max-width:min(420px,90vw);box-shadow:0 8px 24px rgba(0,0,0,.35);z-index:99;}
+    padding:var(--sp-3) var(--sp-5);border-radius:var(--r-sm);opacity:0;transform:translateY(8px);
+    transition:.2s;pointer-events:none;font-size:13px;max-width:min(400px,90vw);
+    box-shadow:var(--dm-shadow-card);z-index:99;border:1px solid rgba(255,255,255,.1);}
   .toast.show{opacity:1;transform:translateY(0);}
+  .mb-4{margin-bottom:var(--sp-4);}
   @media(max-width:720px){
     .app{flex-direction:column;}
-    .side{width:100%;flex:none;flex-direction:row;flex-wrap:wrap;align-items:center;}
+    .side{width:100%;flex:none;flex-direction:row;flex-wrap:wrap;padding:var(--sp-3);}
     .side-foot{width:100%;}
     .main{padding:var(--sp-4);}
+    .pack-grid{grid-template-columns:1fr;}
   }
 </style>
 </head>
@@ -201,7 +254,7 @@ export function buildDashboardHtml(
 <div class="app">
   <nav class="side" aria-label="Dashboard navigation">
     <div class="brand">
-      <div class="brand-title">DMCTN Taste Skill</div>
+      <div class="brand-title">DMCTN Taste</div>
       <div class="brand-sub" data-i="app.subtitle"></div>
     </div>
     <button class="navbtn active" data-tab="overview" type="button">
@@ -233,45 +286,60 @@ export function buildDashboardHtml(
       <span class="nav-label" data-i="nav.about"></span>
     </button>
     <div class="side-foot">
-      <div id="badge" class="badge no" role="status"></div>
+      <div id="badge" class="status-chip no" role="status"></div>
     </div>
   </nav>
 
   <main class="main">
+  <div class="main-inner">
     <section class="page active" id="overview">
-      <div class="card hero">
-        <div class="hero-inner">
-          <img class="brand-logo" src="${logoUri}" alt="" width="72" height="72" />
-          <div class="hero-text">
-            <h1 data-i="overview.heroTitle"></h1>
-            <p data-i="overview.intro"></p>
+      <div class="overview-layout">
+        <div class="hero-premium card">
+          <div class="hero-inner">
+            <img class="brand-logo" src="${logoUri}" alt="" width="64" height="64" />
+            <div class="hero-text">
+              <h1 data-i="overview.heroTitle"></h1>
+              <p data-i="overview.intro"></p>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="status-banner">
-        <div id="ovStatus" class="st missing" role="status"></div>
-        <div class="progress-wrap">
-          <div class="progress-label" id="progLabel" data-i="overview.skillProgress"></div>
-          <div class="progress-track"><div class="progress-fill" id="progFill"></div></div>
+        <div class="info-strip card card-pad">
+          <span class="pill"><strong>●</strong> <span data-i="overview.pillLocal"></span></span>
+          <span class="pill"><strong>13</strong> <span data-i="overview.pillSkills"></span></span>
+          <span class="pill"><strong>○</strong> <span data-i="overview.pillTelemetry"></span></span>
+          <span class="pill"><strong>⇄</strong> <span data-i="overview.pillBilingual"></span></span>
         </div>
-      </div>
-      <div id="ovEmpty" class="empty" style="display:none" data-i="empty.noWorkspace"></div>
-      <div class="row" id="ovActions">
-        <button class="btn btn-primary" id="ovFull" type="button" data-i="overview.installFull"></button>
-        <button class="btn btn-secondary" id="ovMin" type="button" data-i="overview.installMinimal"></button>
-        <button class="btn btn-secondary" data-goto="prompts" type="button" data-i="overview.openPrompt"></button>
-        <button class="btn btn-secondary" id="ovCheck" type="button" data-i="overview.checkBtn"></button>
+        <div class="status-panel card card-pad">
+          <p class="section-label" data-i="overview.statusTitle"></p>
+          <div id="ovStatus" class="status-big st missing" role="status"></div>
+          <div class="progress-block">
+            <div class="progress-label" id="progLabel" data-i="overview.skillProgress"></div>
+            <div class="progress-track"><div class="progress-fill" id="progFill"></div></div>
+          </div>
+        </div>
+        <div class="actions-panel card card-pad">
+          <p class="section-label" data-i="overview.actionsTitle"></p>
+          <div id="ovEmpty" class="empty" style="display:none" data-i="empty.noWorkspace"></div>
+          <div class="action-toolbar" id="ovActions">
+            <button class="btn btn-lg btn-primary" id="ovFull" type="button" data-i="overview.installFull"></button>
+            <button class="btn btn-secondary" data-goto="prompts" type="button" data-i="overview.openPrompt"></button>
+            <button class="btn btn-tertiary" id="ovMin" type="button" data-i="overview.installMinimal"></button>
+            <button class="btn btn-ghost" id="ovCheck" type="button" data-i="overview.checkBtn"></button>
+          </div>
+        </div>
       </div>
     </section>
 
     <section class="page" id="install">
-      <h2 class="page-h1" data-i="install.heading"></h2>
-      <p class="page-lead" data-i="install.desc"></p>
-      <div class="pack-grid">
+      <div class="page-head">
+        <h2 class="page-h1" data-i="install.heading"></h2>
+        <p class="page-lead" data-i="install.desc"></p>
+      </div>
+      <div class="pack-grid mb-4">
         <div class="pack-card">
           <b data-i="install.modeMinimal"></b>
           <span class="micro" data-i="install.modeMinimal.desc"></span>
-          <button class="btn btn-secondary" id="instMin" type="button" data-i="install.btnMinimal"></button>
+          <button class="btn btn-tertiary" id="instMin" type="button" data-i="install.btnMinimal"></button>
         </div>
         <div class="pack-card featured">
           <span class="pack-badge" data-i="install.recommended"></span>
@@ -285,21 +353,23 @@ export function buildDashboardHtml(
           <button class="btn btn-secondary" data-goto="skills" id="instCustom" type="button" data-i="install.btnCustom"></button>
         </div>
       </div>
-      <p class="callout-gold" data-i="install.overwriteWarn"></p>
-      <div class="card">
-        <div class="page-h2" style="margin-top:0" data-i="install.planFor"></div>
+      <p class="callout-safe" data-i="install.overwriteWarn"></p>
+      <div class="card card-pad files-panel">
+        <p class="section-label" data-i="install.planFor"></p>
         <ul class="files" id="planList"></ul>
-        <div class="row">
+        <div class="action-toolbar" style="margin-top:var(--sp-4)">
           <button class="btn btn-secondary" id="btnUpdate" type="button" data-i="install.btnUpdate"></button>
         </div>
       </div>
     </section>
 
     <section class="page" id="skills">
-      <h2 class="page-h1" data-i="skills.heading"></h2>
-      <p class="page-lead" data-i="skills.intro"></p>
-      <div class="card">
-        <div class="field" style="margin-top:0">
+      <div class="page-head">
+        <h2 class="page-h1" data-i="skills.heading"></h2>
+        <p class="page-lead" data-i="skills.intro"></p>
+      </div>
+      <div class="card card-pad">
+        <div class="field search-wrap">
           <label data-i="skills.filter"></label>
           <input type="search" id="skillFilter" autocomplete="off" data-i-placeholder="skills.filterPlaceholder" />
         </div>
@@ -308,17 +378,19 @@ export function buildDashboardHtml(
           <label for="selAll" data-i="skills.selectAll"></label>
         </div>
         <div id="skillList"></div>
-        <div class="row">
+        <div class="action-toolbar" style="margin-top:var(--sp-4)">
           <button class="btn btn-primary" id="btnInstallSel" type="button" data-i="skills.installSelected"></button>
         </div>
       </div>
     </section>
 
     <section class="page" id="prompts">
-      <h2 class="page-h1" data-i="prompts.heading"></h2>
-      <p class="page-lead" data-i="prompts.tabHint"></p>
-      <div class="prompt-layout">
-        <div class="card card-soft">
+      <div class="page-head">
+        <h2 class="page-h1" data-i="prompts.heading"></h2>
+        <p class="page-lead" data-i="prompts.tabHint"></p>
+      </div>
+      <div class="prompt-stage">
+        <div class="card card-pad prompt-controls">
           <div class="field">
             <label data-i="prompts.choosePreset"></label>
             <select id="presetSel"></select>
@@ -327,13 +399,15 @@ export function buildDashboardHtml(
             <label data-i="prompts.projectName"></label>
             <input type="text" id="projName" placeholder="MyApp" />
           </div>
-          <div class="row">
-            <button class="btn btn-primary" id="btnGen" type="button" data-i="prompts.generate"></button>
-            <button class="btn btn-primary" id="btnCopy" type="button" data-i="prompts.copy"></button>
+          <div class="action-toolbar">
+            <button class="btn btn-secondary" id="btnGen" type="button" data-i="prompts.generate"></button>
+            <button class="btn btn-copy btn-lg" id="btnCopy" type="button" data-i="prompts.copy"></button>
           </div>
         </div>
-        <div class="prompt-out-wrap">
-          <label data-i="prompts.output"></label>
+        <div class="prompt-output-card">
+          <div class="prompt-output-head">
+            <p class="section-label" data-i="prompts.outputTitle"></p>
+          </div>
           <textarea id="promptOut" class="prompt-out" readonly placeholder="…"></textarea>
           <p class="paste-hint" data-i="prompts.pasteHint"></p>
         </div>
@@ -341,7 +415,9 @@ export function buildDashboardHtml(
     </section>
 
     <section class="page" id="guide">
-      <h2 class="page-h1" data-i="guide.heading"></h2>
+      <div class="page-head">
+        <h2 class="page-h1" data-i="guide.heading"></h2>
+      </div>
       <div class="guide-grid">
         <div class="guide-card">
           <span class="dm-icon dm-icon--prompt card-icon" aria-hidden="true"></span>
@@ -365,8 +441,10 @@ export function buildDashboardHtml(
     </section>
 
     <section class="page" id="settings">
-      <h2 class="page-h1" data-i="settings.heading"></h2>
-      <div class="card">
+      <div class="page-head">
+        <h2 class="page-h1" data-i="settings.heading"></h2>
+      </div>
+      <div class="card card-pad settings-card">
         <div class="field">
           <label data-i="settings.language"></label>
           <select id="langSel">
@@ -390,7 +468,7 @@ export function buildDashboardHtml(
           <input type="checkbox" id="neverAsk" />
           <label for="neverAsk" data-i="settings.neverAsk"></label>
         </div>
-        <div class="row">
+        <div class="action-toolbar">
           <button class="btn btn-primary" id="btnSave" type="button" data-i="settings.save"></button>
         </div>
       </div>
@@ -398,29 +476,30 @@ export function buildDashboardHtml(
 
     <section class="page" id="about">
       <div class="about-head">
-        <img class="brand-logo brand-logo--sm" src="${logoUri}" alt="" width="48" height="48" />
-        <div>
+        <img class="brand-logo brand-logo--sm" src="${logoUri}" alt="" width="44" height="44" />
+        <div class="about-meta">
           <h2 class="page-h1" style="margin:0" data-i="about.heading"></h2>
           <p class="page-lead" style="margin:var(--sp-2) 0 0" data-i="about.body"></p>
         </div>
       </div>
-      <div class="page-h2" data-i="about.privacy.title"></div>
+      <p class="section-label" data-i="about.privacy.title"></p>
       <div class="privacy-grid">
         <div class="privacy-item"><b data-i="about.privacy.localLabel"></b><span data-i="about.privacy.local"></span></div>
         <div class="privacy-item"><b data-i="about.privacy.telemetryLabel"></b><span data-i="about.privacy.noTelemetry"></span></div>
         <div class="privacy-item"><b data-i="about.privacy.secretsLabel"></b><span data-i="about.privacy.noSecrets"></span></div>
         <div class="privacy-item"><b data-i="about.privacy.writeLabel"></b><span data-i="about.privacy.askWrite"></span></div>
       </div>
-      <div class="card">
+      <div class="card card-pad" style="margin-top:var(--sp-4)">
         <p class="meta-line"><span data-i="about.version"></span>: <strong id="ver"></strong></p>
         <p class="meta-line"><span data-i="about.author"></span>: <strong id="auth">DMCTN Studio</strong></p>
         <p class="meta-line"><span data-i="about.license"></span>: <strong id="lic">MIT</strong></p>
         <p class="meta-line" data-i="about.credits"></p>
-        <div class="row">
+        <div class="action-toolbar">
           <button class="btn btn-danger" id="btnRemove" type="button" data-i="about.removeBtn"></button>
         </div>
       </div>
     </section>
+  </div>
   </main>
 </div>
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
@@ -513,9 +592,7 @@ export function buildDashboardHtml(
       wrap.appendChild(title);
       skills.forEach(s=>wrap.appendChild(makeSkillRow(s)));
     });
-    SKILLS.filter(s=>!used.has(s.id)).forEach(s=>{
-      wrap.appendChild(makeSkillRow(s));
-    });
+    SKILLS.filter(s=>!used.has(s.id)).forEach(s=>wrap.appendChild(makeSkillRow(s)));
     renderPlan();
     filterSkills();
   }
@@ -573,8 +650,8 @@ export function buildDashboardHtml(
     const badge=$('#badge'); const ov=$('#ovStatus');
     const cls=statusClass(s);
     const label=statusLabel(s);
-    badge.className='badge '+cls; badge.textContent=label;
-    ov.className='st '+(s.status==='installed'||s.status==='minimal'?'included':(s.status==='partial'?'modified':'missing'));
+    badge.className='status-chip '+cls; badge.textContent=label;
+    ov.className='status-big st '+(s.status==='installed'||s.status==='minimal'?'included':(s.status==='partial'?'modified':'missing'));
     ov.textContent=label;
 
     const total = s.skillsTotal||13;
