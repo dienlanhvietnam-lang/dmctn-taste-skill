@@ -1,6 +1,9 @@
 # Hướng dẫn chụp ảnh — DMCTN Taste Skill
 # Screenshot guide — DMCTN Taste Skill
 
+**Trạng thái / Status:** 4 ảnh trong `store-assets/` — **Present** (1600×900).  
+**Status:** four screenshots in `store-assets/` — **Present** (1600×900).
+
 Chỉ dùng **UI thật** — không dùng mockup AI gắn nhãn sản phẩm.  
 **Real UI only** — no AI mockups labeled as product shots.
 

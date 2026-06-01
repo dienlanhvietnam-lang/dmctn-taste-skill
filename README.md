@@ -1,6 +1,6 @@
 # DMCTN Taste Skill
 
-[![Version](https://img.shields.io/badge/version-0.2.8-blue)](https://github.com/dienlanhvietnam-lang/dmctn-taste-skill)
+[![Version](https://img.shields.io/badge/version-0.2.9-blue)](https://github.com/dienlanhvietnam-lang/dmctn-taste-skill)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
 **Bộ skill UI chống “AI rập khuôn” cho Cursor, VS Code Agent, Claude Code và Codex.**  
@@ -77,8 +77,8 @@ The extension installs into your workspace:
 ## Cài đặt nhanh
 ## Quick start
 
-1. **Cài extension** — file VSIX (`dmctn-taste-skill-0.2.8.vsix`) hoặc Marketplace khi phát hành.  
-   **Install the extension** — VSIX (`dmctn-taste-skill-0.2.8.vsix`) or Marketplace when published.
+1. **Cài extension** — file VSIX (`dmctn-taste-skill-0.2.9.vsix`) hoặc Marketplace khi phát hành.  
+   **Install the extension** — VSIX (`dmctn-taste-skill-0.2.9.vsix`) or Marketplace when published.
 
 2. **Mở dự án** trong VS Code hoặc Cursor.  
    **Open your project** in VS Code or Cursor.
@@ -157,18 +157,40 @@ Each prompt includes: Design Read, anti-slop, mobile-first, accessibility, perfo
 ## Ảnh minh họa
 ## Screenshots
 
-> Ảnh nằm trong [`store-assets/`](store-assets/) trên GitHub (không đóng gói trong VSIX). Sẽ bổ sung / **to be added**.  
-> Images live in [`store-assets/`](store-assets/) on GitHub (not inside the VSIX). **To be added.**
+Ảnh trong [`store-assets/`](store-assets/) (không đóng gói trong VSIX).  
+Images in [`store-assets/`](store-assets/) (not bundled in the VSIX).
 
-| File | Nội dung / Content |
-|------|-------------------|
-| `store-assets/dashboard-overview.png` | Tab Tổng quan, trạng thái Full / Overview, Full status |
-| `store-assets/install-skills.png` | Tab Cài đặt hoặc Bộ skill / Install or Skills tab |
-| `store-assets/prompt-output.png` | Tab Prompt mẫu, Output có nội dung / Prompts with filled output |
-| `store-assets/coding-result.png` | Kết quả agent / Agent or redesign result |
+### Tổng quan dashboard
+### Dashboard overview
 
-Hướng dẫn chụp: [`docs/SCREENSHOT_GUIDE.md`](docs/SCREENSHOT_GUIDE.md)  
-Capture guide: [`docs/SCREENSHOT_GUIDE.md`](docs/SCREENSHOT_GUIDE.md)
+![Dashboard overview](./store-assets/dashboard-overview.png)
+
+Tab Tổng quan — trạng thái dự án, tiến độ skill, thao tác nhanh.  
+Overview tab — project status, skill progress, quick actions.
+
+### Cài skill vào dự án
+### Install skills into a project
+
+![Install skills](./store-assets/install-skills.png)
+
+Gói Minimal / Full / Custom và danh sách skill.  
+Minimal, Full, and Custom packs with the skills list.
+
+### Tạo prompt cho Agent
+### Generate prompts for agents
+
+![Prompt output](./store-assets/prompt-output.png)
+
+Tab Prompt mẫu — preset, output tự sinh, sao chép vào Cursor Agent.  
+Prompt templates — preset, auto-generated output, copy into Cursor Agent.
+
+### Kết quả coding thật
+### Real coding result
+
+![Coding result](./store-assets/coding-result.png)
+
+Agent áp dụng Taste Skill — Design Read và UI anti-slop.  
+Agent applying Taste Skill — Design Read and anti-slop UI result.
 
 ---
 
@@ -200,8 +222,8 @@ Capture guide: [`docs/SCREENSHOT_GUIDE.md`](docs/SCREENSHOT_GUIDE.md)
 | Mã nguồn GitHub / Source on GitHub | ✅ Public — `main` |
 | Runtime QA (Cursor) | ✅ FULL_PASS — xem [`docs/RUNTIME_QA_REPORT.md`](docs/RUNTIME_QA_REPORT.md) |
 | VSIX build | ✅ `npm run package` |
-| Ảnh Marketplace / Store screenshots | ⏳ Thiếu — xem `store-assets/` |
-| Visual Studio Marketplace | ⏳ **BLOCKED** — cần ảnh + publisher PAT (không lưu trong repo) |
+| Ảnh Marketplace / Store screenshots | ✅ Sẵn sàng — `store-assets/*.png` (1600×900) |
+| Visual Studio Marketplace | ⏳ **BLOCKED** — cần publisher PAT + upload thủ công (không lưu trong repo) |
 | Open VSX | ⏳ **BLOCKED** — tương tự Marketplace |
 
 **Publisher Marketplace:** `buivantinh` (có thể khác owner GitHub `dienlanhvietnam-lang`).  
@@ -212,13 +234,10 @@ Capture guide: [`docs/SCREENSHOT_GUIDE.md`](docs/SCREENSHOT_GUIDE.md)
 ## Lộ trình và bước tiếp theo
 ## Roadmap and next steps
 
-1. Bổ sung 4 ảnh `store-assets/*.png` (crop dashboard, không chụp full IDE).  
-   Add 4 `store-assets/*.png` screenshots (crop the dashboard, not the full IDE).
+1. Publish lên Visual Studio Marketplace / Open VSX — upload 4 ảnh từ `store-assets/` (theo [`docs/PUBLISH_CHECKLIST.md`](docs/PUBLISH_CHECKLIST.md)).  
+   Publish to Visual Studio Marketplace / Open VSX — upload 4 images from `store-assets/`.
 
-2. Publish lên Visual Studio Marketplace / Open VSX (theo [`docs/PUBLISH_CHECKLIST.md`](docs/PUBLISH_CHECKLIST.md)).  
-   Publish to Visual Studio Marketplace / Open VSX (see [`docs/PUBLISH_CHECKLIST.md`](docs/PUBLISH_CHECKLIST.md)).
-
-3. (Tùy chọn) GitHub Release kèm file `.vsix`.  
+2. (Tùy chọn) GitHub Release kèm file `.vsix`.  
    (Optional) GitHub Release with `.vsix` attached.
 
 ---
@@ -289,7 +308,7 @@ No, except when installing the extension from a store.
 npm install
 npm run compile
 npm test
-npm run package   # → dmctn-taste-skill-0.2.8.vsix
+npm run package   # → dmctn-taste-skill-0.2.9.vsix
 ```
 
 Tài liệu / Docs: [`docs/PUBLISH_CHECKLIST.md`](docs/PUBLISH_CHECKLIST.md) · [`docs/RUNTIME_QA_REPORT.md`](docs/RUNTIME_QA_REPORT.md)

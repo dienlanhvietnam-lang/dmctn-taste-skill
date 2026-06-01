@@ -14,7 +14,14 @@ TEST-TASTE-CODING/
 taste-skill-vi-dmctn/
 .dmctn/
 
-# Store screenshots (upload to Marketplace separately; README in store-assets/ is tracked)
+# Branded screenshot source drop (copies live in store-assets/)
+dmctn_taste_skill_store_assets_branded/
+
+# Store screenshots — allowlist 4 Marketplace PNGs for GitHub README
 store-assets/*.png
+!store-assets/dashboard-overview.png
+!store-assets/install-skills.png
+!store-assets/prompt-output.png
+!store-assets/coding-result.png
 store-assets/*.jpg
 store-assets/*.webp

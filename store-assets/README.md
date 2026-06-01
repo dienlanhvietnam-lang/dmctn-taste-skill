@@ -1,52 +1,40 @@
 # Tài nguyên cửa hàng — Marketplace / Open VSX
 # Store assets — Marketplace / Open VSX
 
-Ảnh dùng **chỉ để upload listing** — thư mục này **không** đóng gói trong `.vsix` (xem `.vscodeignore`).  
-Screenshots for **store listing upload only**. This folder is **excluded from the `.vsix`** (see `.vscodeignore`).
+Ảnh minh họa **đã có** — dùng cho GitHub README, Visual Studio Marketplace và Open VSX.  
+**Present** — used for GitHub README, Visual Studio Marketplace, and Open VSX listings.
+
+Thư mục này **không** đóng gói trong `.vsix` (xem `.vscodeignore`).  
+This folder is **excluded from the `.vsix`** (see `.vscodeignore`).
 
 ---
 
-## Bốn file bắt buộc
-## Required files
+## Bốn ảnh Marketplace
+## Marketplace screenshots
 
-| File | Dùng trong listing / Use in listing | Nội dung cần thể hiện / What to show |
-|------|-------------------------------------|--------------------------------------|
-| `dashboard-overview.png` | Ảnh chính / gallery #1 | Tab **Tổng quan** — **Đã cài đủ (Full)**, nút Minimal/Full, UI song ngữ |
-| `install-skills.png` | Gallery #2 | Tab **Cài đặt** (3 gói) **hoặc** **Bộ skill** — 13 skill + badge |
-| `prompt-output.png` | Gallery #3 | Tab **Prompt mẫu** — preset, **Output không trống**, Tạo + Sao chép prompt |
-| `coding-result.png` | Gallery #4 / README | Kết quả agent hoặc UI redesign (vd. `index.html`) — Design Read / anti-slop — **không** mockup giả |
+| File | Mô tả / Description | Trạng thái / Status |
+|------|---------------------|---------------------|
+| `dashboard-overview.png` | Tổng quan dashboard / Dashboard overview | **Present** |
+| `install-skills.png` | Gói cài đặt và bộ skill / Install packs and skills | **Present** |
+| `prompt-output.png` | Prompt generator — output cho Agent / Prompt generator output | **Present** |
+| `coding-result.png` | Kết quả coding thật / Real coding result | **Present** |
 
----
-
-## Trạng thái hiện tại
-## Current status
-
-| File | Trạng thái / Status |
-|------|---------------------|
-| `dashboard-overview.png` | **Thiếu / Missing** — chụp theo `docs/SCREENSHOT_GUIDE.md` |
-| `install-skills.png` | **Thiếu / Missing** |
-| `prompt-output.png` | **Thiếu / Missing** |
-| `coding-result.png` | **Thiếu / Missing** |
-
-**Không** commit placeholder PNG gắn nhãn ảnh sản phẩm thật.  
-**Do not** commit placeholder PNGs labeled as real product screenshots.
+Kích thước: **1600×900** PNG, có đóng dấu logo và ghi chú song ngữ.  
+Dimensions: **1600×900** PNG, branded logo stamp and bilingual captions.
 
 ---
 
-## Cách chụp
-## Capture
+## Dùng ở đâu
+## Where to use
 
-1. **F5** Extension Development Host trong Cursor/VS Code.  
-   **F5** Extension Development Host in Cursor/VS Code.
+- **README** — đường dẫn `./store-assets/*.png`  
+  **README** — paths `./store-assets/*.png`
 
-2. Cài Full → mở Dashboard.  
-   Full install → open Dashboard.
+- **Visual Studio Marketplace** — upload trong publisher portal  
+  **Visual Studio Marketplace** — upload in publisher portal
 
-3. Crop chỉ webview (~1280×720), lưu tại đây.  
-   Crop to webview only (~1280×720), save here.
-
-4. Upload cùng file trên [portal publisher Marketplace](https://marketplace.visualstudio.com/manage) hoặc Open VSX.  
-   Upload the same files in the [Marketplace publisher portal](https://marketplace.visualstudio.com/manage) or Open VSX.
+- **Open VSX** — upload cùng bộ ảnh khi publish  
+  **Open VSX** — upload the same set when publishing
 
 ---
 

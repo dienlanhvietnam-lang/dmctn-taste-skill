@@ -40,14 +40,14 @@ Before Marketplace publish, confirm:
 - [ ] Đã đọc `docs/SCREENSHOT_GUIDE.md`  
 - [ ] Read `docs/SCREENSHOT_GUIDE.md`
 
-- [ ] 4 file PNG trong `store-assets/` (không placeholder giả)  
-- [ ] Four PNG files in `store-assets/` (no fake placeholders)
+- [x] 4 file PNG trong `store-assets/` (1600×900, branded)  
+- [x] Four PNG files in `store-assets/` (1600×900, branded)
 
-- [ ] `store-assets/README.md` — bảng trạng thái = **Present**  
-- [ ] `store-assets/README.md` status table = **Present**
+- [x] `store-assets/README.md` — bảng trạng thái = **Present**  
+- [x] `store-assets/README.md` status table = **Present**
 
-- [ ] README root tham chiếu đúng đường dẫn ảnh  
-- [ ] Root README references correct image paths
+- [x] README root nhúng ảnh `./store-assets/*.png`  
+- [x] Root README embeds `./store-assets/*.png` images
 
 ---
 

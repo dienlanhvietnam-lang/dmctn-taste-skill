@@ -2,7 +2,7 @@
   "name": "dmctn-taste-skill",
   "displayName": "DMCTN Taste Skill",
   "description": "Install anti-slop UI taste skills into your project for Cursor / VS Code agents / Claude Code / Codex. Bilingual VI/EN dashboard.",
-  "version": "0.2.8",
+  "version": "0.2.9",
   "publisher": "buivantinh",
   "repository": {
     "type": "git",

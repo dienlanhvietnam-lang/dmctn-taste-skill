@@ -9,6 +9,25 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 
 ---
 
+## [0.2.9] — Ảnh Marketplace sẵn sàng
+## [0.2.9] — Marketplace screenshots ready
+
+### Thêm / Added
+- 4 ảnh có đóng dấu thương hiệu trong `store-assets/` (1600×900) cho README và listing.  
+  Four branded screenshots in `store-assets/` (1600×900) for README and Marketplace listing.
+
+- README nhúng ảnh thật; `docs/STORE_LISTING.md` trạng thái **READY**.  
+  README embeds real images; `docs/STORE_LISTING.md` screenshot status **READY**.
+
+### Ghi chú / Notes
+- **Không** thay đổi hành vi runtime.  
+  **No** runtime behavior changes.
+
+- Thư mục nguồn `dmctn_taste_skill_store_assets_branded/` không commit (chỉ bản copy trong `store-assets/`).  
+  Source folder `dmctn_taste_skill_store_assets_branded/` is gitignored.
+
+---
+
 ## [0.2.8] — Dashboard visual polish
 ## [0.2.8] — Dashboard visual polish
 

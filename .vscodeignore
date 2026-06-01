@@ -11,6 +11,7 @@ node_modules/**
 out/test/**
 docs/**
 store-assets/**
+dmctn_taste_skill_store_assets_branded/**
 taste-skill-vi-dmctn/**
 TEST-TASTE-CODING/**
 *.vsix

@@ -108,18 +108,23 @@ This extension does not collect, transmit, or store user data. It operates entir
 
 ---
 
+## Trạng thái ảnh minh họa
+## Screenshot status
+
+**READY** — 4 PNG trong `store-assets/` (1600×900, đóng dấu logo, ghi chú song ngữ).  
+**READY** — four PNGs in `store-assets/` (1600×900, branded, bilingual captions).
+
+---
+
 ## Danh sách ảnh (upload từ `store-assets/`)
 ## Screenshot list (upload from `store-assets/`)
 
-Upload 4 PNG theo `docs/SCREENSHOT_GUIDE.md`:  
-Upload these four PNGs per `docs/SCREENSHOT_GUIDE.md`:
+| # | File | Chú thích / Caption | Dùng cho / Use for |
+|---|------|---------------------|-------------------|
+| 1 | `dashboard-overview.png` | Tổng quan dashboard / Dashboard overview | Gallery chính / primary |
+| 2 | `install-skills.png` | Gói cài & skill / Install packs & skills | Install / skills |
+| 3 | `prompt-output.png` | Prompt generator / Prompt generator | Prompt output |
+| 4 | `coding-result.png` | Kết quả coding thật / Real coding result | Coding result |
 
-| File | Chú thích / Caption |
-|------|---------------------|
-| `dashboard-overview.png` | Dashboard song ngữ — Tổng quan, trạng thái Full / Bilingual dashboard — Overview, Full install status |
-| `install-skills.png` | Tab Cài đặt hoặc Bộ skill (13 skill) / Install packs or Skills list (13 skills) |
-| `prompt-output.png` | Prompt mẫu — Output tự sinh / Prompt templates with auto-generated output |
-| `coding-result.png` | Agent áp dụng Taste Skill — Design Read & UI anti-slop / Agent applying Taste Skill — Design Read & anti-slop result |
-
-Cho đến khi file có trên GitHub, upload từ bản cục bộ `store-assets/` — **không** dùng ảnh mockup giả.  
-Until files exist on GitHub, upload local copies from `store-assets/` only — **do not** use fake mockup images.
+Upload từ `store-assets/` lên publisher portal — **không** dùng ảnh mockup.  
+Upload from `store-assets/` to the publisher portal — **do not** use placeholder mockups.
