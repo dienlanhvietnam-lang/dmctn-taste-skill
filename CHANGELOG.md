@@ -26,6 +26,9 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 - Đã upload Marketplace; đang chờ xác minh.  
   Marketplace upload submitted; verification pending.
 
+- Marketplace **Published / Public** — v0.2.9, tìm kiếm công khai.  
+  Marketplace **Published / Public** — v0.2.9, publicly searchable.
+
 ### Ghi chú / Notes
 - **Không** thay đổi hành vi runtime.  
   **No** runtime behavior changes.

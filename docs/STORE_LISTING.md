@@ -14,13 +14,14 @@ Use this text when filling **Marketplace** / **Open VSX** forms.
 
 | Hạng mục / Item | Trạng thái / Status |
 |-----------------|---------------------|
-| Gói Marketplace / Marketplace package | **UPLOADED** — v0.2.9 |
-| Xác minh / Verification | **IN_PROGRESS** — portal: Verifying 0.2.9 |
+| Gói Marketplace / Marketplace package | **PUBLISHED** — v0.2.9 |
+| Xác minh / Verification | **COMPLETE** |
+| Listing công khai / Public listing | **LIVE** — [Marketplace](https://marketplace.visualstudio.com/items?itemName=buivantinh.dmctn-taste-skill) |
 | Ảnh minh họa / Screenshots | **READY** — `store-assets/*.png` |
 | Nội dung listing / Listing copy | **READY** — văn bản dưới đây / text below |
 
-**Chưa** ghi **READY** cho toàn bộ Marketplace cho đến khi verify xong.  
-**Do not** mark full Marketplace **READY** until verification completes.
+QA cài từ store: **PENDING** — xem [`PUBLISH_CHECKLIST.md`](PUBLISH_CHECKLIST.md#post-publish-qa).  
+Store install QA: **PENDING** — see [`PUBLISH_CHECKLIST.md`](PUBLISH_CHECKLIST.md#post-publish-qa).
 
 Chi tiết: [`MARKETPLACE_POST_UPLOAD_STATUS.md`](MARKETPLACE_POST_UPLOAD_STATUS.md)  
 Details: [`MARKETPLACE_POST_UPLOAD_STATUS.md`](MARKETPLACE_POST_UPLOAD_STATUS.md)

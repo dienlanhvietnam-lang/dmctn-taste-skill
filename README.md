@@ -77,8 +77,8 @@ The extension installs into your workspace:
 ## Cài đặt nhanh
 ## Quick start
 
-1. **Cài extension** — [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=buivantinh.dmctn-taste-skill) (đang verify) hoặc VSIX từ [GitHub Release v0.2.9](https://github.com/dienlanhvietnam-lang/dmctn-taste-skill/releases/tag/v0.2.9).  
-   **Install the extension** — [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=buivantinh.dmctn-taste-skill) (verification in progress) or VSIX from [GitHub Release v0.2.9](https://github.com/dienlanhvietnam-lang/dmctn-taste-skill/releases/tag/v0.2.9).
+1. **Cài extension** — [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=buivantinh.dmctn-taste-skill) (khuyến nghị) hoặc VSIX từ [GitHub Release v0.2.9](https://github.com/dienlanhvietnam-lang/dmctn-taste-skill/releases/tag/v0.2.9).  
+   **Install the extension** — [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=buivantinh.dmctn-taste-skill) (recommended) or VSIX from [GitHub Release v0.2.9](https://github.com/dienlanhvietnam-lang/dmctn-taste-skill/releases/tag/v0.2.9).
 
 2. **Mở dự án** trong VS Code hoặc Cursor.  
    **Open your project** in VS Code or Cursor.
@@ -223,10 +223,10 @@ Agent applying Taste Skill — Design Read and anti-slop UI result.
 | Runtime QA (Cursor) | ✅ FULL_PASS — xem [`docs/RUNTIME_QA_REPORT.md`](docs/RUNTIME_QA_REPORT.md) |
 | VSIX build | ✅ READY — `dmctn-taste-skill-0.2.9.vsix` |
 | Ảnh Marketplace / Store screenshots | ✅ READY — `store-assets/*.png` (1600×900) |
-| Visual Studio Marketplace | ⏳ **UPLOADED / VERIFYING** — Đã upload, đang Marketplace verify (v0.2.9, Public) |
-| | ⏳ **UPLOADED / VERIFYING** — Uploaded, Marketplace verification in progress (v0.2.9, Public) |
-| Open VSX | ⏳ **NOT_STARTED** — tùy chọn sau khi Marketplace verify xong |
-| | ⏳ **NOT_STARTED** — optional after Marketplace verification completes |
+| Visual Studio Marketplace | ✅ **PUBLISHED / PUBLIC** — v0.2.9, tìm kiếm công khai trên Marketplace |
+| | ✅ **PUBLISHED / PUBLIC** — v0.2.9, publicly searchable on Marketplace |
+| Open VSX | ⏳ **NOT_STARTED** — tùy chọn |
+| | ⏳ **NOT_STARTED** — optional |
 
 **Publisher Marketplace:** `buivantinh` · **Phiên bản / Version:** `0.2.9`  
 **Marketplace publisher:** `buivantinh` · **Version:** `0.2.9`
@@ -239,11 +239,11 @@ Post-upload details: [`docs/MARKETPLACE_POST_UPLOAD_STATUS.md`](docs/MARKETPLACE
 ## Lộ trình và bước tiếp theo
 ## Roadmap and next steps
 
-1. Đợi Marketplace **verify** xong → chạy QA cài từ store public (theo [`docs/PUBLISH_CHECKLIST.md`](docs/PUBLISH_CHECKLIST.md#post-publish-qa)).  
-   Wait for Marketplace **verification** → run public install QA (see [`docs/PUBLISH_CHECKLIST.md`](docs/PUBLISH_CHECKLIST.md#post-publish-qa)).
+1. Chạy QA cài từ Marketplace public (theo [`docs/PUBLISH_CHECKLIST.md`](docs/PUBLISH_CHECKLIST.md#post-publish-qa)) — **PENDING**.  
+   Run public install QA from Marketplace (see [`docs/PUBLISH_CHECKLIST.md`](docs/PUBLISH_CHECKLIST.md#post-publish-qa)) — **PENDING**.
 
-2. (Tùy chọn) Open VSX — publish sau khi Marketplace ổn định.  
-   (Optional) Open VSX — publish after Marketplace is stable.
+2. (Tùy chọn) Open VSX.  
+   (Optional) Open VSX.
 
 ---
 

@@ -18,8 +18,9 @@ Use this checklist before publishing to **Visual Studio Marketplace** or **Open 
 | GitHub Release v0.2.9 | ✅ **DONE** |
 | VSIX attached to Release | ✅ **DONE** — `dmctn-taste-skill-0.2.9.vsix` |
 | Marketplace upload | ✅ **DONE** |
-| Marketplace verifying | ⏳ **IN_PROGRESS** — portal: Verifying 0.2.9 |
-| Final public install test | ⏳ **PENDING** |
+| Marketplace verification | ✅ **DONE** |
+| Marketplace published (public search) | ✅ **DONE** — v0.2.9 |
+| Public listing QA (install from store) | ⏳ **PENDING** |
 | Open VSX | ⏳ **PENDING** / optional |
 
 Chi tiết sau upload: [`MARKETPLACE_POST_UPLOAD_STATUS.md`](MARKETPLACE_POST_UPLOAD_STATUS.md)  
@@ -208,8 +209,8 @@ Before Marketplace publish, confirm:
 - [x] Marketplace upload submitted (v0.2.9)  
 - [x] Marketplace upload submitted (v0.2.9)
 
-- [ ] Cập nhật docs khi verify → **Published** (không ghi Published khi còn Verifying)  
-- [ ] Update docs when status becomes **Published** (not while still Verifying)
+- [x] Docs cập nhật trạng thái **Published** / **PUBLIC**  
+- [x] Docs updated to **Published** / **PUBLIC**
 
 - [ ] Smoke-install từ Marketplace public trên VS Code **và** Cursor  
 - [ ] Smoke-install from public Marketplace in VS Code **and** Cursor
@@ -219,11 +220,11 @@ Before Marketplace publish, confirm:
 ## Post-publish QA
 ## Post-publish QA
 
-Chạy **sau khi** Marketplace verification hoàn tất.  
-Run **after** Marketplace verification completes.
+Chạy **sau khi** listing **Published** và tìm kiếm công khai được.  
+Run **after** the listing is **Published** and publicly searchable.
 
-1. Đợi portal chuyển từ **Verifying** sang trạng thái công khai ổn định.  
-   Wait until the publisher portal leaves **Verifying** for a stable public state.
+1. [x] Marketplace verification hoàn tất — listing public.  
+   [x] Marketplace verification complete — listing is public.
 
 2. Mở trang extension public trên Marketplace.  
    Open the public extension page on Marketplace.
