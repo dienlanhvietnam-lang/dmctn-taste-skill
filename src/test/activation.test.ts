@@ -162,6 +162,12 @@ test('openDashboard: creates a webview with HTML', async () => {
   assert.ok(lastPanel, 'no webview panel created');
   assert.ok(lastPanel._html.includes('DMCTN Taste'), 'html missing title');
   assert.ok(lastPanel._html.includes('Content-Security-Policy'), 'CSP missing');
+  assert.ok(
+    lastPanel._html.includes('Icon slots prepared for next icon mapping phase'),
+    'icon slot comment missing'
+  );
+  assert.ok(lastPanel._html.includes('dm-icon--overview'), 'overview icon slot missing');
+  assert.ok(lastPanel._html.includes('--dm-green'), 'design tokens missing');
 });
 
 test('install via dashboard message creates files in temp workspace', async () => {

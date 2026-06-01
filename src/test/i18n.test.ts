@@ -57,6 +57,21 @@ test('i18n: nav.prompts is "Prompt mẫu" (not Promt typo)', () => {
   }
 });
 
+test('i18n: dashboard UX keys exist in vi and en', () => {
+  const keys = [
+    'overview.heroTitle',
+    'overview.skillProgress',
+    'prompts.pasteHint',
+    'skills.group.core',
+    'about.privacy.title',
+    'empty.noWorkspace'
+  ];
+  for (const key of keys) {
+    assert.ok(t('vi', key) && t('vi', key) !== key, 'missing vi: ' + key);
+    assert.ok(t('en', key) && t('en', key) !== key, 'missing en: ' + key);
+  }
+});
+
 test('i18n: status.minimal and prompts.copy labels', () => {
   assert.ok(t('vi', 'status.minimal').includes('Minimal'));
   assert.ok(t('vi', 'prompts.copy').includes('prompt'));

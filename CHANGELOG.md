@@ -9,6 +9,25 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 
 ---
 
+## [0.2.6] — Dashboard UX redesign
+## [0.2.6] — Dashboard UX redesign
+
+### Thay đổi / Changed
+- Thiết kế lại shell dashboard, design tokens (`--dm-*`), sidebar, status banner, progress skill.  
+  Redesigned dashboard shell, design tokens, sidebar, status banner, skill progress bar.
+
+- Icon slots CSS (placeholder) cho phase map icon sau — `.dm-icon--overview` … `--about`.  
+  CSS icon slots prepared for next icon mapping phase.
+
+- Cải thiện UX tab: Overview, Install, Skills (nhóm + lọc), Prompt, Guide (3 card), Settings, About (privacy grid).  
+  Improved Overview, Install, Skills (groups + filter), Prompt, Guide, Settings, About tabs.
+
+### Ghi chú / Notes
+- **Không** thay đổi hành vi install/update/remove/prompt.  
+  **No** runtime behavior changes for install/update/remove/prompt.
+
+---
+
 ## [0.2.5] — Tài liệu song ngữ
 ## [0.2.5] — Bilingual documentation
 
