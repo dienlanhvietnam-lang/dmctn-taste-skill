@@ -19,6 +19,13 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 - README nhúng ảnh thật; `docs/STORE_LISTING.md` trạng thái **READY**.  
   README embeds real images; `docs/STORE_LISTING.md` screenshot status **READY**.
 
+### Phát hành / Release
+- Đã tạo GitHub Release và đính kèm VSIX.  
+  GitHub Release created and VSIX attached.
+
+- Đã upload Marketplace; đang chờ xác minh.  
+  Marketplace upload submitted; verification pending.
+
 ### Ghi chú / Notes
 - **Không** thay đổi hành vi runtime.  
   **No** runtime behavior changes.

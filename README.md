@@ -77,8 +77,8 @@ The extension installs into your workspace:
 ## Cài đặt nhanh
 ## Quick start
 
-1. **Cài extension** — file VSIX (`dmctn-taste-skill-0.2.9.vsix`) hoặc Marketplace khi phát hành.  
-   **Install the extension** — VSIX (`dmctn-taste-skill-0.2.9.vsix`) or Marketplace when published.
+1. **Cài extension** — [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=buivantinh.dmctn-taste-skill) (đang verify) hoặc VSIX từ [GitHub Release v0.2.9](https://github.com/dienlanhvietnam-lang/dmctn-taste-skill/releases/tag/v0.2.9).  
+   **Install the extension** — [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=buivantinh.dmctn-taste-skill) (verification in progress) or VSIX from [GitHub Release v0.2.9](https://github.com/dienlanhvietnam-lang/dmctn-taste-skill/releases/tag/v0.2.9).
 
 2. **Mở dự án** trong VS Code hoặc Cursor.  
    **Open your project** in VS Code or Cursor.
@@ -219,26 +219,31 @@ Agent applying Taste Skill — Design Read and anti-slop UI result.
 
 | Hạng mục / Item | Trạng thái / Status |
 |-----------------|---------------------|
-| Mã nguồn GitHub / Source on GitHub | ✅ Public — `main` |
+| Mã nguồn GitHub / Source on GitHub | ✅ Public / READY — `main` |
 | Runtime QA (Cursor) | ✅ FULL_PASS — xem [`docs/RUNTIME_QA_REPORT.md`](docs/RUNTIME_QA_REPORT.md) |
-| VSIX build | ✅ `npm run package` |
-| Ảnh Marketplace / Store screenshots | ✅ Sẵn sàng — `store-assets/*.png` (1600×900) |
-| Visual Studio Marketplace | ⏳ **BLOCKED** — cần publisher PAT + upload thủ công (không lưu trong repo) |
-| Open VSX | ⏳ **BLOCKED** — tương tự Marketplace |
+| VSIX build | ✅ READY — `dmctn-taste-skill-0.2.9.vsix` |
+| Ảnh Marketplace / Store screenshots | ✅ READY — `store-assets/*.png` (1600×900) |
+| Visual Studio Marketplace | ⏳ **UPLOADED / VERIFYING** — Đã upload, đang Marketplace verify (v0.2.9, Public) |
+| | ⏳ **UPLOADED / VERIFYING** — Uploaded, Marketplace verification in progress (v0.2.9, Public) |
+| Open VSX | ⏳ **NOT_STARTED** — tùy chọn sau khi Marketplace verify xong |
+| | ⏳ **NOT_STARTED** — optional after Marketplace verification completes |
 
-**Publisher Marketplace:** `buivantinh` (có thể khác owner GitHub `dienlanhvietnam-lang`).  
-**Marketplace publisher:** `buivantinh` (may differ from GitHub org `dienlanhvietnam-lang`).
+**Publisher Marketplace:** `buivantinh` · **Phiên bản / Version:** `0.2.9`  
+**Marketplace publisher:** `buivantinh` · **Version:** `0.2.9`
+
+Chi tiết sau upload: [`docs/MARKETPLACE_POST_UPLOAD_STATUS.md`](docs/MARKETPLACE_POST_UPLOAD_STATUS.md)  
+Post-upload details: [`docs/MARKETPLACE_POST_UPLOAD_STATUS.md`](docs/MARKETPLACE_POST_UPLOAD_STATUS.md)
 
 ---
 
 ## Lộ trình và bước tiếp theo
 ## Roadmap and next steps
 
-1. Publish lên Visual Studio Marketplace / Open VSX — upload 4 ảnh từ `store-assets/` (theo [`docs/PUBLISH_CHECKLIST.md`](docs/PUBLISH_CHECKLIST.md)).  
-   Publish to Visual Studio Marketplace / Open VSX — upload 4 images from `store-assets/`.
+1. Đợi Marketplace **verify** xong → chạy QA cài từ store public (theo [`docs/PUBLISH_CHECKLIST.md`](docs/PUBLISH_CHECKLIST.md#post-publish-qa)).  
+   Wait for Marketplace **verification** → run public install QA (see [`docs/PUBLISH_CHECKLIST.md`](docs/PUBLISH_CHECKLIST.md#post-publish-qa)).
 
-2. (Tùy chọn) GitHub Release kèm file `.vsix`.  
-   (Optional) GitHub Release with `.vsix` attached.
+2. (Tùy chọn) Open VSX — publish sau khi Marketplace ổn định.  
+   (Optional) Open VSX — publish after Marketplace is stable.
 
 ---
 

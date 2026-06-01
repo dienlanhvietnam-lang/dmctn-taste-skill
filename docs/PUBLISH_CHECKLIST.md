@@ -9,6 +9,24 @@ Use this checklist before publishing to **Visual Studio Marketplace** or **Open 
 
 ---
 
+## Trạng thái phát hành v0.2.9
+## Release status v0.2.9
+
+| Bước / Step | Trạng thái / Status |
+|-------------|---------------------|
+| GitHub repo public | ✅ **DONE** |
+| GitHub Release v0.2.9 | ✅ **DONE** |
+| VSIX attached to Release | ✅ **DONE** — `dmctn-taste-skill-0.2.9.vsix` |
+| Marketplace upload | ✅ **DONE** |
+| Marketplace verifying | ⏳ **IN_PROGRESS** — portal: Verifying 0.2.9 |
+| Final public install test | ⏳ **PENDING** |
+| Open VSX | ⏳ **PENDING** / optional |
+
+Chi tiết sau upload: [`MARKETPLACE_POST_UPLOAD_STATUS.md`](MARKETPLACE_POST_UPLOAD_STATUS.md)  
+Post-upload details: [`MARKETPLACE_POST_UPLOAD_STATUS.md`](MARKETPLACE_POST_UPLOAD_STATUS.md)
+
+---
+
 ## GitHub — Kho mã nguồn
 ## GitHub — Repository
 
@@ -184,17 +202,49 @@ Before Marketplace publish, confirm:
 ## Sau khi publish
 ## Post-publish
 
-- [ ] Tag git: `v0.2.x`  
-- [ ] Tag release in git: `v0.2.x`
+- [x] Tag / GitHub Release: `v0.2.9` + VSIX  
+- [x] Tag / GitHub Release: `v0.2.9` + VSIX attached
 
-- [ ] (Tùy chọn) Đính `.vsix` vào GitHub Release  
-- [ ] (Optional) Attach `.vsix` to GitHub Release
+- [x] Marketplace upload submitted (v0.2.9)  
+- [x] Marketplace upload submitted (v0.2.9)
 
-- [ ] Cập nhật `CHANGELOG.md` với ngày publish  
-- [ ] Update `CHANGELOG.md` with publish date
+- [ ] Cập nhật docs khi verify → **Published** (không ghi Published khi còn Verifying)  
+- [ ] Update docs when status becomes **Published** (not while still Verifying)
 
-- [ ] Smoke-install từ store trên VS Code **và** Cursor  
-- [ ] Smoke-install from store in VS Code **and** Cursor
+- [ ] Smoke-install từ Marketplace public trên VS Code **và** Cursor  
+- [ ] Smoke-install from public Marketplace in VS Code **and** Cursor
+
+---
+
+## Post-publish QA
+## Post-publish QA
+
+Chạy **sau khi** Marketplace verification hoàn tất.  
+Run **after** Marketplace verification completes.
+
+1. Đợi portal chuyển từ **Verifying** sang trạng thái công khai ổn định.  
+   Wait until the publisher portal leaves **Verifying** for a stable public state.
+
+2. Mở trang extension public trên Marketplace.  
+   Open the public extension page on Marketplace.
+
+3. Cài extension từ Marketplace vào VS Code hoặc Cursor (profile sạch nếu có thể).  
+   Install from Marketplace in VS Code or Cursor (clean profile if possible).
+
+4. Mở dashboard — lệnh **DMCTN Taste: Open Dashboard**.  
+   Open the dashboard via **DMCTN Taste: Open Dashboard**.
+
+5. Cài **Full** (13/13 skill) vào project test.  
+   Run **Full** install (13/13 skills) in a test project.
+
+6. Tạo prompt mẫu — tab Prompt / generator.  
+   Generate a sample prompt from the Prompt tab.
+
+7. Kiểm tra README và ảnh trên listing hiển thị đúng.  
+   Verify README and listing screenshots render correctly.
+
+8. Ghi kết quả vào `docs/RUNTIME_QA_REPORT.md`: **FULL_PASS** hoặc **FAIL**.  
+   Record outcome in `docs/RUNTIME_QA_REPORT.md`: **FULL_PASS** or **FAIL**.
 
 ---
 

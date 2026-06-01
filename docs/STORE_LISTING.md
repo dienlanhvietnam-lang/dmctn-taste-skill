@@ -9,6 +9,24 @@ Use this text when filling **Marketplace** / **Open VSX** forms.
 
 ---
 
+## Trạng thái gói Marketplace
+## Marketplace package status
+
+| Hạng mục / Item | Trạng thái / Status |
+|-----------------|---------------------|
+| Gói Marketplace / Marketplace package | **UPLOADED** — v0.2.9 |
+| Xác minh / Verification | **IN_PROGRESS** — portal: Verifying 0.2.9 |
+| Ảnh minh họa / Screenshots | **READY** — `store-assets/*.png` |
+| Nội dung listing / Listing copy | **READY** — văn bản dưới đây / text below |
+
+**Chưa** ghi **READY** cho toàn bộ Marketplace cho đến khi verify xong.  
+**Do not** mark full Marketplace **READY** until verification completes.
+
+Chi tiết: [`MARKETPLACE_POST_UPLOAD_STATUS.md`](MARKETPLACE_POST_UPLOAD_STATUS.md)  
+Details: [`MARKETPLACE_POST_UPLOAD_STATUS.md`](MARKETPLACE_POST_UPLOAD_STATUS.md)
+
+---
+
 ## Tên extension (package)
 ## Extension name (package)
 

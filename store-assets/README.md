@@ -30,11 +30,11 @@ Dimensions: **1600×900** PNG, branded logo stamp and bilingual captions.
 - **README** — đường dẫn `./store-assets/*.png`  
   **README** — paths `./store-assets/*.png`
 
-- **Visual Studio Marketplace** — upload trong publisher portal  
-  **Visual Studio Marketplace** — upload in publisher portal
+- **Visual Studio Marketplace** — ✅ đã upload v0.2.9; đang verify (xem [`docs/MARKETPLACE_POST_UPLOAD_STATUS.md`](../docs/MARKETPLACE_POST_UPLOAD_STATUS.md))  
+  **Visual Studio Marketplace** — ✅ uploaded v0.2.9; verification in progress (see [`docs/MARKETPLACE_POST_UPLOAD_STATUS.md`](../docs/MARKETPLACE_POST_UPLOAD_STATUS.md))
 
-- **Open VSX** — upload cùng bộ ảnh khi publish  
-  **Open VSX** — upload the same set when publishing
+- **Open VSX** — ⏳ chưa bắt đầu; upload cùng bộ ảnh khi publish  
+  **Open VSX** — ⏳ not started; upload the same set when publishing
 
 ---
 
