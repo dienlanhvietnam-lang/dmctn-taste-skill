@@ -9,6 +9,22 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 
 ---
 
+## [0.2.11] — Chuẩn hóa Overview Marketplace
+## [0.2.11] — Marketplace Overview Polish
+
+### Thay đổi / Changed
+- Polished the README overview for GitHub and Marketplace.  
+  Chuẩn hóa phần Overview README cho GitHub và Marketplace.
+
+- Marked Marketplace public install and dashboard-open QA as PASS.  
+  Ghi nhận QA cài từ Marketplace và mở dashboard là PASS.
+
+### Ghi chú / Notes
+- No runtime behavior changes.  
+  Không thay đổi hành vi runtime.
+
+---
+
 ## [0.2.10] — Đồng bộ README Marketplace
 ## [0.2.10] — Marketplace README Sync
 

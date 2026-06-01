@@ -16,11 +16,13 @@ Use this checklist before publishing to **Visual Studio Marketplace**.
 |-------------|---------------------|
 | GitHub repo public | ✅ **DONE** |
 | GitHub Release v0.2.9 | ✅ **DONE** |
-| Marketplace published (live) | ✅ **DONE** — v**0.2.9** public search |
+| Marketplace published (live) | ✅ **DONE** — v**0.2.10** public search |
 | Runtime QA (VSIX/Cursor) | ✅ **FULL_PASS** |
-| Public listing QA (install from store) | ⏳ **PENDING_PUBLIC_INSTALL_QA** |
-| README sync package v0.2.10 | 📦 **READY** — upload `dmctn-taste-skill-0.2.10.vsix` thủ công |
-| | 📦 **READY** — manual upload `dmctn-taste-skill-0.2.10.vsix` |
+| Public listing QA (install from store) | ✅ **PASS** |
+| Dashboard opens after Marketplace install | ✅ **PASS** |
+| Full 13/13 install from Marketplace | ⏳ **PENDING_MANUAL** |
+| README sync package v0.2.11 | 📦 **READY** — upload `dmctn-taste-skill-0.2.11.vsix` thủ công |
+| | 📦 **READY** — manual upload `dmctn-taste-skill-0.2.11.vsix` |
 
 Chi tiết Marketplace: [`MARKETPLACE_POST_UPLOAD_STATUS.md`](MARKETPLACE_POST_UPLOAD_STATUS.md)  
 Marketplace details: [`MARKETPLACE_POST_UPLOAD_STATUS.md`](MARKETPLACE_POST_UPLOAD_STATUS.md)

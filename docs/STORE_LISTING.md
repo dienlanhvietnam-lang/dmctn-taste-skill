@@ -14,15 +14,15 @@ Use this text when filling the **Visual Studio Marketplace** form.
 
 | Hạng mục / Item | Trạng thái / Status |
 |-----------------|---------------------|
-| Gói Marketplace (live) / Live package | **PUBLISHED** — v**0.2.9** |
-| Gói đồng bộ README / README sync package | **READY** — v**0.2.10** (upload thủ công) |
+| Gói Marketplace (live) / Live package | **PUBLISHED** — v**0.2.10** |
+| Gói đồng bộ README / README sync package | **READY** — v**0.2.11** (upload thủ công) |
 | Xác minh / Verification | **COMPLETE** |
 | Listing công khai / Public listing | **LIVE** — [Marketplace](https://marketplace.visualstudio.com/items?itemName=buivantinh.dmctn-taste-skill) |
 | Ảnh minh họa / Screenshots | **READY** — `store-assets/*.png` (trong VSIX) |
 | Nội dung listing / Listing copy | **READY** — văn bản dưới đây / text below |
 
-QA cài từ store: **PENDING_PUBLIC_INSTALL_QA** — xem [`PUBLISH_CHECKLIST.md`](PUBLISH_CHECKLIST.md#post-publish-qa).  
-Store install QA: **PENDING_PUBLIC_INSTALL_QA** — see [`PUBLISH_CHECKLIST.md`](PUBLISH_CHECKLIST.md#post-publish-qa).
+QA cài từ store: **PASS** — xem [`RUNTIME_QA_REPORT.md`](RUNTIME_QA_REPORT.md#marketplace-public-install-qa).  
+Store install QA: **PASS** — see [`RUNTIME_QA_REPORT.md`](RUNTIME_QA_REPORT.md#marketplace-public-install-qa).
 
 Chi tiết: [`MARKETPLACE_POST_UPLOAD_STATUS.md`](MARKETPLACE_POST_UPLOAD_STATUS.md)  
 Details: [`MARKETPLACE_POST_UPLOAD_STATUS.md`](MARKETPLACE_POST_UPLOAD_STATUS.md)

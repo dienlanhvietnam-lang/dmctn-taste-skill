@@ -3,7 +3,7 @@
 
 | Trường / Field | Giá trị / Value |
 |----------------|-----------------|
-| **Phiên bản / Version** | 0.2.5 (tài liệu song ngữ / bilingual docs) |
+| **Phiên bản / Version** | 0.2.11 (Marketplace Overview Polish) |
 | **Tổng thể / Overall** | **FULL_PASS** |
 | **Smoke tự động / Automated smoke** | PASS — `npm test` 49/49, `activation.test.ts` |
 
@@ -107,13 +107,34 @@ Validated on a real project workspace with Full pack installed.
 
 ---
 
+## Marketplace Public Install QA
+## Marketplace Public Install QA
+
+**Trạng thái / Status: FULL_PASS**
+
+| Kiểm tra / Check | Kết quả / Result |
+|------------------|------------------|
+| Installed from VS Code Marketplace | PASS |
+| Extension visible in VS Code | PASS |
+| Dashboard opens after install | PASS |
+| Current project status visible | PASS |
+| **Publisher** | `buivantinh` / DMCTN Studio |
+| **Version tested** | 0.2.10 (Marketplace live) |
+| **Date** | 2026-06-01 |
+
+**Ghi chú / Notes**
+- Full install 13/13: **PENDING_MANUAL** (chưa chạy cài Full 13/13 từ phiên bản Marketplace trên profile sạch).
+- Full install 13/13: **PENDING_MANUAL** (Full 13/13 install from Marketplace on a clean profile not yet verified).
+
+---
+
 ## Ký duyệt
 ## Sign-off
 
 | | |
 |---|---|
-| **Người test / Tester** | Bùi Văn Tĩnh (Cursor runtime + coding QA) |
+| **Người test / Tester** | Bùi Văn Tĩnh (Cursor runtime + coding QA + Marketplace public install) |
 | **Ngày / Date** | 2026-06-01 |
 | **Editor** | Cursor |
-| **Phiên bản extension test / Extension version tested** | 0.2.2 → đóng gói Store Ready 0.2.3+; docs 0.2.5 |
-| **Kết luận / Verdict** | **FULL_PASS** (runtime + coding application) |
+| **Phiên bản extension test / Extension version tested** | 0.2.2 → 0.2.10 (runtime); 0.2.10 (Marketplace public install) |
+| **Kết luận / Verdict** | **FULL_PASS** (runtime + coding application + Marketplace public install) |

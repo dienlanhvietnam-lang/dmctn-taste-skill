@@ -1,83 +1,54 @@
 # DMCTN Taste Skill
 
-[![Version](https://img.shields.io/badge/version-0.2.10-blue)](https://github.com/dienlanhvietnam-lang/dmctn-taste-skill)
+Bộ skill chống UI rập khuôn cho Cursor, VS Code Agent, Claude Code và Codex — giúp AI đọc brief, xác định gu thiết kế, tránh giao diện AI-slope trước khi code.
+
+Anti-slop UI taste skills for Cursor, VS Code Agent, Claude Code, and Codex — helping AI read the brief, define design taste, and avoid generic AI-generated interfaces before coding.
+
+[![Version](https://img.shields.io/badge/version-0.2.11-blue)](https://github.com/dienlanhvietnam-lang/dmctn-taste-skill)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![Marketplace](https://img.shields.io/visual-studio-marketplace/v/buivantinh.dmctn-taste-skill?label=Marketplace)](https://marketplace.visualstudio.com/items?itemName=buivantinh.dmctn-taste-skill)
-
-**DMCTN Taste Skill** cài bộ quy tắc và prompt chống UI AI rập khuôn vào dự án Cursor / VS Code Agent.  
-**DMCTN Taste Skill** installs anti-slop UI taste rules and prompt packs into Cursor / VS Code agent projects.
-
-**Bộ skill UI chống “AI rập khuôn” cho Cursor, VS Code Agent, Claude Code và Codex.**  
-**Anti-slop UI skills for Cursor, VS Code agents, Claude Code, and Codex.**
-
-**Cài bộ Taste Skill vào dự án để agent không còn tạo giao diện chung chung, giống template.**  
-**Install a curated taste-skill pack so agents stop shipping generic, look-alike interfaces.**
-
-**Kho mã nguồn:** https://github.com/dienlanhvietnam-lang/dmctn-taste-skill  
-**Repository:** https://github.com/dienlanhvietnam-lang/dmctn-taste-skill
-
-**Cài từ Marketplace:** https://marketplace.visualstudio.com/items?itemName=buivantinh.dmctn-taste-skill  
-**Install from Marketplace:** https://marketplace.visualstudio.com/items?itemName=buivantinh.dmctn-taste-skill
+![Local only](https://img.shields.io/badge/local--only-true-purple)
+![No Telemetry](https://img.shields.io/badge/telemetry-none-brightgreen)
 
 ---
 
-## Tổng quan
-## Overview
+## Vì sao dùng?
+## Why use it?
 
-**DMCTN Taste Skill** là extension VS Code / Cursor chạy **hoàn toàn cục bộ**, có dashboard song ngữ (Việt / Anh).  
-**DMCTN Taste Skill** is a **local-only** VS Code / Cursor extension with a bilingual dashboard (Vietnamese / English).
+- AI có thể code nhanh nhưng UI dễ giống template.  
+  AI can code fast, but the UI often looks like a template.
 
-Extension giúp bạn cài vào workspace:  
-The extension installs into your workspace:
+- Extension này cài rule/skill/prompt vào project để agent phải Design Read trước khi code.  
+  This extension installs rules/skills/prompts so agents must Design Read before coding.
 
-- **Rule Cursor** — `.cursor/rules/dmctn-taste-gate.mdc` (Taste Gate: bắt buộc Design Read trước khi code UI)  
-- **Cursor rules** — `.cursor/rules/dmctn-taste-gate.mdc` (Taste Gate: Design Read before UI code)
+- Phù hợp khi làm landing page, dashboard, app UI, redesign, image-to-code, brand kit.  
+  Ideal for landing pages, dashboards, app UIs, redesigns, image-to-code, and brand kits.
 
-- **13 skill cho agent** — taste, redesign, brandkit, GPT/Codex, image-to-code, preset phong cách, output enforcement, …  
-- **13 agent skills** — taste, redesign, brandkit, GPT/Codex variants, image-to-code, style presets, output enforcement, and more
-
-- **`AGENTS.md`** và **prompt mẫu** để dán thẳng vào agent  
-- **`AGENTS.md`** and **prompt templates** ready to paste into your agent
-
-**Không cloud. Không telemetry. Không ghi file vào dự án khi bạn chưa xác nhận.**  
-**No cloud. No telemetry. Nothing is written to your project until you confirm.**
+- Local-only, không telemetry, không đọc secret/token.  
+  Local-only, no telemetry, never reads secrets or tokens.
 
 ---
 
 ## Tính năng chính
 ## Key features
 
-- **Dashboard** — 7 tab: Tổng quan, Cài đặt, Bộ skill, Prompt mẫu, Hướng dẫn, Cài đặt extension, Thông tin  
-- **Dashboard** — 7 tabs: Overview, Install, Skills, Prompts, Guide, Settings, About
+- **Cài Minimal / Full / Custom skill pack** — chọn gói phù hợp với dự án.  
+  **Minimal / Full / Custom skill pack** — choose the right pack for your project.
 
-- **Bộ skill đầy đủ** — 13 skill; cài **Minimal** / **Full** / **Custom**  
-- **Full skill pack** — 13 skills; install as **Minimal**, **Full**, or **Custom**
+- **Dashboard song ngữ Việt / Anh** — 7 tab: Tổng quan, Cài đặt, Bộ skill, Prompt mẫu, Hướng dẫn, Cài đặt extension, Thông tin.  
+  **Bilingual VI / EN dashboard** — 7 tabs: Overview, Install, Skills, Prompts, Guide, Settings, About.
 
-- **Phát hiện trạng thái** — Chưa cài / Đã cài Minimal / Đã cài đủ Full (13/13) / Cài một phần  
-- **Status detection** — Missing / Minimal installed / Full installed (13/13) / Partial
+- **Prompt generator** — 6 preset mẫu cho Cursor và agent, kèm anti-slop checklist.  
+  **Prompt generator** — 6 presets for Cursor and agents with anti-slop checklist.
 
-- **Tạo prompt** — 6 preset (Dashboard, Landing, Redesign, Audit UI, Mobile-first, Web doanh nghiệp địa phương)  
-- **Prompt generator** — 6 presets with Design Read, anti-slop checklist, a11y, security, PASS/FAIL report
+- **Skill detector** — phát hiện trạng thái: Missing / Minimal / Full.  
+  **Skill detector** — detects status: Missing / Minimal / Full.
 
-- **Cập nhật an toàn** — backup vào `.dmctn/taste-skill-backups/`; không ghi đè file bạn đã sửa nếu chưa hỏi  
-- **Safe updates** — backups under `.dmctn/taste-skill-backups/`; never overwrites your edits without asking
+- **Cập nhật có backup** — backup vào `.dmctn/taste-skill-backups/`, không ghi đè file đã sửa.  
+  **Update with backup** — backups in `.dmctn/taste-skill-backups/`, never overwrites edited files.
 
----
-
-## Vì sao nên dùng
-## Why use it
-
-- **Hero gradient tím + 3 card ngang** — checklist anti-slop trong mọi prompt mẫu  
-- **Purple-gradient heroes and 3-card rows** — anti-AI-slop checklist in every generated prompt
-
-- **Agent code UI không đọc brief** — Taste Gate bắt **Design Read** trước  
-- **Agents skip the brief** — Taste Gate requires a **Design Read** first
-
-- **Skill rời rạc giữa các dự án** — cài **Minimal** hoặc **Full** một lần trong workspace  
-- **Inconsistent skills across projects** — one-click **Minimal** or **Full** install
-
-- **Công cụ song ngữ** — dashboard + prompt **Việt / Anh**  
-- **Bilingual tooling** — dashboard and prompts in **VI / EN**
+- **An toàn** — local-only, no telemetry, hỏi trước khi ghi.  
+  **Safety** — local-only, no telemetry, ask before writing.
 
 ---
 
@@ -119,8 +90,8 @@ The extension installs into your workspace:
 3. Dán prompt vào **Cursor Agent**; yêu cầu agent trả **Design Read** trước khi sửa file UI.  
    Paste into **Cursor Agent**; require a **Design Read** before any UI file changes.
 
-4. Nếu agent nhảy vào code ngay, nhắc: *“Chạy Taste Gate trước — đọc skills/taste-skill.”*  
-   If the agent codes immediately, say: *“Run Taste Gate first — read skills/taste-skill.”*
+4. Nếu agent nhảy vào code ngay, nhắc: *"Chạy Taste Gate trước — đọc skills/taste-skill."*  
+   If the agent codes immediately, say: *"Run Taste Gate first — read skills/taste-skill."*
 
 ---
 
@@ -229,12 +200,12 @@ Agent applying Taste Skill — Design Read and anti-slop UI result.
 | Mã nguồn GitHub / Source on GitHub | ✅ Public / READY — `main` |
 | GitHub Release | ✅ v0.2.9 **DONE** |
 | Runtime QA (VSIX/Cursor) | ✅ **FULL_PASS** |
-| QA cài từ Marketplace public | ⏳ **PENDING_PUBLIC_INSTALL_QA** |
-| VSIX build (repo) | ✅ READY — `dmctn-taste-skill-0.2.10.vsix` |
+| QA cài từ Marketplace public | ✅ **PASS** |
+| VSIX build (repo) | ✅ READY — `dmctn-taste-skill-0.2.11.vsix` |
 | Ảnh Marketplace / Store screenshots | ✅ READY — `store-assets/*.png` (1600×900) |
-| Visual Studio Marketplace (live) | ✅ **PUBLISHED / PUBLIC** — v**0.2.9** |
-| | ✅ **PUBLISHED / PUBLIC** — live v**0.2.9** on Marketplace |
-| Gói đồng bộ README (upload thủ công) | 📦 v**0.2.10** — sync Marketplace README |
+| Visual Studio Marketplace (live) | ✅ **PUBLISHED / PUBLIC** — v**0.2.10** |
+| | ✅ **PUBLISHED / PUBLIC** — live v**0.2.10** on Marketplace |
+| Gói đồng bộ README (upload thủ công) | 📦 v**0.2.11** — sync Marketplace Overview |
 
 **Publisher:** `buivantinh` / DMCTN Studio  
 **Publisher:** `buivantinh` / DMCTN Studio
@@ -301,8 +272,8 @@ No, except when installing the extension from Marketplace.
 **Marketplace README khác GitHub?**  
 **Marketplace README differs from GitHub?**
 
-Marketplace hiển thị README từ gói VSIX đã upload — cập nhật bằng bản VSIX mới (vd. v0.2.10).  
-Marketplace shows the README from the uploaded VSIX — update by uploading a new package (e.g. v0.2.10).
+Marketplace hiển thị README từ gói VSIX đã upload — cập nhật bằng bản VSIX mới (vd. v0.2.11).  
+Marketplace shows the README from the uploaded VSIX — update by uploading a new package (e.g. v0.2.11).
 
 ---
 
@@ -313,7 +284,7 @@ Marketplace shows the README from the uploaded VSIX — update by uploading a ne
 npm install
 npm run compile
 npm test
-npm run package   # → dmctn-taste-skill-0.2.10.vsix
+npm run package   # → dmctn-taste-skill-0.2.11.vsix
 ```
 
 Tài liệu trên GitHub: [PUBLISH_CHECKLIST](https://github.com/dienlanhvietnam-lang/dmctn-taste-skill/blob/main/docs/PUBLISH_CHECKLIST.md) · [RUNTIME_QA_REPORT](https://github.com/dienlanhvietnam-lang/dmctn-taste-skill/blob/main/docs/RUNTIME_QA_REPORT.md)
