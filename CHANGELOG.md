@@ -9,6 +9,28 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 
 ---
 
+## [0.2.10] — Đồng bộ README Marketplace
+## [0.2.10] — Marketplace README Sync
+
+### Thay đổi / Changed
+- Đồng bộ README trong gói Marketplace với tài liệu GitHub đã public.  
+  Synced Marketplace package README with the published GitHub documentation.
+
+- Cập nhật trạng thái phát hành thành **PUBLISHED / PUBLIC**.  
+  Updated release status to **PUBLISHED / PUBLIC**.
+
+- Bốn ảnh `store-assets/*.png` được đóng gói trong VSIX để README Marketplace hiển thị ảnh tương đối.  
+  Four `store-assets/*.png` screenshots bundled in the VSIX for relative README image paths.
+
+### Ghi chú / Notes
+- **Không** thay đổi hành vi runtime.  
+  **No** runtime behavior changes.
+
+- Upload thủ công `dmctn-taste-skill-0.2.10.vsix` lên Marketplace (không publish CLI).  
+  Manual upload of `dmctn-taste-skill-0.2.10.vsix` to Marketplace (no CLI publish).
+
+---
+
 ## [0.2.9] — Ảnh Marketplace sẵn sàng
 ## [0.2.9] — Marketplace screenshots ready
 

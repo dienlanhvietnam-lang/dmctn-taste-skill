@@ -1,8 +1,8 @@
 # Trạng thái Marketplace — DMCTN Taste Skill
 # Marketplace status — DMCTN Taste Skill
 
-Cập nhật sau khi extension **đã publish** trên Visual Studio Marketplace (không lưu PAT/token trong repo).  
-Updated after the extension is **published** on Visual Studio Marketplace (no PAT/tokens stored in repo).
+Extension **đã publish** trên Visual Studio Marketplace. Gói **0.2.10** đồng bộ README (upload thủ công).  
+Extension is **published** on Visual Studio Marketplace. Package **0.2.10** syncs README (manual upload).
 
 ---
 
@@ -13,25 +13,27 @@ Updated after the extension is **published** on Visual Studio Marketplace (no PA
 |----------------|-----------------|
 | Extension | **DMCTN Taste Skill** |
 | Publisher | `buivantinh` — DMCTN Studio |
-| Version | **0.2.9** |
+| Marketplace (live) | **v0.2.9** — [Listing](https://marketplace.visualstudio.com/items?itemName=buivantinh.dmctn-taste-skill) |
+| README sync package | **v0.2.10** — `dmctn-taste-skill-0.2.10.vsix` (upload thủ công) |
 | GitHub repo | https://github.com/dienlanhvietnam-lang/dmctn-taste-skill |
 | GitHub Release | [v0.2.9](https://github.com/dienlanhvietnam-lang/dmctn-taste-skill/releases/tag/v0.2.9) |
-| VSIX | `dmctn-taste-skill-0.2.9.vsix` |
-| Marketplace | [buivantinh.dmctn-taste-skill](https://marketplace.visualstudio.com/items?itemName=buivantinh.dmctn-taste-skill) |
 | Marketplace status | **Published** — public search available |
 | Availability | **Public** |
-| Screenshots | **Ready** — `store-assets/*.png` |
+| Screenshots | **Ready** — `store-assets/*.png` (in VSIX for README) |
 
 ---
 
 ## Bước tiếp theo
 ## Next step
 
-Chạy **Post-publish QA** — cài từ Marketplace, dashboard, Full 13/13, prompt (xem [`PUBLISH_CHECKLIST.md`](PUBLISH_CHECKLIST.md#post-publish-qa)).  
-Run **post-publish QA** — install from Marketplace, dashboard, Full 13/13, prompt (see [`PUBLISH_CHECKLIST.md`](PUBLISH_CHECKLIST.md#post-publish-qa)).
+1. **Tĩnh upload thủ công** `dmctn-taste-skill-0.2.10.vsix` lên publisher portal (cập nhật README Marketplace).  
+   **Manual upload** `dmctn-taste-skill-0.2.10.vsix` on the publisher portal (sync Marketplace README).
 
-**Không** publish lại hoặc bump version chỉ vì cập nhật trạng thái docs.  
-**Do not** re-publish or bump version for documentation-only status updates.
+2. Chạy **Post-publish QA** sau khi v0.2.10 live (xem [`PUBLISH_CHECKLIST.md`](PUBLISH_CHECKLIST.md#post-publish-qa)).  
+   Run **post-publish QA** after v0.2.10 is live (see [`PUBLISH_CHECKLIST.md`](PUBLISH_CHECKLIST.md#post-publish-qa)).
+
+**Không** publish bằng CLI từ repo; **không** lưu PAT/token.  
+**Do not** CLI-publish from the repo; **do not** store PAT/tokens.
 
 ---
 
@@ -39,10 +41,11 @@ Run **post-publish QA** — install from Marketplace, dashboard, Full 13/13, pro
 
 - [x] GitHub repo public
 - [x] GitHub Release v0.2.9
-- [x] VSIX uploaded to Marketplace
-- [x] Screenshots ready
+- [x] Marketplace live (v0.2.9)
 - [x] Marketplace verification complete
 - [x] Public listing opens reliably
+- [x] VSIX v0.2.10 built (README + screenshots in package)
+- [ ] v0.2.10 uploaded to Marketplace (manual)
 - [ ] Install from Marketplace (QA)
 - [ ] Dashboard opens after install (QA)
 - [ ] Full install 13/13 works (QA)
@@ -53,5 +56,8 @@ Run **post-publish QA** — install from Marketplace, dashboard, Full 13/13, pro
 ## Ghi chú
 ## Notes
 
-- Runtime QA trước publish (VSIX/Cursor): **FULL_PASS** — xem [`RUNTIME_QA_REPORT.md`](RUNTIME_QA_REPORT.md).  
-  Pre-publish runtime QA (VSIX/Cursor): **FULL_PASS** — see [`RUNTIME_QA_REPORT.md`](RUNTIME_QA_REPORT.md).
+- Marketplace **không** tự đồng bộ README từ GitHub — cần upload VSIX mới.  
+  Marketplace does **not** auto-sync README from GitHub — upload a new VSIX.
+
+- Runtime QA (VSIX/Cursor): **FULL_PASS** — [`RUNTIME_QA_REPORT.md`](RUNTIME_QA_REPORT.md).  
+  Runtime QA (VSIX/Cursor): **FULL_PASS** — [`RUNTIME_QA_REPORT.md`](RUNTIME_QA_REPORT.md).

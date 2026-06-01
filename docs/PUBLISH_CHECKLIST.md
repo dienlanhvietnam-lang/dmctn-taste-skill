@@ -9,21 +9,21 @@ Use this checklist before publishing to **Visual Studio Marketplace**.
 
 ---
 
-## Trạng thái phát hành v0.2.9
-## Release status v0.2.9
+## Trạng thái phát hành
+## Release status
 
 | Bước / Step | Trạng thái / Status |
 |-------------|---------------------|
 | GitHub repo public | ✅ **DONE** |
 | GitHub Release v0.2.9 | ✅ **DONE** |
-| VSIX attached to Release | ✅ **DONE** — `dmctn-taste-skill-0.2.9.vsix` |
-| Marketplace upload | ✅ **DONE** |
-| Marketplace verification | ✅ **DONE** |
-| Marketplace published (public search) | ✅ **DONE** — v0.2.9 |
-| Public listing QA (install from store) | ⏳ **PENDING** |
+| Marketplace published (live) | ✅ **DONE** — v**0.2.9** public search |
+| Runtime QA (VSIX/Cursor) | ✅ **FULL_PASS** |
+| Public listing QA (install from store) | ⏳ **PENDING_PUBLIC_INSTALL_QA** |
+| README sync package v0.2.10 | 📦 **READY** — upload `dmctn-taste-skill-0.2.10.vsix` thủ công |
+| | 📦 **READY** — manual upload `dmctn-taste-skill-0.2.10.vsix` |
 
-Chi tiết sau upload: [`MARKETPLACE_POST_UPLOAD_STATUS.md`](MARKETPLACE_POST_UPLOAD_STATUS.md)  
-Post-upload details: [`MARKETPLACE_POST_UPLOAD_STATUS.md`](MARKETPLACE_POST_UPLOAD_STATUS.md)
+Chi tiết Marketplace: [`MARKETPLACE_POST_UPLOAD_STATUS.md`](MARKETPLACE_POST_UPLOAD_STATUS.md)  
+Marketplace details: [`MARKETPLACE_POST_UPLOAD_STATUS.md`](MARKETPLACE_POST_UPLOAD_STATUS.md)
 
 ---
 

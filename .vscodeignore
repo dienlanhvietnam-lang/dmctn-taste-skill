@@ -10,7 +10,11 @@ tsconfig.json
 node_modules/**
 out/test/**
 docs/**
-store-assets/**
+store-assets/README.md
+!store-assets/dashboard-overview.png
+!store-assets/install-skills.png
+!store-assets/prompt-output.png
+!store-assets/coding-result.png
 dmctn_taste_skill_store_assets_branded/**
 taste-skill-vi-dmctn/**
 TEST-TASTE-CODING/**

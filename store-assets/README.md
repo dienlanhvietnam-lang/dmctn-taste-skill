@@ -4,8 +4,8 @@
 Ảnh minh họa **đã có** — dùng cho GitHub README và Visual Studio Marketplace.  
 **Present** — used for GitHub README and Visual Studio Marketplace listings.
 
-Thư mục này **không** đóng gói trong `.vsix` (xem `.vscodeignore`).  
-This folder is **excluded from the `.vsix`** (see `.vscodeignore`).
+Bốn file PNG được **đóng gói trong VSIX** (README Marketplace); `store-assets/README.md` không đóng gói.  
+Four PNG files are **bundled in the VSIX** (Marketplace README); `store-assets/README.md` is excluded.
 
 ---
 
@@ -30,8 +30,8 @@ Dimensions: **1600×900** PNG, branded logo stamp and bilingual captions.
 - **README** — đường dẫn `./store-assets/*.png`  
   **README** — paths `./store-assets/*.png`
 
-- **Visual Studio Marketplace** — ✅ **Published** v0.2.9 (xem [`docs/MARKETPLACE_POST_UPLOAD_STATUS.md`](../docs/MARKETPLACE_POST_UPLOAD_STATUS.md))  
-  **Visual Studio Marketplace** — ✅ **Published** v0.2.9 (see [`docs/MARKETPLACE_POST_UPLOAD_STATUS.md`](../docs/MARKETPLACE_POST_UPLOAD_STATUS.md))
+- **Visual Studio Marketplace** — ✅ **Published** v0.2.9 live · gói README sync **v0.2.10** (xem [`docs/MARKETPLACE_POST_UPLOAD_STATUS.md`](../docs/MARKETPLACE_POST_UPLOAD_STATUS.md))  
+  **Visual Studio Marketplace** — ✅ **Published** v0.2.9 live · README sync package **v0.2.10** (see [`docs/MARKETPLACE_POST_UPLOAD_STATUS.md`](../docs/MARKETPLACE_POST_UPLOAD_STATUS.md))
 
 ---
 

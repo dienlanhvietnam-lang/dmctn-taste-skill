@@ -1,7 +1,11 @@
 # DMCTN Taste Skill
 
-[![Version](https://img.shields.io/badge/version-0.2.9-blue)](https://github.com/dienlanhvietnam-lang/dmctn-taste-skill)
+[![Version](https://img.shields.io/badge/version-0.2.10-blue)](https://github.com/dienlanhvietnam-lang/dmctn-taste-skill)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![Marketplace](https://img.shields.io/visual-studio-marketplace/v/buivantinh.dmctn-taste-skill?label=Marketplace)](https://marketplace.visualstudio.com/items?itemName=buivantinh.dmctn-taste-skill)
+
+**DMCTN Taste Skill** cài bộ quy tắc và prompt chống UI AI rập khuôn vào dự án Cursor / VS Code Agent.  
+**DMCTN Taste Skill** installs anti-slop UI taste rules and prompt packs into Cursor / VS Code agent projects.
 
 **Bộ skill UI chống “AI rập khuôn” cho Cursor, VS Code Agent, Claude Code và Codex.**  
 **Anti-slop UI skills for Cursor, VS Code agents, Claude Code, and Codex.**
@@ -11,6 +15,9 @@
 
 **Kho mã nguồn:** https://github.com/dienlanhvietnam-lang/dmctn-taste-skill  
 **Repository:** https://github.com/dienlanhvietnam-lang/dmctn-taste-skill
+
+**Cài từ Marketplace:** https://marketplace.visualstudio.com/items?itemName=buivantinh.dmctn-taste-skill  
+**Install from Marketplace:** https://marketplace.visualstudio.com/items?itemName=buivantinh.dmctn-taste-skill
 
 ---
 
@@ -77,8 +84,8 @@ The extension installs into your workspace:
 ## Cài đặt nhanh
 ## Quick start
 
-1. **Cài extension** — [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=buivantinh.dmctn-taste-skill) (khuyến nghị) hoặc VSIX từ [GitHub Release v0.2.9](https://github.com/dienlanhvietnam-lang/dmctn-taste-skill/releases/tag/v0.2.9).  
-   **Install the extension** — [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=buivantinh.dmctn-taste-skill) (recommended) or VSIX from [GitHub Release v0.2.9](https://github.com/dienlanhvietnam-lang/dmctn-taste-skill/releases/tag/v0.2.9).
+1. **Cài extension** — [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=buivantinh.dmctn-taste-skill) (khuyến nghị) hoặc VSIX từ [GitHub Releases](https://github.com/dienlanhvietnam-lang/dmctn-taste-skill/releases).  
+   **Install the extension** — [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=buivantinh.dmctn-taste-skill) (recommended) or VSIX from [GitHub Releases](https://github.com/dienlanhvietnam-lang/dmctn-taste-skill/releases).
 
 2. **Mở dự án** trong VS Code hoặc Cursor.  
    **Open your project** in VS Code or Cursor.
@@ -157,8 +164,8 @@ Each prompt includes: Design Read, anti-slop, mobile-first, accessibility, perfo
 ## Ảnh minh họa
 ## Screenshots
 
-Ảnh trong [`store-assets/`](store-assets/) (không đóng gói trong VSIX).  
-Images in [`store-assets/`](store-assets/) (not bundled in the VSIX).
+Bốn ảnh trong `store-assets/` (1600×900) — có trong gói VSIX để README Marketplace hiển thị đúng.  
+Four images in `store-assets/` (1600×900) — bundled in the VSIX so the Marketplace README renders correctly.
 
 ### Tổng quan dashboard
 ### Dashboard overview
@@ -220,25 +227,17 @@ Agent applying Taste Skill — Design Read and anti-slop UI result.
 | Hạng mục / Item | Trạng thái / Status |
 |-----------------|---------------------|
 | Mã nguồn GitHub / Source on GitHub | ✅ Public / READY — `main` |
-| Runtime QA (Cursor) | ✅ FULL_PASS — xem [`docs/RUNTIME_QA_REPORT.md`](docs/RUNTIME_QA_REPORT.md) |
-| VSIX build | ✅ READY — `dmctn-taste-skill-0.2.9.vsix` |
+| GitHub Release | ✅ v0.2.9 **DONE** |
+| Runtime QA (VSIX/Cursor) | ✅ **FULL_PASS** |
+| QA cài từ Marketplace public | ⏳ **PENDING_PUBLIC_INSTALL_QA** |
+| VSIX build (repo) | ✅ READY — `dmctn-taste-skill-0.2.10.vsix` |
 | Ảnh Marketplace / Store screenshots | ✅ READY — `store-assets/*.png` (1600×900) |
-| Visual Studio Marketplace | ✅ **PUBLISHED / PUBLIC** — v0.2.9, tìm kiếm công khai trên Marketplace |
-| | ✅ **PUBLISHED / PUBLIC** — v0.2.9, publicly searchable on Marketplace |
+| Visual Studio Marketplace (live) | ✅ **PUBLISHED / PUBLIC** — v**0.2.9** |
+| | ✅ **PUBLISHED / PUBLIC** — live v**0.2.9** on Marketplace |
+| Gói đồng bộ README (upload thủ công) | 📦 v**0.2.10** — sync Marketplace README |
 
-**Publisher:** `buivantinh` / DMCTN Studio · **Phiên bản / Version:** `0.2.9`  
-**Publisher:** `buivantinh` / DMCTN Studio · **Version:** `0.2.9`
-
-Chi tiết sau upload: [`docs/MARKETPLACE_POST_UPLOAD_STATUS.md`](docs/MARKETPLACE_POST_UPLOAD_STATUS.md)  
-Post-upload details: [`docs/MARKETPLACE_POST_UPLOAD_STATUS.md`](docs/MARKETPLACE_POST_UPLOAD_STATUS.md)
-
----
-
-## Lộ trình và bước tiếp theo
-## Roadmap and next steps
-
-1. Chạy QA cài từ Marketplace public (theo [`docs/PUBLISH_CHECKLIST.md`](docs/PUBLISH_CHECKLIST.md#post-publish-qa)) — **PENDING**.  
-   Run public install QA from Marketplace (see [`docs/PUBLISH_CHECKLIST.md`](docs/PUBLISH_CHECKLIST.md#post-publish-qa)) — **PENDING**.
+**Publisher:** `buivantinh` / DMCTN Studio  
+**Publisher:** `buivantinh` / DMCTN Studio
 
 ---
 
@@ -296,8 +295,14 @@ Install skips existing files; update asks before overwrite and can backup.
 **Có cần internet không?**  
 **Does it need the internet?**
 
-Không, trừ khi bạn tải extension từ store.  
-No, except when installing the extension from a store.
+Không, trừ khi bạn tải extension từ Marketplace.  
+No, except when installing the extension from Marketplace.
+
+**Marketplace README khác GitHub?**  
+**Marketplace README differs from GitHub?**
+
+Marketplace hiển thị README từ gói VSIX đã upload — cập nhật bằng bản VSIX mới (vd. v0.2.10).  
+Marketplace shows the README from the uploaded VSIX — update by uploading a new package (e.g. v0.2.10).
 
 ---
 
@@ -308,10 +313,10 @@ No, except when installing the extension from a store.
 npm install
 npm run compile
 npm test
-npm run package   # → dmctn-taste-skill-0.2.9.vsix
+npm run package   # → dmctn-taste-skill-0.2.10.vsix
 ```
 
-Tài liệu / Docs: [`docs/PUBLISH_CHECKLIST.md`](docs/PUBLISH_CHECKLIST.md) · [`docs/RUNTIME_QA_REPORT.md`](docs/RUNTIME_QA_REPORT.md)
+Tài liệu trên GitHub: [PUBLISH_CHECKLIST](https://github.com/dienlanhvietnam-lang/dmctn-taste-skill/blob/main/docs/PUBLISH_CHECKLIST.md) · [RUNTIME_QA_REPORT](https://github.com/dienlanhvietnam-lang/dmctn-taste-skill/blob/main/docs/RUNTIME_QA_REPORT.md)
 
 ---
 
