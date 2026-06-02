@@ -7,9 +7,22 @@
  * test/build, và Final PASS/FAIL report.
  */
 
-export type PresetId = 'dashboard' | 'landing' | 'redesign' | 'audit' | 'mobile' | 'localbiz';
+export type PresetId = 'dashboard' | 'landing' | 'redesign' | 'audit' | 'mobile' | 'marketplace';
 
-export const PRESETS: PresetId[] = ['dashboard', 'landing', 'redesign', 'audit', 'mobile', 'localbiz'];
+export const PRESETS: PresetId[] = ['dashboard', 'landing', 'redesign', 'audit', 'mobile', 'marketplace'];
+
+/** Legacy preset ids kept for backward-compatible dashboard state / saved prompts. */
+const LEGACY_PRESET_ALIASES: Record<string, PresetId> = {
+  localbiz: 'marketplace'
+};
+
+export function normalizePresetId(raw: string | undefined): PresetId {
+  const key = String(raw || '').trim();
+  if (LEGACY_PRESET_ALIASES[key]) {
+    return LEGACY_PRESET_ALIASES[key];
+  }
+  return PRESETS.includes(key as PresetId) ? (key as PresetId) : 'dashboard';
+}
 
 export interface PromptOptions {
   preset: PresetId;
@@ -108,19 +121,25 @@ const BRIEFS: Record<PresetId, Brief> = {
       en: ['Context-appropriate bottom nav/primary action.', 'Short, clear text; avoid two-hand interactions.']
     }
   },
-  localbiz: {
-    title: { vi: 'Web doanh nghiệp địa phương', en: 'Local Business Website' },
+  marketplace: {
+    title: { vi: 'Trang giới thiệu Marketplace', en: 'Marketplace Listing Page' },
     goal: {
-      vi: 'Thiết kế web cho doanh nghiệp địa phương: tạo niềm tin, dễ liên hệ, SEO local tốt.',
-      en: 'Design a local business website: build trust, easy contact, strong local SEO.'
+      vi: 'Thiết kế trang listing extension/app trên Marketplace: value prop rõ, screenshot thật, CTA cài đặt, tín hiệu tin cậy cho developer.',
+      en: 'Design an extension/app marketplace listing page: clear value props, real screenshots, install CTA, trust signals for developers.'
     },
     audience: {
-      vi: 'khách địa phương muốn tìm dịch vụ, giờ mở cửa, địa chỉ, cách liên hệ',
-      en: 'local customers looking for services, hours, address and contact'
+      vi: 'developer đang so sánh extension/tool trước khi cài hoặc mua',
+      en: 'developers evaluating extensions/tools before install or purchase'
     },
     extra: {
-      vi: ['Thông tin liên hệ/địa chỉ/giờ mở cửa nổi bật.', 'SEO local: title/description, schema, bản đồ, đánh giá thật.'],
-      en: ['Prominent contact/address/opening hours.', 'Local SEO: title/description, schema, map, real reviews.']
+      vi: [
+        'Hero + feature bullets + changelog highlights; badge publisher/version.',
+        'Screenshot gallery 1600×900; pricing/license rõ; link repo/docs.'
+      ],
+      en: [
+        'Hero + feature bullets + changelog highlights; publisher/version badges.',
+        '1600×900 screenshot gallery; clear pricing/license; repo/docs links.'
+      ]
     }
   }
 };
@@ -186,7 +205,7 @@ FINAL REPORT (required):
 /** Sinh prompt theo preset. Luôn trả về chuỗi không rỗng (fallback dashboard). */
 export function generatePrompt(opts: PromptOptions): string {
   const lang: 'vi' | 'en' = opts.lang === 'vi' ? 'vi' : 'en';
-  const preset: PresetId = PRESETS.includes(opts.preset) ? opts.preset : 'dashboard';
+  const preset: PresetId = normalizePresetId(opts.preset);
   const name =
     (opts.projectName && opts.projectName.trim()) || (lang === 'vi' ? 'dự án này' : 'this project');
   const brief = BRIEFS[preset];

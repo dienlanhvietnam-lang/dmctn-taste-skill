@@ -26,6 +26,7 @@ TEST-TASTE-CODING/**
 **/.dmctn/**
 package-lock.json
 incoming-assets/**
+_upstream/**
 !assets/**
 !media/icon.png
 !media/dmctn-taste-logo.png

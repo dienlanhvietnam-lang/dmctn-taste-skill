@@ -126,7 +126,7 @@ flowchart LR
 ## Out of scope
 
 - Open VSX publish
-- Preset ngành riêng (điện máy, sửa chữa, SEO địa phương riêng, …) — preset `localbiz` hiện có giữ **generic** “local business”, không mở rộng ngành
+- Preset ngành riêng (điện máy, sửa chữa, SEO địa phương riêng, …) — preset legacy `localbiz` đã đổi thành **`marketplace`** (Marketplace Listing Page, developer-oriented)
 - Thay thế hoàn toàn `npx skills add` — có thể **document** song song, không bắt buộc implement CLI
 
 ---

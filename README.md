@@ -1,8 +1,8 @@
 # DMCTN Taste Skill
 
-Bộ skill chống UI rập khuôn cho Cursor, VS Code Agent, Claude Code và Codex — giúp AI đọc brief, xác định gu thiết kế, tránh giao diện AI-slope trước khi code.
+**AI UI Design Director for Developers** — bộ skill chống UI rập khuôn cho Cursor, VS Code Agent, Claude Code và Codex. Tập trung developer, frontend, dashboard, SaaS, devtool, docs, agent UI và app UI — không preset ngành cá nhân trong core.
 
-Anti-slop UI taste skills for Cursor, VS Code Agent, Claude Code, and Codex — helping AI read the brief, define design taste, and avoid generic AI-generated interfaces before coding.
+**AI UI Design Director for Developers** — anti-slop UI taste skills for Cursor, VS Code Agent, Claude Code, and Codex. Focused on developers, frontends, dashboards, SaaS, devtools, docs, agent UI, and app UI — no personal-industry presets in core.
 
 [![Version](https://img.shields.io/badge/version-0.3.0-blue)](https://github.com/dienlanhvietnam-lang/dmctn-taste-skill)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
@@ -136,7 +136,7 @@ Six presets are available in the Dashboard and Command Palette:
 | Redesign Existing UI | Làm đẹp UI cũ, giữ hành vi / Improve UI, keep behavior |
 | Full UI Audit | Audit trước khi sửa / Audit before changes |
 | Mobile-first App | App ưu tiên mobile / Mobile-first screens |
-| Local Business Website | Web địa phương + SEO / Local business + SEO |
+| Marketplace Listing Page | Trang listing extension/app / Marketplace listing + install CTA |
 
 Mỗi prompt gồm: Design Read, anti-slop, mobile-first, accessibility, performance, security (nếu có code), PASS/FAIL.  
 Each prompt includes: Design Read, anti-slop, mobile-first, accessibility, performance, security (when relevant), PASS/FAIL.
@@ -212,11 +212,11 @@ Agent applying Taste Skill — Design Read and anti-slop UI result.
 | GitHub Release | ✅ v0.2.9 **DONE** |
 | Runtime QA (VSIX/Cursor) | ✅ **FULL_PASS** |
 | QA cài từ Marketplace public | ✅ **PASS** |
-| VSIX build (repo) | ✅ READY — `dmctn-taste-skill-0.2.11.vsix` |
+| VSIX build (repo) | 📦 READY — `dmctn-taste-skill-0.3.0.vsix` (RC polish, chưa upload) |
 | Ảnh Marketplace / Store screenshots | ✅ READY — `store-assets/*.png` (1600×900) |
-| Visual Studio Marketplace (live) | ✅ **PUBLISHED / PUBLIC** — v**0.2.10** |
-| | ✅ **PUBLISHED / PUBLIC** — live v**0.2.10** on Marketplace |
-| Gói đồng bộ README (upload thủ công) | 📦 v**0.2.11** — sync Marketplace Overview |
+| Visual Studio Marketplace (live) | ✅ **PUBLISHED / PUBLIC** — v**0.2.10** (upload v0.3.0 pending) |
+| | ✅ **PUBLISHED / PUBLIC** — live v**0.2.10**; v**0.3.0** RC ready for manual upload |
+| Gói đồng bộ README (upload thủ công) | 📦 v**0.3.0** — Design Director Core + marketplace preset |
 
 **Publisher:** `buivantinh` / DMCTN Studio  
 **Publisher:** `buivantinh` / DMCTN Studio
@@ -295,7 +295,7 @@ Marketplace shows the README from the uploaded VSIX — update by uploading a ne
 npm install
 npm run compile
 npm test
-npm run package   # → dmctn-taste-skill-0.2.11.vsix
+npm run package   # → dmctn-taste-skill-0.3.0.vsix
 ```
 
 Tài liệu trên GitHub: [PUBLISH_CHECKLIST](https://github.com/dienlanhvietnam-lang/dmctn-taste-skill/blob/main/docs/PUBLISH_CHECKLIST.md) · [RUNTIME_QA_REPORT](https://github.com/dienlanhvietnam-lang/dmctn-taste-skill/blob/main/docs/RUNTIME_QA_REPORT.md)

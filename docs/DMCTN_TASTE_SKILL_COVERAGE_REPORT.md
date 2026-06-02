@@ -18,7 +18,7 @@
 | Minimal pack | 3 skill + core (`taste-skill`, `redesign-skill`, `brandkit`) |
 | Dashboard tabs | 7 — Overview, Install, Skills, Prompts, Guide, Settings, About |
 | Install modes | Minimal / Full / Custom |
-| Prompt presets | 6 — `dashboard`, `landing`, `redesign`, `audit`, `mobile`, `localbiz` |
+| Prompt presets | 6 — `dashboard`, `landing`, `redesign`, `audit`, `mobile`, `marketplace` (alias `localbiz` → `marketplace`) |
 | Tests | **52/52** PASS (`npm test`) |
 | Marketplace (docs) | **PUBLISHED / PUBLIC** — live ~v0.2.10; sync package v0.2.11 pending upload |
 | Runtime QA | FULL_PASS (VSIX/Cursor) + Marketplace public install PASS (dashboard) |

@@ -28,9 +28,9 @@ UI_APPLICATION: ...
 DO_NOT_USE: ...
 ```
 
-## Với DMCTN/local business
+## Với listing Marketplace / devtool
 
-Ưu tiên rõ ràng, đáng tin, thực tế, không quá “startup giả”. Ảnh thật và bằng chứng thật mạnh hơn minh hoạ bóng bẩy.
+Ưu tiên rõ ràng, đáng tin, thực tế — screenshot thật, changelog rõ, không quá “startup giả”. Bằng chứng thật (repo, license, publisher) mạnh hơn mockup bóng bẩy.
 
 ## Quy trình bắt buộc
 

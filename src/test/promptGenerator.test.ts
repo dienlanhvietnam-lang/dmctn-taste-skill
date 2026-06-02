@@ -1,6 +1,6 @@
 import { test } from 'node:test';
 import assert from 'node:assert';
-import { generatePrompt, PRESETS } from '../core/promptGenerator';
+import { generatePrompt, PRESETS, normalizePresetId } from '../core/promptGenerator';
 
 test('PRESETS: has at least 6 presets', () => {
   assert.ok(PRESETS.length >= 6);
@@ -74,4 +74,10 @@ test('generatePrompt: unknown preset falls back to dashboard', () => {
 
 test('generatePrompt: empty name uses default placeholder', () => {
   assert.ok(generatePrompt({ preset: 'dashboard', projectName: '   ', lang: 'vi' }).includes('dự án này'));
+});
+
+test('normalizePresetId: legacy localbiz maps to marketplace', () => {
+  assert.strictEqual(normalizePresetId('localbiz'), 'marketplace');
+  const out = generatePrompt({ preset: 'localbiz' as any, lang: 'en' });
+  assert.ok(out.includes('Marketplace Listing Page'));
 });

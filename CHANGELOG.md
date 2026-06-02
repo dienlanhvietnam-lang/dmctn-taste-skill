@@ -25,8 +25,16 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 - **Skill mới** — `ui-review-skill` (Design QA Score 100), `component-taste` (14 component rule sets).  
   **New skills** — UI review scoring and component taste rules.
 
-- **Prompt generator** — Gate R2 sections (UI Plan, Pre-Flight, ui-review); giữ 6 preset cũ.  
-  **Prompt generator** — R2 gate sections; same six dashboard presets.
+- **Prompt generator** — Gate R2 sections (UI Plan, Pre-Flight, ui-review); 6 preset dev-oriented (preset `localbiz` đổi thành `marketplace`).  
+  **Prompt generator** — R2 gate sections; six developer-oriented presets (`localbiz` renamed to `marketplace`).
+
+### RC Polish (pre-Marketplace upload)
+- Preset **`marketplace`** thay legacy **`localbiz`** — Trang giới thiệu Marketplace / Marketplace Listing Page (developer-oriented).  
+  **`marketplace`** preset replaces legacy **`localbiz`** — developer marketplace listing, not personal-industry local business.
+- Alias `localbiz` → `marketplace` vẫn hoạt động cho state cũ.  
+  Legacy `localbiz` id maps to `marketplace` for saved dashboard state.
+- Loại `_upstream/` khỏi VSIX; cập nhật README/QA cho v0.3.0.  
+  Exclude `_upstream/` from VSIX; README/QA aligned for v0.3.0 RC.
 
 - **AGENTS.md** template đồng bộ Gate R2.  
   **AGENTS.md** template aligned with Gate R2.
