@@ -43,8 +43,8 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 - Không đổi hành vi installer/dashboard lớn; Full install = **15** skill.  
   No major dashboard redesign; Full install = **15** skills.
 
-- Không publish Marketplace trong mốc này.  
-  No Marketplace publish in this release.
+- Marketplace release/public runtime QA: **PASS** (v0.3.0 live).  
+  Marketplace public runtime QA: **PASS** (v0.3.0 live).
 
 ---
 

@@ -209,14 +209,13 @@ Agent applying Taste Skill — Design Read and anti-slop UI result.
 | Hạng mục / Item | Trạng thái / Status |
 |-----------------|---------------------|
 | Mã nguồn GitHub / Source on GitHub | ✅ Public / READY — `main` |
-| GitHub Release | ✅ v0.2.9 **DONE** |
+| GitHub Release | ✅ v0.3.0 **DONE** |
 | Runtime QA (VSIX/Cursor) | ✅ **FULL_PASS** |
 | QA cài từ Marketplace public | ✅ **PASS** |
-| VSIX build (repo) | 📦 READY — `dmctn-taste-skill-0.3.0.vsix` (RC polish, chưa upload) |
+| VSIX build (repo) | 📦 READY — `dmctn-taste-skill-0.3.0.vsix` |
 | Ảnh Marketplace / Store screenshots | ✅ READY — `store-assets/*.png` (1600×900) |
-| Visual Studio Marketplace (live) | ✅ **PUBLISHED / PUBLIC** — v**0.2.10** (upload v0.3.0 pending) |
-| | ✅ **PUBLISHED / PUBLIC** — live v**0.2.10**; v**0.3.0** RC ready for manual upload |
-| Gói đồng bộ README (upload thủ công) | 📦 v**0.3.0** — Design Director Core + marketplace preset |
+| Visual Studio Marketplace (live) | ✅ **PUBLISHED / PUBLIC** — v**0.3.0** |
+| Runtime QA from Marketplace install | ✅ **PASS** — dashboard mở OK, 15 skill, prompt/gate hoạt động |
 
 **Publisher:** `buivantinh` / DMCTN Studio  
 **Publisher:** `buivantinh` / DMCTN Studio

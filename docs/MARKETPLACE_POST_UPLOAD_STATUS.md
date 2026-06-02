@@ -1,8 +1,8 @@
 # Trạng thái Marketplace — DMCTN Taste Skill
 # Marketplace status — DMCTN Taste Skill
 
-Extension **đã publish** trên Visual Studio Marketplace. Gói **0.2.11** đồng bộ Marketplace Overview (upload thủ công).  
-Extension is **published** on Visual Studio Marketplace. Package **0.2.11** syncs Marketplace Overview (manual upload).
+Extension **đã publish public** trên Visual Studio Marketplace với **v0.3.0**.  
+Extension is **publicly published** on Visual Studio Marketplace with **v0.3.0**.
 
 ---
 
@@ -13,11 +13,11 @@ Extension is **published** on Visual Studio Marketplace. Package **0.2.11** sync
 |----------------|-----------------|
 | Extension | **DMCTN Taste Skill** |
 | Publisher | `buivantinh` — DMCTN Studio |
-| Marketplace (live) | **v0.2.10** — [Listing](https://marketplace.visualstudio.com/items?itemName=buivantinh.dmctn-taste-skill) |
-| README sync package | **v0.2.11** — `dmctn-taste-skill-0.2.11.vsix` (upload thủ công) |
+| Marketplace (live) | **v0.3.0** — [Listing](https://marketplace.visualstudio.com/items?itemName=buivantinh.dmctn-taste-skill) |
+| Version live | **0.3.0** |
 | GitHub repo | https://github.com/dienlanhvietnam-lang/dmctn-taste-skill |
 | GitHub Release | [v0.2.9](https://github.com/dienlanhvietnam-lang/dmctn-taste-skill/releases/tag/v0.2.9) |
-| Marketplace status | **Published** — public search available |
+| Marketplace status | **Published** |
 | Availability | **Public** |
 | Screenshots | **Ready** — `store-assets/*.png` (in VSIX for README) |
 
@@ -29,24 +29,24 @@ Extension is **published** on Visual Studio Marketplace. Package **0.2.11** sync
 |------------------|---------------------|
 | Marketplace public | ✅ **YES** |
 | Public search | ✅ **YES** |
-| Public install from Marketplace | ✅ **PASS** |
-| Dashboard after install | ✅ **PASS** |
-| README sync | 📦 preparing v**0.2.11** |
-| Full 13/13 QA (optional) | ⏳ **PENDING_MANUAL** |
+| Install from Marketplace | ✅ **PASS** |
+| Runtime dashboard | ✅ **PASS** |
+| Prompt generator | ✅ **PASS** |
+| Runtime QA verdict | ✅ **PUBLIC_RUNTIME_PASS** |
 
 ---
 
-## Bước tiếp theo
-## Next step
+## Trạng thái sau upload v0.3.0
+## Post-upload status for v0.3.0
 
-1. **Tĩnh upload thủ công** `dmctn-taste-skill-0.2.11.vsix` lên publisher portal (cập nhật README Marketplace Overview).  
-   **Manual upload** `dmctn-taste-skill-0.2.11.vsix` on the publisher portal (sync Marketplace README Overview).
+- Version live: **0.3.0**
+- Availability: **Public**
+- Install from Marketplace: **PASS**
+- Runtime dashboard: **PASS**
+- Prompt generator: **PASS**
 
-2. Kiểm tra Marketplace Overview hiển thị README mới.  
-   Check that the Marketplace Overview displays the new README correctly.
-
-**Không** publish bằng CLI từ repo; **không** lưu PAT/token.  
-**Do not** CLI-publish from the repo; **do not** store PAT/tokens.
+Không thực hiện publish CLI trong repo, không đụng PAT/token.  
+No CLI publishing from this repo, no PAT/token handling.
 
 ---
 
@@ -56,16 +56,16 @@ Extension is **published** on Visual Studio Marketplace. Package **0.2.11** sync
 |---|------------|---------------------|
 | 1 | GitHub repo public | ✅ **DONE** |
 | 2 | GitHub Release v0.2.9 | ✅ **DONE** |
-| 3 | Marketplace live (v0.2.10) | ✅ **DONE** |
+| 3 | Marketplace live (v0.3.0) | ✅ **DONE** |
 | 4 | Marketplace verification complete | ✅ **DONE** |
 | 5 | Public listing opens reliably | ✅ **DONE** |
-| 6 | VSIX v0.2.11 built (README overview polish + screenshots) | 📦 **READY** |
-| 7 | v0.2.11 uploaded to Marketplace (manual) | ⏳ **TODO** |
+| 6 | v0.3.0 live on Marketplace | ✅ **DONE** |
+| 7 | Post-upload runtime QA (public install) | ✅ **PASS** |
 | 8 | Install from Marketplace (QA) | ✅ **PASS** |
 | 9 | Dashboard opens after install (QA) | ✅ **PASS** |
-| 10 | Full install 13/13 works (QA) | ⏳ **PENDING_MANUAL** |
+| 10 | Full install 15/15 works (QA) | ✅ **PASS** |
 | 11 | Prompt generator works (QA) | ✅ **PASS** (from runtime QA) |
-| 12 | README Overview displays correctly on Marketplace | ⏳ **TODO** (after upload) |
+| 12 | README Overview displays correctly on Marketplace | ✅ **PASS** |
 
 ---
 

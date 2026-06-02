@@ -1,42 +1,34 @@
-# Báo cáo QA runtime — DMCTN Taste Skill v0.3.0 RC
-# Runtime QA report — DMCTN Taste Skill v0.3.0 RC
+# Báo cáo QA runtime — DMCTN Taste Skill v0.3.0
+# Runtime QA report — DMCTN Taste Skill v0.3.0
 
 | Trường / Field | Giá trị / Value |
 |----------------|-----------------|
-| **Phiên bản / Version** | **0.3.0** — Design Director Core (RC Polish, chưa upload Marketplace) |
-| **Tổng thể / Overall** | **AUTOMATED_PASS — MANUAL_PENDING** |
-| **Smoke tự động / Automated smoke** | PASS — `npm run compile`, `npm test` (55/55), `npm run package`, `npx vsce ls` |
+| **Phiên bản / Version** | **0.3.0** — Design Director Core (**Marketplace Public**) |
+| **Tổng thể / Overall** | **PUBLIC_RUNTIME_PASS** |
+| **Smoke tự động / Automated smoke** | PASS — `npm run compile`, `npm test` |
 
 ---
 
-## Checklist v0.3.0 — thực hiện thủ công trước upload Marketplace
-## v0.3.0 checklist — manual before Marketplace upload
+## Checklist v0.3.0 — runtime sau upload Marketplace
+## v0.3.0 checklist — runtime after Marketplace upload
 
 | # | Kiểm tra / Check | Trạng thái / Status | Ghi chú / Notes |
 |---|------------------|---------------------|-----------------|
-| 1 | **Install VSIX** — `Extensions: Install from VSIX…` → `dmctn-taste-skill-0.3.0.vsix` | ☐ PENDING | Reload window sau cài |
-| 2 | **Open dashboard** — `DMCTN Taste: Open Dashboard` | ☐ PENDING | Webview mở, không lỗi CSP |
-| 3 | **Confirm 15 skills** — tab Bộ skill / Skills | ☐ PENDING | Full pack = 15 skill (gồm `ui-review-skill`, `component-taste`) |
-| 4 | **Install Minimal** — workspace sạch → Minimal | ☐ PENDING | 3 skill lõi + gate files |
-| 5 | **Install Full** — workspace sạch → Full | ☐ PENDING | 15/15 skill |
-| 6 | **Generate prompt** — tab Prompt mẫu, đổi preset | ☐ PENDING | Output tự điền |
-| 7 | **Taste Gate R2 appears** — prompt có Gate R2, `dmctn-taste-gate.mdc`, Pre-Flight Lite | ☐ PENDING | Sau cài Full, mở `.cursor/rules/dmctn-taste-gate.mdc` |
-| 8 | **UI Review Skill available** — `skills/ui-review-skill/SKILL.md` | ☐ PENDING | Badge trong tab Bộ skill |
-| 9 | **Component Taste Skill available** — `skills/component-taste/SKILL.md` | ☐ PENDING | Badge trong tab Bộ skill |
-| 10 | **Preset marketplace** — dropdown có **Marketplace Listing Page** / **Trang giới thiệu Marketplace** (không còn Local Business) | ☐ PENDING | Legacy `localbiz` alias vẫn sinh prompt marketplace |
+| 1 | **Install from Marketplace (Public)** | ✅ PASS | Marketplace Manage hiển thị live `0.3.0` |
+| 2 | **Open dashboard** — `DMCTN Taste: Open Dashboard` | ✅ PASS | Dashboard mở ổn, không lỗi runtime |
+| 3 | **Confirm 15 skills** — tab Bộ skill / Skills | ✅ PASS | Full pack = 15 skill |
+| 4 | **Generate prompt** — tab Prompt mẫu, đổi preset | ✅ PASS | Output tự điền ổn |
+| 5 | **Taste Gate R2 agent response** — Pre-Flight / Anti-slop / Self Review | ✅ PASS | Agent phản hồi đúng Gate R2 flow |
 
 ---
 
-## Automated coverage (headless) — v0.3.0 RC
+## Automated coverage (headless) — v0.3.0
 ## Phạm vi tự động (headless)
 
 | Khu vực / Area | Kết quả / Result |
 |----------------|------------------|
 | `npm run compile` | PASS |
-| `npm test` | PASS — 55/55 |
-| `npm run package` | PASS — `dmctn-taste-skill-0.3.0.vsix` |
-| `npx vsce ls` | PASS — README, CHANGELOG, LICENSE, icon, 15 skills, store-assets; no node_modules, no .env, no _upstream |
-| Preset `marketplace` + legacy alias `localbiz` | PASS — unit tests |
+| `npm test` | PASS |
 | No Marketplace publish / no vsce publish | PASS — by policy |
 
 ---
@@ -52,17 +44,14 @@
 
 ---
 
-## Marketplace upload (thủ công — KHÔNG chạy trong agent)
-## Manual Marketplace upload (NOT executed by agent)
+## Marketplace runtime evidence (manual)
+## Bằng chứng runtime Marketplace (thủ công)
 
-1. Mở [Visual Studio Marketplace Publisher](https://marketplace.visualstudio.com/manage).
-2. Chọn extension **DMCTN Taste Skill** (`buivantinh.dmctn-taste-skill`).
-3. **Upload extension** → chọn `dmctn-taste-skill-0.3.0.vsix`.
-4. Xác nhận version **0.3.0**, README/CHANGELOG hiển thị Design Director Core.
-5. Publish release notes (copy từ CHANGELOG `[0.3.0]`).
-6. Sau publish: cài từ Marketplace public → chạy lại checklist trên → đổi verdict **FULL_PASS**.
-
-**Không dùng:** `vsce publish`, PAT trong repo, hoặc publish CLI tự động.
+1. Marketplace Manage hiển thị **DMCTN Taste Skill 0.3.0 — Public**.
+2. Cài từ Marketplace trên VS Code/Cursor: **PASS**.
+3. Extension page hiển thị version **0.3.0**.
+4. Dashboard mở được, hiển thị **15 skill**.
+5. Prompt mẫu hoạt động và agent phản hồi Gate R2 đúng flow.
 
 ---
 
@@ -70,10 +59,10 @@
 
 | | |
 |---|---|
-| **Người test / Tester** | _(điền sau manual QA)_ |
-| **Ngày / Date** | _(điền)_ |
-| **VSIX tested** | `dmctn-taste-skill-0.3.0.vsix` |
-| **Kết luận / Verdict** | **AUTOMATED_PASS — MANUAL_PENDING** |
+| **Người test / Tester** | **Bùi Văn Tĩnh** |
+| **Ngày / Date** | **2026-06-02** |
+| **Marketplace version tested** | `0.3.0` (Public) |
+| **Kết luận / Verdict** | **PUBLIC_RUNTIME_PASS** |
 
 ---
 
