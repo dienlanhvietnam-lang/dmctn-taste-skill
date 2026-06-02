@@ -17,6 +17,9 @@ taste-skill-vi-dmctn/
 # Branded screenshot source drop (copies live in store-assets/)
 dmctn_taste_skill_store_assets_branded/
 
+# Upstream reference clone (local audit only — not committed)
+_upstream/
+
 # Store screenshots — allowlist 4 Marketplace PNGs for GitHub README
 store-assets/*.png
 !store-assets/dashboard-overview.png
