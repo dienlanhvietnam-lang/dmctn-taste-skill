@@ -4,7 +4,7 @@ Bộ skill chống UI rập khuôn cho Cursor, VS Code Agent, Claude Code và Co
 
 Anti-slop UI taste skills for Cursor, VS Code Agent, Claude Code, and Codex — helping AI read the brief, define design taste, and avoid generic AI-generated interfaces before coding.
 
-[![Version](https://img.shields.io/badge/version-0.2.11-blue)](https://github.com/dienlanhvietnam-lang/dmctn-taste-skill)
+[![Version](https://img.shields.io/badge/version-0.3.0-blue)](https://github.com/dienlanhvietnam-lang/dmctn-taste-skill)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![Marketplace](https://img.shields.io/visual-studio-marketplace/v/buivantinh.dmctn-taste-skill?label=Marketplace)](https://marketplace.visualstudio.com/items?itemName=buivantinh.dmctn-taste-skill)
 ![Local only](https://img.shields.io/badge/local--only-true-purple)
@@ -50,6 +50,17 @@ Anti-slop UI taste skills for Cursor, VS Code Agent, Claude Code, and Codex — 
 - **An toàn** — local-only, no telemetry, hỏi trước khi ghi.  
   **Safety** — local-only, no telemetry, ask before writing.
 
+### Design Director Core (v0.3.0)
+
+- **Taste Gate R2** — Design Read → Taste Direction → UI Plan → Pre-Flight Lite → Anti-Slop → Self Review.  
+  **Taste Gate R2** — structured gate before any UI code.
+
+- **10 Developer Presets** — devtool, SaaS, admin dashboard, AI workspace, docs, marketplace listing, mobile utility, design system, redesign, image-to-code (không preset ngành cá nhân trong core).  
+  **10 developer presets** — no personal-industry presets baked into core.
+
+- **UI Review + Component Taste** — Design QA Score (100) và rule từng component.  
+  **UI Review + Component Taste** — scored review and per-component rules.
+
 ---
 
 ## Cài đặt nhanh
@@ -61,8 +72,8 @@ Anti-slop UI taste skills for Cursor, VS Code Agent, Claude Code, and Codex — 
 2. **Mở dự án** trong VS Code hoặc Cursor.  
    **Open your project** in VS Code or Cursor.
 
-3. Khi được hỏi, chọn **Cài đặt** → **Minimal** (3 skill lõi) hoặc **Full** (13 skill).  
-   When prompted, choose **Install** → **Minimal** (3 core skills) or **Full** (all 13).
+3. Khi được hỏi, chọn **Cài đặt** → **Minimal** (3 skill lõi) hoặc **Full** (15 skill).  
+   When prompted, choose **Install** → **Minimal** (3 core skills) or **Full** (all 15).
 
 4. Chạy lệnh **DMCTN Taste: Open Dashboard** → tab **Prompt mẫu**.  
    Run **DMCTN Taste: Open Dashboard** → **Prompts** tab.
@@ -254,8 +265,8 @@ Yes — Cursor reads `.cursor/rules/` and `skills/` like VS Code.
 - **Minimal** — `taste-skill`, `redesign-skill`, `brandkit` + file core  
 - **Minimal** — `taste-skill`, `redesign-skill`, `brandkit` + core files
 
-- **Full** — 13 skill + `docs/` gate  
-- **Full** — all 13 skills + `docs/` gate files
+- **Full** — 15 skill + `docs/` gate (gồm `ui-review-skill`, `component-taste`)  
+- **Full** — all 15 skills + `docs/` gate files (incl. UI review & component taste)
 
 **Có ghi đè file tôi đã sửa không?**  
 **Will it overwrite my edits?**

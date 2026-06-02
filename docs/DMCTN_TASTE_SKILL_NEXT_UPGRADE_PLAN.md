@@ -14,6 +14,8 @@ Dựa trên audit upstream (`UPSTREAM_TASTE_SKILL_AUDIT.md`) và coverage **~59%
 
 ## v0.3.0 — Design Director Core
 
+**Trạng thái:** ✅ **DONE** (Core R1 — 2026-06-02) — Gate R2, taste-skill depth, 10 dev presets, Pre-Flight Lite, redesign 4 mode, `ui-review-skill`, `component-taste`, prompt Gate R2. Không publish Marketplace trong mốc này.
+
 **Mục tiêu:** Đưa coverage từ ~59% → **~72%** (ước lượng) trên Brief, Design System, Anti-pattern, Output layers.
 
 | Hạng mục | Deliverable | PASS nếu | FAIL nếu |

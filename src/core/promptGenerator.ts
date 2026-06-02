@@ -126,22 +126,25 @@ const BRIEFS: Record<PresetId, Brief> = {
 };
 
 const GATE = {
-  vi: (b: Brief, name: string): string => `Áp dụng skills/taste-skill và .cursor/rules/dmctn-taste-gate.mdc. Không code ngay.
+  vi: (b: Brief, name: string): string => `Áp dụng skills/taste-skill, skills/component-taste, .cursor/rules/dmctn-taste-gate.mdc (Gate R2). Không code ngay.
 
 Bối cảnh: ${b.title.vi} cho ${name}.
 Mục tiêu: ${b.goal.vi}
 
-1) DESIGN READ — trả về 1 dòng: đây là loại sản phẩm gì, cho ai, cảm giác thương hiệu, hệ/phong cách thiết kế phù hợp.
-2) NGƯỜI DÙNG MỤC TIÊU: ${b.audience.vi}.
-3) DIALS: DESIGN_VARIANCE, MOTION_INTENSITY, VISUAL_DENSITY (1-10).
-4) ANTI-AI-SLOP CHECKLIST — tránh: gradient tím/xanh mặc định, Inter+slate+card bo góc giống nhau, 3 feature card ngang mặc định, hero căn giữa vô hồn, glassmorphism lạm dụng, CTA glow vô nghĩa, animation thừa, ảnh stock generic.
-5) MOBILE-FIRST: thiết kế mobile trước, kiểm tra 360 / 768 / 1280; không vỡ layout.
-6) ACCESSIBILITY: tương phản WCAG AA, semantic heading, focus/keyboard, alt text, không phụ thuộc hiệu ứng để hiểu chức năng.
-7) PERFORMANCE: tải nhẹ, tránh layout shift lớn, ảnh tối ưu, không dependency nặng chỉ để làm đẹp.
-8) SECURITY (nếu có code auth/dữ liệu): input validation, session/CSRF, rate limit endpoint nhạy cảm, KHÔNG log secret/token, không lộ key ở frontend.
-${b.extra.vi.map((e, i) => `${9 + i}) ${e}`).join('\n')}
+1) DESIGN READ — block: product type, target user, intent, primary action, hierarchy, constraints + 1 dòng tóm tắt.
+2) TASTE DIRECTION — chọn 1 Developer Preset từ taste-skill (dev/SaaS/dashboard/devtool/docs/agent UI); color/typography/component direction.
+3) NGƯỜI DÙNG MỤC TIÊU: ${b.audience.vi}.
+4) DIALS: DESIGN_VARIANCE, MOTION_INTENSITY, VISUAL_DENSITY (1-10).
+5) UI PLAN — layout, component list, responsive 360/768/1280, a11y, states, edge cases.
+6) PRE-FLIGHT CHECK LITE — 10 mục YES/NO; verdict PASS_TO_CODE hoặc NEEDS_MORE_BRIEF (chỉ PASS_TO_CODE mới code).
+7) ANTI-AI-SLOP CHECKLIST — tránh: gradient tím/cyan AI, glass vô nghĩa, 3 card ngang, CTA glow, generic SaaS hero, emoji/icon lộn xộn, loop animation, stock copy, Inter+slate mặc định.
+8) MOBILE-FIRST: thiết kế mobile trước; không vỡ layout.
+9) ACCESSIBILITY: WCAG AA, heading semantic, focus/keyboard, alt, reduced-motion.
+10) PERFORMANCE: tải nhẹ, tránh CLS lớn, ảnh tối ưu.
+11) SECURITY (nếu auth/dữ liệu): validation, session/CSRF, rate limit; KHÔNG log secret/token.
+${b.extra.vi.map((e, i) => `${12 + i}) ${e}`).join('\n')}
 
-Sau khi Taste Gate PASS mới code. Khi xong: chạy test/build/verify phù hợp.
+Sau khi Taste Gate + Pre-Flight PASS mới code. Khi có UI: skills/ui-review-skill — Design QA Score (100) + verdict.
 
 FINAL REPORT (bắt buộc):
 - Summary
@@ -151,22 +154,25 @@ FINAL REPORT (bắt buộc):
 - Remaining issues
 - VERDICT: PASS / FAIL`,
 
-  en: (b: Brief, name: string): string => `Apply skills/taste-skill and .cursor/rules/dmctn-taste-gate.mdc. Do not code yet.
+  en: (b: Brief, name: string): string => `Apply skills/taste-skill, skills/component-taste, .cursor/rules/dmctn-taste-gate.mdc (Gate R2). Do not code yet.
 
 Context: ${b.title.en} for ${name}.
 Goal: ${b.goal.en}
 
-1) DESIGN READ — one line: what product this is, for whom, brand feeling, and the fitting design system/style.
-2) TARGET USERS: ${b.audience.en}.
-3) DIALS: DESIGN_VARIANCE, MOTION_INTENSITY, VISUAL_DENSITY (1-10).
-4) ANTI-AI-SLOP CHECKLIST — avoid: default purple/blue gradients, Inter+slate+rounded-card sameness, default 3 horizontal feature cards, soulless centered hero, glassmorphism overuse, meaningless CTA glow, useless animation, generic stock images.
-5) MOBILE-FIRST: design mobile first, verify 360 / 768 / 1280; no broken layout.
-6) ACCESSIBILITY: WCAG AA contrast, semantic headings, focus/keyboard, alt text, no effect-dependent comprehension.
-7) PERFORMANCE: light payload, avoid large layout shift, optimized images, no heavy deps just for looks.
-8) SECURITY (if auth/data code): input validation, session/CSRF, rate limit sensitive endpoints, do NOT log secrets/tokens, no keys exposed in frontend.
-${b.extra.en.map((e, i) => `${9 + i}) ${e}`).join('\n')}
+1) DESIGN READ — block: product type, target user, intent, primary action, hierarchy, constraints + one summary line.
+2) TASTE DIRECTION — pick one Developer Preset from taste-skill (dev/SaaS/dashboard/devtool/docs/agent UI); color/typography/component direction.
+3) TARGET USERS: ${b.audience.en}.
+4) DIALS: DESIGN_VARIANCE, MOTION_INTENSITY, VISUAL_DENSITY (1-10).
+5) UI PLAN — layout, components, responsive 360/768/1280, a11y, states, edge cases.
+6) PRE-FLIGHT CHECK LITE — 10 YES/NO items; verdict PASS_TO_CODE or NEEDS_MORE_BRIEF (code only after PASS_TO_CODE).
+7) ANTI-AI-SLOP CHECKLIST — avoid: default AI purple/cyan gradients, meaningless glass, 3-card rows, CTA glow, generic SaaS hero, emoji/icon noise, motion loops, stock copy, default Inter+slate.
+8) MOBILE-FIRST: design mobile first; no broken layout.
+9) ACCESSIBILITY: WCAG AA, semantic headings, focus/keyboard, alt, reduced-motion.
+10) PERFORMANCE: light payload, avoid large CLS, optimized images.
+11) SECURITY (if auth/data): validation, session/CSRF, rate limit; do NOT log secrets/tokens.
+${b.extra.en.map((e, i) => `${12 + i}) ${e}`).join('\n')}
 
-Only code after the Taste Gate PASSES. When done: run the appropriate test/build/verify.
+Only code after Taste Gate + Pre-Flight PASS. When UI exists: skills/ui-review-skill — Design QA Score (100) + verdict.
 
 FINAL REPORT (required):
 - Summary

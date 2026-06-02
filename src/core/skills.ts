@@ -21,8 +21,8 @@ export const SKILLS: SkillMeta[] = [
     id: 'taste-skill',
     name: { vi: 'Taste Skill', en: 'Taste Skill' },
     desc: {
-      vi: 'Chống UI AI rập khuôn cho landing/portfolio/redesign; đọc brief rồi mới code.',
-      en: 'Anti-slop frontend for landing/portfolio/redesign; read the brief before coding.'
+      vi: 'Design Director Core: Design Read, preset dev, Pre-Flight, anti-slop; đọc brief rồi mới code.',
+      en: 'Design Director Core: design read, dev presets, pre-flight, anti-slop; read the brief before coding.'
     },
     minimal: true
   },
@@ -30,8 +30,8 @@ export const SKILLS: SkillMeta[] = [
     id: 'redesign-skill',
     name: { vi: 'Redesign Skill', en: 'Redesign Skill' },
     desc: {
-      vi: 'Audit và redesign dự án hiện có mà không phá chức năng cũ.',
-      en: 'Audit and redesign an existing project without breaking behavior.'
+      vi: 'Redesign 4 mode (Refresh/Refactor/Rebrand/Rebuild); audit, keep/remove/improve, không phá flow.',
+      en: 'Redesign in 4 modes (Refresh/Refactor/Rebrand/Rebuild); audit without breaking flows.'
     },
     minimal: true
   },
@@ -131,6 +131,24 @@ export const SKILLS: SkillMeta[] = [
     desc: {
       vi: 'Ép agent xuất kết quả đầy đủ, không placeholder, có test và verdict.',
       en: 'Force complete output, no placeholders, with tests and a verdict.'
+    },
+    minimal: false
+  },
+  {
+    id: 'ui-review-skill',
+    name: { vi: 'UI Review', en: 'UI Review' },
+    desc: {
+      vi: 'Review UI sau build: Design QA Score 100 điểm, verdict READY/POLISH/REDESIGN/FAIL.',
+      en: 'Post-build UI review: 100-point Design QA score and READY/POLISH/REDESIGN/FAIL verdict.'
+    },
+    minimal: false
+  },
+  {
+    id: 'component-taste',
+    name: { vi: 'Component Taste', en: 'Component Taste' },
+    desc: {
+      vi: 'Quy tắc must/avoid/a11y/mobile cho button, card, nav, form, table, modal, …',
+      en: 'Must/avoid/a11y/mobile rules for buttons, cards, nav, forms, tables, modals, and more.'
     },
     minimal: false
   }

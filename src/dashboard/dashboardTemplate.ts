@@ -305,7 +305,7 @@ export function buildDashboardHtml(
         </div>
         <div class="info-strip card card-pad">
           <span class="pill"><strong>●</strong> <span data-i="overview.pillLocal"></span></span>
-          <span class="pill"><strong>13</strong> <span data-i="overview.pillSkills"></span></span>
+          <span class="pill"><strong>15</strong> <span data-i="overview.pillSkills"></span></span>
           <span class="pill"><strong>○</strong> <span data-i="overview.pillTelemetry"></span></span>
           <span class="pill"><strong>⇄</strong> <span data-i="overview.pillBilingual"></span></span>
         </div>

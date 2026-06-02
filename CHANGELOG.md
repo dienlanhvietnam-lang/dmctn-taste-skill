@@ -9,6 +9,37 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 
 ---
 
+## [0.3.0] — Design Director Core (Core R1)
+## [0.3.0] — Design Director Core (Core R1)
+
+### Thay đổi / Changed
+- **Taste Gate R2** — `dmctn-taste-gate.mdc`: Design Read, Taste Direction, UI Plan, Pre-Flight Lite, Anti-Slop, Self Review.  
+  **Taste Gate R2** — expanded gate rule with full design-director flow.
+
+- **taste-skill** — Developer Preset Pack (10 preset dev), Pre-Flight, component/system map; không preset ngành cá nhân trong core.  
+  **taste-skill** — 10 developer presets, pre-flight, deeper anti-slop (no personal-industry presets in core).
+
+- **redesign-skill** — 4 mode: Refresh / Refactor / Rebrand / Rebuild + output inventory bắt buộc.  
+  **redesign-skill** — four redesign modes and mandatory audit output.
+
+- **Skill mới** — `ui-review-skill` (Design QA Score 100), `component-taste` (14 component rule sets).  
+  **New skills** — UI review scoring and component taste rules.
+
+- **Prompt generator** — Gate R2 sections (UI Plan, Pre-Flight, ui-review); giữ 6 preset cũ.  
+  **Prompt generator** — R2 gate sections; same six dashboard presets.
+
+- **AGENTS.md** template đồng bộ Gate R2.  
+  **AGENTS.md** template aligned with Gate R2.
+
+### Ghi chú / Notes
+- Không đổi hành vi installer/dashboard lớn; Full install = **15** skill.  
+  No major dashboard redesign; Full install = **15** skills.
+
+- Không publish Marketplace trong mốc này.  
+  No Marketplace publish in this release.
+
+---
+
 ## [0.2.11] — Chuẩn hóa Overview Marketplace
 ## [0.2.11] — Marketplace Overview Polish
 
