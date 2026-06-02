@@ -16,7 +16,7 @@ Extension is **publicly published** on Visual Studio Marketplace with **v0.3.0**
 | Marketplace (live) | **v0.3.0** — [Listing](https://marketplace.visualstudio.com/items?itemName=buivantinh.dmctn-taste-skill) |
 | Version live | **0.3.0** |
 | GitHub repo | https://github.com/dienlanhvietnam-lang/dmctn-taste-skill |
-| GitHub Release | [v0.2.9](https://github.com/dienlanhvietnam-lang/dmctn-taste-skill/releases/tag/v0.2.9) |
+| GitHub Release | [v0.3.0](https://github.com/dienlanhvietnam-lang/dmctn-taste-skill/releases/tag/v0.3.0) |
 | Marketplace status | **Published** |
 | Availability | **Public** |
 | Screenshots | **Ready** — `store-assets/*.png` (in VSIX for README) |
@@ -55,7 +55,7 @@ No CLI publishing from this repo, no PAT/token handling.
 | # | Mục / Item | Trạng thái / Status |
 |---|------------|---------------------|
 | 1 | GitHub repo public | ✅ **DONE** |
-| 2 | GitHub Release v0.2.9 | ✅ **DONE** |
+| 2 | GitHub Release v0.3.0 | ✅ **DONE** |
 | 3 | Marketplace live (v0.3.0) | ✅ **DONE** |
 | 4 | Marketplace verification complete | ✅ **DONE** |
 | 5 | Public listing opens reliably | ✅ **DONE** |

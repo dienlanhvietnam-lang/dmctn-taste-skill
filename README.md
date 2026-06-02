@@ -4,7 +4,7 @@
 
 **AI UI Design Director for Developers** — anti-slop UI taste skills for Cursor, VS Code Agent, Claude Code, and Codex. Focused on developers, frontends, dashboards, SaaS, devtools, docs, agent UI, and app UI — no personal-industry presets in core.
 
-[![Version](https://img.shields.io/badge/version-0.3.0-blue)](https://github.com/dienlanhvietnam-lang/dmctn-taste-skill)
+[![Version](https://img.shields.io/badge/version-0.3.1-blue)](https://github.com/dienlanhvietnam-lang/dmctn-taste-skill)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![Marketplace](https://img.shields.io/visual-studio-marketplace/v/buivantinh.dmctn-taste-skill?label=Marketplace)](https://marketplace.visualstudio.com/items?itemName=buivantinh.dmctn-taste-skill)
 ![Local only](https://img.shields.io/badge/local--only-true-purple)
@@ -209,12 +209,12 @@ Agent applying Taste Skill — Design Read and anti-slop UI result.
 | Hạng mục / Item | Trạng thái / Status |
 |-----------------|---------------------|
 | Mã nguồn GitHub / Source on GitHub | ✅ Public / READY — `main` |
-| GitHub Release | ✅ v0.3.0 **DONE** |
-| Runtime QA (VSIX/Cursor) | ✅ **FULL_PASS** |
+| GitHub Release | ✅ v0.3.1 **READY** |
+| Runtime QA (VSIX/Cursor) | ✅ **PUBLIC_RUNTIME_PASS** |
 | QA cài từ Marketplace public | ✅ **PASS** |
-| VSIX build (repo) | 📦 READY — `dmctn-taste-skill-0.3.0.vsix` |
+| VSIX build (repo) | 📦 READY — `dmctn-taste-skill-0.3.1.vsix` |
 | Ảnh Marketplace / Store screenshots | ✅ READY — `store-assets/*.png` (1600×900) |
-| Visual Studio Marketplace (live) | ✅ **PUBLISHED / PUBLIC** — v**0.3.0** |
+| Visual Studio Marketplace (live) | ✅ **PUBLISHED / PUBLIC** — live v**0.3.0**; next update v**0.3.1** |
 | Runtime QA from Marketplace install | ✅ **PASS** — dashboard mở OK, 15 skill, prompt/gate hoạt động |
 
 **Publisher:** `buivantinh` / DMCTN Studio  

@@ -82,13 +82,13 @@ Dựa trên audit upstream (`UPSTREAM_TASTE_SKILL_AUDIT.md`) và coverage **~59%
 
 ```mermaid
 flowchart LR
-  A[v0.2.11 README sync upload] --> B[v0.3.0 Design Director Core]
+  A[v0.3.0 public runtime PASS] --> B[v0.3.0 Design Director Core]
   B --> C[v0.3.1 Skill Library UI]
   C --> D[v0.3.2 Demos]
   D --> E[v0.4.0 Design System tools]
 ```
 
-1. **Ngay:** Upload `dmctn-taste-skill-0.2.11.vsix` (manual) — Overview polish đã có trong repo.
+1. **Ngay:** Upload `dmctn-taste-skill-0.3.1.vsix` (manual) — metadata sync (README/Marketplace Overview) theo bản 0.3.0 public.
 2. **v0.3.0** — Ưu tiên **taste-skill depth** + pre-flight lite (impact cao nhất lên % coverage).
 3. **v0.3.1** — Dashboard (moat).
 4. **v0.3.2** — Assets Marketplace.
@@ -125,7 +125,7 @@ flowchart LR
 ## Không nằm trong roadmap (explicit)
 ## Out of scope
 
-- Open VSX publish
+- Không publish bằng OpenVSX
 - Preset ngành riêng (điện máy, sửa chữa, SEO địa phương riêng, …) — preset legacy `localbiz` đã đổi thành **`marketplace`** (Marketplace Listing Page, developer-oriented)
 - Thay thế hoàn toàn `npx skills add` — có thể **document** song song, không bắt buộc implement CLI
 

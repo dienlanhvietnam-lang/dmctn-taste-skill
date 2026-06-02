@@ -14,8 +14,8 @@ Use this text when filling the **Visual Studio Marketplace** form.
 
 | Hạng mục / Item | Trạng thái / Status |
 |-----------------|---------------------|
-| Gói Marketplace (live) / Live package | **PUBLISHED** — v**0.2.10** |
-| Gói đồng bộ README / README sync package | **READY** — v**0.2.11** (upload thủ công) |
+| Gói Marketplace (live) / Live package | **PUBLISHED** — v**0.3.0** |
+| Gói đồng bộ README / README sync package | **READY** — v**0.3.1** (upload thủ công) |
 | Xác minh / Verification | **COMPLETE** |
 | Listing công khai / Public listing | **LIVE** — [Marketplace](https://marketplace.visualstudio.com/items?itemName=buivantinh.dmctn-taste-skill) |
 | Ảnh minh họa / Screenshots | **READY** — `store-assets/*.png` (trong VSIX) |
@@ -69,8 +69,8 @@ Install anti-slop UI taste skills into your project for Cursor, VS Code agents, 
 
 ### Tính năng / What you get
 
-- **13 skill** — cài Minimal / Full / Custom: taste-skill, redesign-skill, brandkit, GPT/Codex, image-to-code, preset phong cách, output enforcement, …  
-- **13 skills** — Minimal / Full / Custom install: taste-skill, redesign-skill, brandkit, GPT/Codex variants, image-to-code, style presets, output enforcement, and more.
+- **15 skill** — cài Minimal / Full / Custom: taste-skill, redesign-skill, brandkit, GPT/Codex, image-to-code, preset phong cách, output enforcement, …  
+- **15 skills** — Minimal / Full / Custom install: taste-skill, redesign-skill, brandkit, GPT/Codex variants, image-to-code, style presets, output enforcement, and more.
 
 - **Dashboard song ngữ** — Tổng quan, Cài đặt, Bộ skill, Prompt mẫu, Hướng dẫn, Cài đặt extension, Thông tin  
 - **Bilingual dashboard (VI / EN)** — Overview, Install, Skills, Prompts, Guide, Settings, About.

@@ -15,14 +15,14 @@ Use this checklist before publishing to **Visual Studio Marketplace**.
 | Bước / Step | Trạng thái / Status |
 |-------------|---------------------|
 | GitHub repo public | ✅ **DONE** |
-| GitHub Release v0.2.9 | ✅ **DONE** |
-| Marketplace published (live) | ✅ **DONE** — v**0.2.10** public search |
+| GitHub Release v0.3.0 | ✅ **DONE** |
+| Marketplace published (live) | ✅ **DONE** — v**0.3.0** public search |
 | Runtime QA (VSIX/Cursor) | ✅ **FULL_PASS** |
 | Public listing QA (install from store) | ✅ **PASS** |
 | Dashboard opens after Marketplace install | ✅ **PASS** |
-| Full 13/13 install from Marketplace | ⏳ **PENDING_MANUAL** |
-| README sync package v0.2.11 | 📦 **READY** — upload `dmctn-taste-skill-0.2.11.vsix` thủ công |
-| | 📦 **READY** — manual upload `dmctn-taste-skill-0.2.11.vsix` |
+| Full 15/15 install from Marketplace | ✅ **PASS** |
+| README sync package v0.3.1 | 📦 **READY** — upload `dmctn-taste-skill-0.3.1.vsix` thủ công |
+| | 📦 **READY** — manual upload `dmctn-taste-skill-0.3.1.vsix` |
 
 Chi tiết Marketplace: [`MARKETPLACE_POST_UPLOAD_STATUS.md`](MARKETPLACE_POST_UPLOAD_STATUS.md)  
 Marketplace details: [`MARKETPLACE_POST_UPLOAD_STATUS.md`](MARKETPLACE_POST_UPLOAD_STATUS.md)
@@ -177,11 +177,11 @@ Before Marketplace publish, confirm:
 ## Sau khi publish
 ## Post-publish
 
-- [x] Tag / GitHub Release: `v0.2.9` + VSIX  
-- [x] Tag / GitHub Release: `v0.2.9` + VSIX attached
+- [x] Tag / GitHub Release: `v0.3.1` + VSIX  
+- [x] Tag / GitHub Release: `v0.3.1` + VSIX attached
 
-- [x] Marketplace upload submitted (v0.2.9)  
-- [x] Marketplace upload submitted (v0.2.9)
+- [x] Marketplace upload submitted (v0.3.1)  
+- [x] Marketplace upload submitted (v0.3.1)
 
 - [x] Docs cập nhật trạng thái **Published** / **PUBLIC**  
 - [x] Docs updated to **Published** / **PUBLIC**
@@ -209,8 +209,8 @@ Run **after** the listing is **Published** and publicly searchable.
 4. Mở dashboard — lệnh **DMCTN Taste: Open Dashboard**.  
    Open the dashboard via **DMCTN Taste: Open Dashboard**.
 
-5. Cài **Full** (13/13 skill) vào project test.  
-   Run **Full** install (13/13 skills) in a test project.
+5. Cài **Full** (15/15 skill) vào project test.  
+   Run **Full** install (15/15 skills) in a test project.
 
 6. Tạo prompt mẫu — tab Prompt / generator.  
    Generate a sample prompt from the Prompt tab.

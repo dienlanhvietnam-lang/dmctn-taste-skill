@@ -9,6 +9,24 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 
 ---
 
+## [0.3.1] — Marketplace/GitHub Metadata Sync
+
+### Thay đổi / Changed
+- Sync GitHub README và Marketplace Overview metadata để thống nhất với **v0.3.0 public (runtime)**.
+  Sync GitHub README and Marketplace Overview metadata to match **v0.3.0 public (runtime)**.
+
+- Mark **Marketplace public runtime QA PASS** cho **v0.3.0** trong các docs hiện hành.
+  Mark **Marketplace public runtime QA PASS** for **v0.3.0** in the current docs.
+
+- Loại bỏ các trạng thái release cũ (0.2.9/0.2.10, RC/pending) khỏi trang release status hiện hành; giữ lịch sử đúng theo version.
+  Remove stale release status (0.2.9/0.2.10, RC/pending) from the current release status pages; keep proper version history.
+
+- Không đổi hành vi runtime. Chỉ metadata/docs/package version.
+  No runtime behavior change. Only metadata/docs/package version.
+
+- Đóng gói VSIX **0.3.1** để upload thủ công nhằm đồng bộ Marketplace Overview metadata.
+  Package VSIX **0.3.1** for manual upload to sync Marketplace Overview metadata.
+
 ## [0.3.0] — Design Director Core (Core R1)
 ## [0.3.0] — Design Director Core (Core R1)
 

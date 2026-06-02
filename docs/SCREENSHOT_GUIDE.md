@@ -15,7 +15,7 @@ Chỉ dùng **UI thật** — không dùng mockup AI gắn nhãn sản phẩm.
 | File | Tab / chủ đề / Tab / subject |
 |------|------------------------------|
 | `dashboard-overview.png` | Tab **Tổng quan** — trạng thái Full, nút cài / **Overview** — Full status, install buttons |
-| `install-skills.png` | Tab **Cài đặt** **hoặc** **Bộ skill** (13 skill) / **Install** **or** **Skills** (13 skills) |
+| `install-skills.png` | Tab **Cài đặt** **hoặc** **Bộ skill** (15 skill) / **Install** **or** **Skills** (15 skills) |
 | `prompt-output.png` | Tab **Prompt mẫu** — ô Output có nội dung / **Prompt mẫu** — filled Output textarea |
 | `coding-result.png` | Kết quả agent — Design Read / trang redesign (vd. `index.html`) / Agent Design Read / redesigned page |
 
@@ -57,8 +57,8 @@ Chỉ dùng **UI thật** — không dùng mockup AI gắn nhãn sản phẩm.
 1. Mở thư mục extension → `npm install` → **F5** (Extension Development Host).  
    Open extension root → `npm install` → **F5**.
 
-2. Workspace tạm → **Cài Full** → trạng thái **13/13**.  
-   Temp workspace → **Install Full** → status **13/13**.
+2. Workspace tạm → **Cài Full** → trạng thái **15/15**.
+   Temp workspace → **Install Full** → status **15/15**.
 
 3. **DMCTN Taste: Open Dashboard** → chụp Tổng quan, Cài đặt/Bộ skill, Prompt mẫu.  
    **DMCTN Taste: Open Dashboard** → capture Overview, Install/Skills, Prompt mẫu.

@@ -1,5 +1,10 @@
 .vscode/**
 .vscode-test/**
+/.cursor/**
+/.cursor/**/*
+/AGENTS.md
+/examples/**
+/skills/**
 src/**
 .gitignore
 .vscodeignore
